@@ -25,9 +25,9 @@ menu:
     icon: "fa fa-rss"
 
 links:
-  - title: "Github"
-    url: https://github.com/HujiangTechnology
-    intro: "Github"
+  - title: "GitHub"
+    url: https://github.com/mobilev5
+    intro: "GitHub"
 
 widgets:
 - category
