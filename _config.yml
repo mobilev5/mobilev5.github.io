@@ -79,5 +79,5 @@ feed:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/mobilev5/mobilev5.github.io.git
+  repository: git@mobilev5:mobilev5/mobilev5.github.io.git
   branch: master
