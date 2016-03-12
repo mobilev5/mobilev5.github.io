@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>用RAML构建API文档 | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="用RAML构建API文档"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 用RAML构建API文档</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>App开发人员应当了解的一些API知识，熟悉编写API文档的一些工具和方法。</p>
+<a id="more"></a>
+<h2 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h2><p>全称：Representational State Transfer(表现层状态转化)</p>
+<p>其实我们常见的GET, POST等的API都属于这类，RESTful有以下几个关键概念：</p>
+<ul>
+<li>一种设计风格而不是标准，只是提供了一组设计原则和约束条件</li>
+<li>资源，用一个URI（统一资源定位符）指向它，每种资源对应一个特定的URI</li>
+<li>Method<ul>
+<li>GET：用来获取资源</li>
+<li>POST用来新建资源（也可以用于更新资源）</li>
+<li>PUT用来更新资源</li>
+<li>DELETE用来删除资源</li>
+</ul>
+</li>
+</ul>
+<h2 id="RAML是啥？"><a href="#RAML是啥？" class="headerlink" title="RAML是啥？"></a>RAML是啥？</h2><p><a href="http://raml.org/" target="_blank" rel="external">RAML</a>是一个API建模语言，完全遵守RESTful风格，有严格的语法来约束，采用<a href="http://www.yaml.org/" target="_blank" rel="external">yaml</a>描述，可以通过一系列工具转化为HTML，Wiki等文档样式。</p>
+<h2 id="开始写一个API"><a href="#开始写一个API" class="headerlink" title="开始写一个API"></a>开始写一个API</h2><h3 id="先装个工具"><a href="#先装个工具" class="headerlink" title="先装个工具"></a>先装个工具</h3><p>采用Atom插件 <a href="http://apiworkbench.com/" target="_blank" rel="external">API Workbench</a> 打造一个可视化工具，自动化提示，语法检测等功能，一应俱全，非常适合编写RAML。</p>
+<p><img src="api-workbench.png" alt="API Workbench主要功能"></p>
+<h3 id="熟读基本语法"><a href="#熟读基本语法" class="headerlink" title="熟读基本语法"></a>熟读基本语法</h3><p><a href="https://github.com/raml-org/raml-spec/blob/master/raml-0.8.md" target="_blank" rel="external">点击查看</a></p>
+<h3 id="创建API工程"><a href="#创建API工程" class="headerlink" title="创建API工程"></a>创建API工程</h3><p>本文例子采用v0.8版本，目前1.0版本配套的工具还不太完善，等后续更新。</p>
+<ul>
+<li>API 头部</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#%RAML 0.8</span></span><br><span class="line"><span class="attr">title:</span> A6</span><br><span class="line"><span class="attr">version:</span> v2</span><br><span class="line"><span class="attr">baseUri:</span> http://&#123;apiDomain&#125;.hujiang.com/&#123;version&#125;</span><br><span class="line"><span class="attr">baseUriParameters:</span></span><br><span class="line"><span class="attr">  apiDomain:</span></span><br><span class="line"><span class="attr">    description:</span> <span class="string">|</span><br><span class="line">      The sub-domain at which the API is accessible.</span><br><span class="line"></span><span class="attr">    enum:</span> [ <span class="string">"test"</span> , <span class="string">"yz.test"</span>, <span class="string">"qa.test"</span> ]</span><br><span class="line"><span class="attr">mediaType:</span>  application/json</span><br><span class="line"><span class="attr">protocols:</span> [ HTTP, HTTPS ]</span><br><span class="line"><span class="attr">documentation:</span></span><br><span class="line"><span class="attr">  - title:</span> 类型定义</span><br><span class="line"><span class="attr">    content:</span> !include documentation/type-definition.md</span><br><span class="line"><span class="attr">resourceTypes:</span></span><br><span class="line"><span class="attr">  - base:</span> !include resourceTypes/base.raml</span><br><span class="line"><span class="attr">  - collection:</span> !include resourceTypes/collection.raml</span><br><span class="line"><span class="attr">schemas:</span></span><br><span class="line"><span class="attr">  - test:</span> !include schemas/test-schema.json</span><br></pre></td></tr></table></figure>
+<ul>
+<li>API 实体</li>
+</ul>
+<p>有几个关键词： <code>type</code>, <code>uriParameters</code>, <code>require</code>, <code>queryParameters</code>, <code>displayName</code>, <code>description</code>，具体可参看文档 </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/test/&#123;uriParam1&#125;/&#123;uriParam2&#125;:</span><br><span class="line"><span class="attr">type:</span> collection</span><br><span class="line"><span class="attr">  displayName:</span> 获取xxxxx</span><br><span class="line"><span class="attr">  uriParameters:</span></span><br><span class="line"><span class="attr">    screenWidth:</span></span><br><span class="line"><span class="attr">      required:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">      displayName:</span> uriParam1</span><br><span class="line"><span class="attr">      description:</span> uriParam1说明</span><br><span class="line"><span class="attr">      type:</span> integer</span><br><span class="line"><span class="attr">    screenHeight:</span></span><br><span class="line"><span class="attr">      required:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">      displayName:</span> uriParam2</span><br><span class="line"><span class="attr">      description:</span> uriParam2说明</span><br><span class="line"><span class="attr">      type:</span> integer</span><br><span class="line"><span class="attr">  get:</span></span><br><span class="line"><span class="attr">    description:</span> 获取xx内容</span><br><span class="line"><span class="attr">    queryParameters:</span></span><br><span class="line"><span class="attr">      param1:</span></span><br><span class="line"><span class="attr">        required:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">        displayName:</span> param1</span><br><span class="line"><span class="attr">        description:</span> param1说明</span><br><span class="line"><span class="attr">        type:</span> string</span><br><span class="line"><span class="attr">    responses:</span></span><br><span class="line">      <span class="number">200</span>:</span><br><span class="line"><span class="attr">        body:</span></span><br><span class="line">          application/json:</span><br><span class="line"><span class="attr">            schema:</span> test</span><br><span class="line"><span class="attr">            example:</span> !include examples/test-example.json</span><br></pre></td></tr></table></figure>
+<h3 id="ResourceTypes"><a href="#ResourceTypes" class="headerlink" title="ResourceTypes"></a>ResourceTypes</h3><p>资源类型统一描述，常见的统一定义HTTP Header，示例如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">get?:</span><br><span class="line"><span class="attr">  headers:</span></span><br><span class="line"><span class="attr">    Hujiang-Agent:</span></span><br><span class="line"><span class="attr">      description:</span> <span class="string">|</span><br><span class="line">        统一的沪江Agent定义</span><br><span class="line"></span><span class="attr">      required:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><p>API的一些说明性文档，例如某些特定值的定义和说明，注意事项等</p>
+<h3 id="Schemas"><a href="#Schemas" class="headerlink" title="Schemas"></a>Schemas</h3><p>定义返回结构中的数据定义，示例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"required"</span> : <span class="literal">true</span> ,</span><br><span class="line">  <span class="attr">"$schema"</span> : <span class="string">"http://json-schema.org/draft-03/schema"</span> ,</span><br><span class="line">  <span class="attr">"type"</span> : <span class="string">"array"</span> ,</span><br><span class="line">  <span class="attr">"items"</span> : &#123;</span><br><span class="line">    <span class="attr">"type"</span> : <span class="string">"object"</span>,</span><br><span class="line">    <span class="attr">"properties"</span> : &#123;</span><br><span class="line">      <span class="attr">"adType"</span> : &#123;</span><br><span class="line">        <span class="attr">"type"</span> : <span class="string">"integer"</span> ,</span><br><span class="line">        <span class="attr">"description"</span>: <span class="string">"参看广告类型定义"</span>,</span><br><span class="line">        <span class="attr">"required"</span> : <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">"adId"</span> : &#123;</span><br><span class="line">        <span class="attr">"type"</span> : <span class="string">"integer"</span> ,</span><br><span class="line">        <span class="attr">"description"</span> : <span class="string">"广告位ID"</span>,</span><br><span class="line">        <span class="attr">"required"</span> : <span class="literal">false</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">"adItemList"</span> : &#123;</span><br><span class="line">        <span class="attr">"type"</span> : <span class="string">"array"</span> ,</span><br><span class="line">        <span class="attr">"description"</span> : <span class="string">"广告条列表，最大不超过6个"</span>,</span><br><span class="line">        <span class="attr">"required"</span> : <span class="literal">true</span> ,</span><br><span class="line">        <span class="attr">"items"</span> : &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"object"</span> ,</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外在API头部可以统一include，方便后续API实体中直接调用。</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>根据上述的Schemas，提供一个API返回示例，便于用户更好地了解API，示例如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"adType"</span> : <span class="number">31</span>,</span><br><span class="line">    <span class="attr">"adId"</span> : <span class="number">10001</span>,</span><br><span class="line">    <span class="attr">"adItemList"</span> : [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"adItemId"</span> : <span class="number">1021021</span>,</span><br><span class="line">        <span class="attr">"title"</span> : <span class="string">"广告条标题"</span>,</span><br><span class="line">        <span class="attr">"summary"</span> : <span class="string">"广告条描述"</span>,</span><br><span class="line">        <span class="attr">"actionType"</span> : <span class="number">1</span>,</span><br><span class="line">        <span class="attr">"actionUrl"</span> : <span class="string">"http://www.hujiang.com"</span>,</span><br><span class="line">        <span class="attr">"startTime"</span> : <span class="string">"2016-2-29T17:54:46.203+08:00"</span>,</span><br><span class="line">        <span class="attr">"endTime"</span> : <span class="string">"2016-3-29T17:54:46.203+08:00"</span>,</span><br><span class="line">        <span class="attr">"imageUrl"</span> : <span class="string">"http://i2.w.hjfile.cn/news/201602/201602247003009941.jpg"</span>,</span><br><span class="line">        <span class="attr">"orderIndex"</span> : <span class="number">2</span>,</span><br><span class="line">        <span class="attr">"fillColor"</span> : <span class="number">1023123123123</span>,</span><br><span class="line">        <span class="attr">"scheme"</span> : <span class="string">"hujiang://"</span>,</span><br><span class="line">        <span class="attr">"appIdentifier"</span> : <span class="string">"com.hujiang.normandy"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  ... ...</span><br><span class="line">  </span><br><span class="line"> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h3 id="生成HTML或wiki"><a href="#生成HTML或wiki" class="headerlink" title="生成HTML或wiki"></a>生成HTML或wiki</h3><p>基本差不多了，就要以找一些工具转成用户可以直观看到的文档，可以使用如下工具：</p>
+<p>raml2html: <a href="https://github.com/raml2html/raml2html" target="_blank" rel="external">https://github.com/raml2html/raml2html</a><br>raml2wiki: <a href="https://github.com/jhitchcock/raml2wiki" target="_blank" rel="external">https://github.com/jhitchcock/raml2wiki</a></p>
+<h2 id="它还可以做什么"><a href="#它还可以做什么" class="headerlink" title="它还可以做什么"></a>它还可以做什么</h2><p>既然是建模语言，所有的API定义，返回值都非常方便结构化，利用这些数据我们可以自制mock server，将API整个流程打通，非常期待大家的参与。</p>
+<h2 id="RAML-vs-Swagger-vs-API-Blueprint"><a href="#RAML-vs-Swagger-vs-API-Blueprint" class="headerlink" title="RAML vs. Swagger vs. API Blueprint"></a>RAML vs. Swagger vs. API Blueprint</h2><p><a href="http://www.mikestowe.com/2014/07/raml-vs-swagger-vs-api-blueprint.php" target="_blank" rel="external">mikestowe</a>上有专门针对这三类做了比较，最后综合得分RAML排首位，当然大家也要结合当下团队实力，选择合适的工具</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://raml.org/" target="_blank" rel="external">RAML 官网</a></li>
+<li><a href="https://atom.io/" target="_blank" rel="external">atom 官网</a></li>
+<li><a href="https://bourgeois.me/rest/" target="_blank" rel="external">REST best practices</a></li>
+<li><a href="https://codeplanet.io/principles-good-restful-api-design/" target="_blank" rel="external">Principles of good RESTful API Design</a></li>
+<li><a href="http://www.yaml.org/" target="_blank" rel="external">YAML官网</a></li>
+<li><a href="http://www.mikestowe.com/2014/07/raml-vs-swagger-vs-api-blueprint.php" target="_blank" rel="external">RAML vs. Swagger vs. API Blueprint</a></li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/03/06/using-raml-build-api-doc/" data-title="用RAML构建API文档" data-url="http://yoursite.com/2016/03/06/using-raml-build-api-doc/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-06 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	Yomi 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#RESTful-API"><span class="toc-article-text">RESTful API</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#RAML是啥？"><span class="toc-article-text">RAML是啥？</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#开始写一个API"><span class="toc-article-text">开始写一个API</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#先装个工具"><span class="toc-article-text">先装个工具</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#熟读基本语法"><span class="toc-article-text">熟读基本语法</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#创建API工程"><span class="toc-article-text">创建API工程</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#ResourceTypes"><span class="toc-article-text">ResourceTypes</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Documentation"><span class="toc-article-text">Documentation</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Schemas"><span class="toc-article-text">Schemas</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Examples"><span class="toc-article-text">Examples</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#生成HTML或wiki"><span class="toc-article-text">生成HTML或wiki</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#它还可以做什么"><span class="toc-article-text">它还可以做什么</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#RAML-vs-Swagger-vs-API-Blueprint"><span class="toc-article-text">RAML vs. Swagger vs. API Blueprint</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#参考"><span class="toc-article-text">参考</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>

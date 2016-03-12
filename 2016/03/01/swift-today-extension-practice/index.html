@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>探索Today Extension的奥秘 | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="探索Today Extension的奥秘"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 探索Today Extension的奥秘</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本文重点介绍Today Extension的机制，并通过一个Demo讲解整个实现过程。</p>
+<a id="more"></a>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>extension并不是一个独立的app，它有一个包含在 app bundle 中的独立 bundle，extension 的bundle 后缀名是 .appex。其生命周期也和普通 app 不同。</li>
+<li>extension不能单独存在，必须有一个包含它的 Containing app。</li>
+<li>extension 需要用户手动激活  比如 Today 中的 widget 需要在 Today 中激活和关闭</li>
+</ul>
+<h2 id="Today-extension-的特点"><a href="#Today-extension-的特点" class="headerlink" title="Today extension 的特点"></a>Today extension 的特点</h2><ul>
+<li>可以在锁屏情况下 快速查看</li>
+<li>及时 简单直观 快速</li>
+<li>简单交互 不可以输入 打开 Container APP</li>
+</ul>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p><img src="app_extensions_lifecycle.png" alt="生命周期"></p>
+<hr>
+<p>可以看到 Today 的生命周期分为3步 </p>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>在用户打开Today 点击extension时，系统就会加载extension应用，这是生命周期的开始。</p>
+<h3 id="执行任务"><a href="#执行任务" class="headerlink" title="执行任务"></a>执行任务</h3><p>extension启动后，开始执行它的代码。</p>
+<h3 id="终止"><a href="#终止" class="headerlink" title="终止"></a>终止</h3><p>在用户取消任务，或者任务执行结束,系统会将其杀掉。</p>
+<h2 id="通讯"><a href="#通讯" class="headerlink" title="通讯"></a>通讯</h2><p><img src="detailed_communication.png" alt="通讯"></p>
+<ul>
+<li>extension 是属于Today的插件 它和Today的通讯是直接的</li>
+<li>通过openURL的方式打开Container APP 当然也可打开其它的应用</li>
+<li>通过一个公共的数据区与Container来交换数据</li>
+</ul>
+<h2 id="数据共享"><a href="#数据共享" class="headerlink" title="数据共享"></a>数据共享</h2><p><img src="app_extensions_container_restrictions.png" alt="数据共享"><br>公共的数据区 extension 和 Container 都可以读写<br>其实是一个配置了相同 groupId 的 NSUserDefault</p>
+<h2 id="Today-的尺寸"><a href="#Today-的尺寸" class="headerlink" title="Today 的尺寸"></a>Today 的尺寸</h2><h3 id="iOS不同设备-Today-的宽度"><a href="#iOS不同设备-Today-的宽度" class="headerlink" title="iOS不同设备 Today 的宽度"></a>iOS不同设备 Today 的宽度</h3><p>iphone4s /5/5s/6/6s 只有竖屏一种情况 </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">设备</th>
+<th style="text-align:center">横屏左</th>
+<th style="text-align:center">横屏右</th>
+<th style="text-align:center">竖屏左</th>
+<th style="text-align:center">竖屏右</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">iphone6/6s plus iOS 8</td>
+<td style="text-align:center">666</td>
+<td style="text-align:center">666</td>
+<td style="text-align:center">414</td>
+<td style="text-align:center">414</td>
+</tr>
+<tr>
+<td style="text-align:center">iphone6/6s plus iOS 9</td>
+<td style="text-align:center">736</td>
+<td style="text-align:center">736</td>
+<td style="text-align:center">414</td>
+<td style="text-align:center">414</td>
+</tr>
+<tr>
+<td style="text-align:center">iPad</td>
+<td style="text-align:center">471</td>
+<td style="text-align:center">328</td>
+<td style="text-align:center">512</td>
+<td style="text-align:center">512</td>
+</tr>
+<tr>
+<td style="text-align:center">iPad Pro</td>
+<td style="text-align:center">629</td>
+<td style="text-align:center">437</td>
+<td style="text-align:center">471</td>
+<td style="text-align:center">328</td>
+</tr>
+</tbody>
+</table>
+<p>可以看到 不同的设备 extension 的宽度是很不一样的<br>iPhone Plus 可以横屏<br>iPad 在横屏时候 分为左边和右边<br>iPad Pro 情况就更复杂,竖屏的时候相当于 iPad 的横屏 横屏的时候 宽度也很大<br>所以在设计 Extension 时候 最好用 autoLayout</p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>下面就花10分钟来 实践写一个最简单的 extension 具体可以看 Demo.<br>在 Demo 里我弄了一个非常简单的 App 就只是一个UITextField 和一个button<br>点击 OK 按钮, 会把UITextField的文本保存到公共的 Userdefault 里面. </p>
+<p><img src="APPMain.png" alt=""></p>
+<hr>
+<p>当然还开启了一个 scheme 用来让 extension 可以通过 openUrl 来打开<br>另外 有一个 shareData文件<br>代码如下:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ShareData</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">let</span> key = <span class="string">"com.hujiang.key"</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">let</span> <span class="type">GroupName</span> = <span class="string">"group.open.com"</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">let</span> scheme = <span class="string">"testExtension-appextention://"</span></span><br><span class="line">    </span><br><span class="line">	<span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">getShareData</span><span class="params">()</span></span> -&gt; <span class="type">String</span>? &#123;</span><br><span class="line">    	<span class="keyword">let</span> userDefault = <span class="type">NSUserDefaults</span>(suiteName: <span class="type">GroupName</span>)</span><br><span class="line">    	<span class="keyword">return</span> userDefault?.objectForKey(key) <span class="keyword">as</span>? <span class="type">String</span></span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">saveShareData</span><span class="params">(string: String)</span></span> &#123;</span><br><span class="line">    	<span class="keyword">let</span> shareDefault = <span class="type">NSUserDefaults</span>(suiteName: <span class="type">GroupName</span>)</span><br><span class="line">    	shareDefault?.setObject(string, forKey: key)</span><br><span class="line">    	shareDefault?.synchronize()</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>shareData 只是用来存储公共数据 包括3个常量和2个方法:<br>saveShareData 用来把值存到指定 GroupId 的 NSUserDefaults 中<br>getShareData 从指定 GroupId 的 NSUserDefaults 中取值  </p>
+<p>ok Container app 介绍完毕.下一步<br>添加一个 extension 的 Target 名称是 testEExtension</p>
+<h2 id="配置证书"><a href="#配置证书" class="headerlink" title="配置证书"></a>配置证书</h2><p><img src="配置证书.png" alt="配置证书"><br>首先得要在 iTunes Connect 里配置 证书文件的 groupId 例如: group.com.hujiang.demo<br>注意,必须要以 group 开头</p>
+<h2 id="开启-App-Group"><a href="#开启-App-Group" class="headerlink" title="开启 App Group"></a>开启 App Group</h2><p>在Xcode中 分别为container 和 extension 的Target   Target —&gt; Capabilities<br>开启 app group 功能<br>开启好之后 工程里会有 两个entitlements 文件 </p>
+<h2 id="修改info-Plist文件"><a href="#修改info-Plist文件" class="headerlink" title="修改info.Plist文件"></a>修改info.Plist文件</h2><p><img src="plist.png" alt="plist.png"></p>
+<p>####先说明一下这个Plist中 NSExtension下的几个字段</p>
+<ul>
+<li>NSExtensionAttributes 表明是那一种类型的 extension</li>
+<li>NSExtensionPrincipalClass  使用代码时 ViewControlle r的名称 </li>
+<li>NSExtensionMainStoryboard 使用 storyboard storyboard 文件名,默认是MainInterface.</li>
+</ul>
+<p>如果不使用 storyboard 就一定要指定 NSExtensionPrincipalClass<br>删除 NSExtensionMainStoryboard,然后添加 NSExtensionPrincipalClass<br>使用你的新ViewController的名字 </p>
+<hr>
+<p>这里我们不使用 Storyboard 我们用自定义的 TodayViewController 作为主界面.<br>首先删除 NSExtensionMainStoryboard字段 ,添加 NSExtensionPrincipalClass 字段,设置 NSExtensionPrincipalClass 的 value 为 TodayViewController.</p>
+<h2 id="TodayViewController-的实现"><a href="#TodayViewController-的实现" class="headerlink" title="TodayViewController 的实现"></a>TodayViewController 的实现</h2><p>首先在 TodayViewController里添加一个 button</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var button: UIButton!</span><br></pre></td></tr></table></figure>
+<p>然后在 viewDidLoad 里面</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">    button = <span class="type">UIButton</span>(type: .<span class="type">Custom</span>)</span><br><span class="line">    button.frame = <span class="type">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">300</span>, <span class="number">40</span>)</span><br><span class="line">    button.setTitle(<span class="string">"open"</span>, forState: .<span class="type">Normal</span>)</span><br><span class="line">    button.addTarget(<span class="keyword">self</span>, action: <span class="string">"openAction:"</span>, </span><br><span class="line">    forControlEvents: .<span class="type">TouchUpInside</span>)</span><br><span class="line">    view.addSubview(button)</span><br><span class="line">    <span class="keyword">self</span>.preferredContentSize = <span class="type">CGSizeMake</span>(<span class="number">0</span>, <span class="number">300</span>) </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 self.preferredContentSize是控制显示这个 extension 的高度为300</p>
+<p>在viewWillAppear里显示存储的值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewWillAppear</span><span class="params">(animated: Bool)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.viewWillAppear(animated)</span><br><span class="line">    button.setTitle(<span class="type">ShareData</span>.getShareData(), forState: .<span class="type">Normal</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>必须把ShareData 添加到 extension的Target 里面</p>
+ <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">openAction</span><span class="params">(sender: AnyObject?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">let</span> url = <span class="type">NSURL</span>(string: <span class="type">ShareData</span>.scheme + <span class="string">"com.123"</span>)</span><br><span class="line">    <span class="keyword">self</span>.extensionContext?.openURL(url!, completionHandler: <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译运行 你会得到</p>
+<h2 id="一个错误"><a href="#一个错误" class="headerlink" title="一个错误"></a>一个错误</h2><p>&gt;<br>testEExtension[6048:147384] <strong><em> Terminating app due to uncaught exception ‘NSInvalidArgumentException’, reason: ‘</em></strong> setObjectForKey: object cannot be nil (key: <__nsconcreteuuid 0x7f8ca0513420=""> 9DB046F6-C18B-44CC-9148-1860D9C35B8F)’</__nsconcreteuuid></p>
+<h3 id="这个问题只在-swift里才有-解决方法是"><a href="#这个问题只在-swift里才有-解决方法是" class="headerlink" title="这个问题只在 swift里才有, 解决方法是:"></a>这个问题只在 swift里才有, 解决方法是:</h3><ol>
+<li>在extension的 build setting 的Packaging 里的Defines Module 设置为 YES.</li>
+<li>在info.plist 的 NSExtensionPrincipalClass 前加上模块名 testEExtension.<br>然后编译运行 记得选中Extension 的target<br>最后的效果图:<br><img src="result.png" alt="最后的效果图"><br>点击 button 也可以打开 Contaier App .结束!</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>  可以看到, 做一个 extension 还是很简单的 一起动手做一个吧!</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/NotificationCenter.html#//apple_ref/doc/uid/TP40014214-CH11-SW1" target="_blank" rel="external">官方文档</a></li>
+<li><a href="wangzz.github.io/blog/2014/06/23/wwdc2014zhi-app-extensionsxue-xi-bi-ji/">App Extension编程指南 中文版</a></li>
+<li><a href="onevcat.com/2014/08/notification-today-widget/">WWDC2014之App Extensions学习笔记</a></li>
+<li><a href="www.raywenderlich.com/83809/ios-8-today-extension-tutorial">iOS 8 Extensions</a></li>
+<li><a href="onevcat.com/2014/08/notification-today-widget/">WWDC 2014 Session笔记 - iOS 通知中心扩展制作入门</a></li>
+<li><a href="www.cocoachina.com/ios/20140904/9527.html">App Extension编程指南（iOS8/OS X v10.10）：扩展类型–Today</a></li>
+<li><a href="www.raywenderlich.com/83809/ios-8-today-extension-tutorial">iOS 8 Today Extension Tutorial</a></li>
+<li><a href="code.tutsplus.com/tutorials/ios-8-creating-a-today-widget--cms-22379">iOS 8: Creating a Today Widget</a></li>
+<li><a href="www.cocoachina.com/industry/20140522/8514.html">自定义 URL Scheme 完全指南</a></li>
+<li><a href="blog.sina.com.cn/s/blog_407fb5bc01013v6s.html">iOS Framework制作全攻略</a></li>
+<li><a href="http://www.cocoachina.com/ios/20140904/9527.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20140904/9527.html</a></li>
+<li><a href="http://www.toptal.com/ios/ios-8-app-extensions" target="_blank" rel="external">http://www.toptal.com/ios/ios-8-app-extensions</a></li>
+<li><a href="https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" target="_blank" rel="external">https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1</a></li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/03/01/swift-today-extension-practice/" data-title="探索Today Extension的奥秘" data-url="http://yoursite.com/2016/03/01/swift-today-extension-practice/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-01 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	刘小龙 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
