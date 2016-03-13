@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-13T13:23:36.000Z</updated>
+  <updated>2016-03-13T14:18:36.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,17 +16,124 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>iOS技术周刊第3期</title>
+    <link href="http://yoursite.com/2016/03/13/ios-technology-magazine-3/"/>
+    <id>http://yoursite.com/2016/03/13/ios-technology-magazine-3/</id>
+    <published>2016-03-12T16:00:00.000Z</published>
+    <updated>2016-03-13T14:18:36.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本周我们开源了下载模块，还有两位同学贡献了自己的原创文章~&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;开源&quot;&gt;&lt;a href=&quot;#开源&quot; class=&quot;headerlink&quot; title=&quot;开源&quot;&gt;&lt;/a&gt;开源&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;通用下载模块&lt;/a&gt;开源了，基于 NSURLSession 开发，支持多任务、后台下载、断点续传。介绍文章见&lt;a href=&quot;&quot;&gt;这里&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://liuduo.me/2016/03/12/gointocoredata/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;走进 Core Data 的世界&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://firestudio.cn/2016/03/11/take-screenshot-of-eaglview-may-easily-cause-memory-leaks-in-swift/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swift 下 OpenGL 截图容易导致的内存泄露&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/turbolinks/turbolinks-ios&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Basecamp 新出的一个 hybrid 框架&lt;/a&gt; Basecamp 一直都在尝试 hybird 这套开发方式，技术方案选用了 WKWebView，需要 iOS 9 以上，初步看下来是一套很不错的整套方案，期待后续文章专门介绍。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;动画&quot;&gt;&lt;a href=&quot;#动画&quot; class=&quot;headerlink&quot; title=&quot;动画&quot;&gt;&lt;/a&gt;动画&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/scotteg/LayerPlayer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LayerPlayer&lt;/a&gt;，LayerPlayer - Layer Player explores the capabilities of Apple’s Core Animation API&lt;br&gt;一套可以快速熟悉 Core Animation API 的项目，可以调节各种参数，非常适合入门学习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/TencentOpen/GT&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GT&lt;/a&gt; 腾讯开源的一套性能检测工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/johnno1962/injectionforxcode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Injection for Xcode&lt;/a&gt; 结合 &lt;a href=&quot;https://github.com/artsy/eigen/blob/master/Artsy%2FView_Controllers%2FApp_Navigation%2FARTopMenuViewController%2BDeveloperExtras.m&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DeveloperExtras.m&lt;/a&gt;  用就很方便了，每次触发 Injection，然后重新 pop 和 push 当前页，可以不需要编译实现快速代码预览&lt;br&gt;视频可以看&lt;a href=&quot;http://artsy.github.io/blog/2016/03/05/iOS-Code-Injection/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;gitignore 很多时候我们都是参考 &lt;a href=&quot;https://www.gitignore.io/api/xcode%2Cobjective-c%2Cswift&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gitignore.io&lt;/a&gt;, 但具体情况还是需要具体分析，下面两种情况需要增改 gitignore 文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git 库 为 Library 库时，完全可以过滤掉 *.xcworkspace 和 Podfile.lock 文件，参考 &lt;a href=&quot;https://github.com/orta/ORStackView/blob/master/.gitignore&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ORStackView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;git 库 为项目库时，可以考虑忽略 xcshareddata *.xcscmblueprint 等&lt;br&gt;参考开源项目 &lt;a href=&quot;https://github.com/artsy/eigen/blob/master/.gitignore&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;eigen&lt;/a&gt;&lt;br&gt;此外当你的 gitigonre 发生了变化，新增了一些忽略文件的时候，一定要记得使用 &lt;code&gt;git rm --cached&lt;/code&gt; 命令删除 git 库的索引，不然 gitignore 不会生效。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;@import 和 使用 Objective-C++ 生成的 *.mm 的文件不兼容，遇到这种情况暂时只能回退到老的方式，期待后续支持。参考 &lt;a href=&quot;https://github.com/stripe/stripe-ios/issues/220&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/stripe/stripe-ios/issues/220&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本周我们开源了下载模块，还有两位同学贡献了自己的原创文章~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS通用下载管理器-HJMURLDownloader</title>
+    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
+    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
+    <published>2016-03-12T16:00:00.000Z</published>
+    <updated>2016-03-13T14:13:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
+&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
+&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
+&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
+&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>iOS技术周刊第2期</title>
     <link href="http://yoursite.com/2016/03/06/ios-technology-magazine-2/"/>
     <id>http://yoursite.com/2016/03/06/ios-technology-magazine-2/</id>
     <published>2016-03-05T16:00:00.000Z</published>
-    <updated>2016-03-13T13:23:36.000Z</updated>
+    <updated>2016-03-13T13:51:59.000Z</updated>
     
     <content type="html">&lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深度实践 AsyncDisplayKit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/#Examples&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用RAML来构建API文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用RAML来构建API文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/20150811/12985.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UIWebView与JS的深度交互&lt;/a&gt;，禁用获取的HTML文本中自带的 &amp;lt; img &amp;gt; 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。&lt;/li&gt;

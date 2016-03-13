@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS通用下载管理器-HJMURLDownloader | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="iOS通用下载管理器-HJMURLDownloader"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> iOS通用下载管理器-HJMURLDownloader</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见<a href="https://github.com/HujiangTechnology/HJMURLDownloader" target="_blank" rel="external">这里</a>。</p>
+<a id="more"></a>
+<h2 id="为什么造轮子"><a href="#为什么造轮子" class="headerlink" title="为什么造轮子"></a>为什么造轮子</h2><p>在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 <a href="https://github.com/Heikowi/HWIFileDownload" target="_blank" rel="external">HWIFileDownload</a> 和 <a href="https://github.com/thibaultCha/TCBlobDownload" target="_blank" rel="external">TCBlobDownload</a> 这两个不错的项目，基于我们的需求重新搞了一套，</p>
+<p>总结了下，提供了如下特性：</p>
+<ul>
+<li>基于 NSURLSession，支持多任务、后台下载、断点续传</li>
+<li>采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务</li>
+<li>使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目</li>
+<li>处理了较多的异常情况，例如用户手动把后台的 app 杀掉</li>
+</ul>
+<p>说几点开发下载模块时遇到的问题和注意点:</p>
+<ol>
+<li><p>BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。</p>
+</li>
+<li><p>断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 <code>NSURLSessionDownloadTask</code> 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。</p>
+</li>
+<li><p>后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…</p>
+</li>
+<li><p>用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 <code>- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error</code> 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey </p>
+</li>
+<li><p>正确理解 NSURLSession <code>- (void)getTasksWithCompletionHandler:(void (^)(NSArray&lt;NSURLSessionDataTask *&gt; *dataTasks, NSArray&lt;NSURLSessionUploadTask *&gt; *uploadTasks, NSArray&lt;NSURLSessionDownloadTask *&gt; *downloadTasks))completionHandler;</code> 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示</p>
+</li>
+<li><p>处理 <code>- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler</code> 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。</p>
+</li>
+<li><p>当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。</p>
+</li>
+<li><p>NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。</p>
+</li>
+<li><p>判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 <code>- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response</code>, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。</p>
+</li>
+<li><p>采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 <code>NSFetchedResultsController</code>，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。</p>
+</li>
+</ol>
+<p>下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~</p>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/03/13/meeting-common-urldownloader/" data-title="iOS通用下载管理器-HJMURLDownloader" data-url="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-13 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	东子 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>

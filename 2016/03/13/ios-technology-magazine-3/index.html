@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS技术周刊第2期 | 移动开发</title>
+  <title>iOS技术周刊第3期 | 移动开发</title>
   <meta name="author" content="移动开发">
   
   <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="iOS技术周刊第2期"/>
+  <meta property="og:title" content="iOS技术周刊第3期"/>
   <meta property="og:site_name" content="移动开发"/>
 
   
@@ -91,7 +91,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> iOS技术周刊第2期</h1>
+			<h1 class="title title-inverse "> iOS技术周刊第3期</h1>
 		</div>		
 	
 
@@ -111,37 +111,34 @@
 	<div class="mypage">		
 	  		
 
-	  <p>本周重点在性能优化和Hybrid方面，包含<code>AsyncDisplayKit</code>的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。</p>
+	  <p>本周我们开源了下载模块，还有两位同学贡献了自己的原创文章~</p>
 <a id="more"></a>
+<h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><ul>
+<li><a href="https://github.com/HujiangTechnology/HJMURLDownload" target="_blank" rel="external">通用下载模块</a>开源了，基于 NSURLSession 开发，支持多任务、后台下载、断点续传。介绍文章见<a href="">这里</a></li>
+</ul>
 <h2 id="原创"><a href="#原创" class="headerlink" title="原创"></a>原创</h2><ul>
-<li><a href="http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/" target="_blank" rel="external">深度实践 AsyncDisplayKit</a></li>
-<li><a href="http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/" target="_blank" rel="external">用RAML来构建API文档</a></li>
+<li><a href="http://liuduo.me/2016/03/12/gointocoredata/" target="_blank" rel="external">走进 Core Data 的世界</a></li>
+<li><a href="http://firestudio.cn/2016/03/11/take-screenshot-of-eaglview-may-easily-cause-memory-leaks-in-swift/" target="_blank" rel="external">Swift 下 OpenGL 截图容易导致的内存泄露</a></li>
 </ul>
 <h2 id="Hybrid"><a href="#Hybrid" class="headerlink" title="Hybrid"></a>Hybrid</h2><ul>
-<li><a href="http://www.cocoachina.com/ios/20150811/12985.html" target="_blank" rel="external">UIWebView与JS的深度交互</a>，禁用获取的HTML文本中自带的 &lt; img &gt; 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。</li>
-<li><a href="https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3" target="_blank" rel="external">JSPatch 实现原理详解</a></li>
-<li><a href="https://github.com/ele828/react-native-guide#%E5%B7%A5%E5%85%B7" target="_blank" rel="external">React-Native各类学习资源</a>，资料很全面，包含开源app，以及一些工具和组件。</li>
+<li><a href="https://github.com/turbolinks/turbolinks-ios" target="_blank" rel="external">Basecamp 新出的一个 hybrid 框架</a> Basecamp 一直都在尝试 hybird 这套开发方式，技术方案选用了 WKWebView，需要 iOS 9 以上，初步看下来是一套很不错的整套方案，期待后续文章专门介绍。</li>
 </ul>
-<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><ul>
-<li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/#more-41893" target="_blank" rel="external">iOS 保持界面流畅的技巧</a>，很详细的分析了界面卡顿的原因，以及对应的解决方法的研究方向（<em>异步绘制</em>，<em>预排版</em>，<em>预渲染</em>，<em>全局并发控制</em>）和实践，相当不错哦，值得你拥有。</li>
-<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;mid=447105405&amp;idx=1&amp;sn=054dc54289a98e8a39f2b9386f4f620e&amp;scene=23&amp;srcid=0108RhyzhXk9wUwQvnW3cmZT#rd" target="_blank" rel="external">内存恶鬼drawRect - 谈画图功能的内存优化</a></li>
-</ul>
-<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
-<li><a href="http://www.jianshu.com/p/cc756016243b" target="_blank" rel="external">iOS的TCP/IP协议族剖析&amp;&amp;Socket</a>，主要介绍了TCP/IP的工作原理以及Socket的原理和实现细节。</li>
-</ul>
-<h2 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h2><ul>
-<li><a href="http://ciechanowski.me/" target="_blank" rel="external">神奇的Transform</a>，看看我们可以通过transform来做点什么，简直太好玩了，不服来看😏😏</li>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><ul>
+<li><a href="https://github.com/scotteg/LayerPlayer" target="_blank" rel="external">LayerPlayer</a>，LayerPlayer - Layer Player explores the capabilities of Apple’s Core Animation API<br>一套可以快速熟悉 Core Animation API 的项目，可以调节各种参数，非常适合入门学习</li>
 </ul>
 <h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li><a href="https://github.com/apple/swift/tree/master/benchmark" target="_blank" rel="external">Swift基准测试套件</a>，包含基准测试驱动以及显示性能的一些度量，协助开发者创建更快更高效的代码。</li>
-<li><a href="http://blog.cnbluebox.com/blog/2015/03/05/chisel/" target="_blank" rel="external">Chisel-LLDB命令插件，让调试更Easy</a></li>
-<li><a href="http://camsong.github.io/redux-in-chinese/index.html" target="_blank" rel="external">Redux可预测化的状态管理</a></li>
+<li><a href="https://github.com/TencentOpen/GT" target="_blank" rel="external">GT</a> 腾讯开源的一套性能检测工具</li>
+<li><a href="https://github.com/johnno1962/injectionforxcode" target="_blank" rel="external">Injection for Xcode</a> 结合 <a href="https://github.com/artsy/eigen/blob/master/Artsy%2FView_Controllers%2FApp_Navigation%2FARTopMenuViewController%2BDeveloperExtras.m" target="_blank" rel="external">DeveloperExtras.m</a>  用就很方便了，每次触发 Injection，然后重新 pop 和 push 当前页，可以不需要编译实现快速代码预览<br>视频可以看<a href="http://artsy.github.io/blog/2016/03/05/iOS-Code-Injection/" target="_blank" rel="external">这里</a>。</li>
 </ul>
 <h2 id="后花园"><a href="#后花园" class="headerlink" title="后花园"></a>后花园</h2><ul>
-<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=402973995&amp;idx=1&amp;sn=87625ad8a3e3d5b16baa0890d6eedfe8&amp;scene=23&amp;srcid=03050zf9BxGthj6HoRiTCmb3#rd" target="_blank" rel="external">程序员VS武林高手：技术为外功，思维乃内力</a>，真气雄浑，滚滚不可测，吐气如剑，拈花摘叶，老司机今天带你重新认识当代武林高手－程序员。</li>
-<li>大妈喊你还债了，<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=402964742&amp;idx=1&amp;sn=60a657a4eeca714bee80e861406c6443&amp;scene=23&amp;srcid=0305FCtWZQFUXz2Xx4PePzCx#rd" target="_blank" rel="external">年前挖的坑都填了吗？技术债务偿还计划</a>😄😄</li>
-<li><a href="http://www.jianshu.com/p/ff4a34a5a136" target="_blank" rel="external">你不可错过的50部电影清单！（附评分、推荐语）</a></li>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&amp;mid=404242829&amp;idx=1&amp;sn=aacddf1c2c828281e6202eff8cd374f5&amp;scene=1&amp;srcid=0302Q1dT8nUezoEZLZzistUl&amp;key=710a5d99946419d96e1c7481a2d8dae6400769cbc8bc9015cca38f9694d8c1ae46c0ff571ec714de57c149dd6aef6796&amp;ascene=0&amp;uin=Mzg1OTg2NQ%3D%3D" target="_blank" rel="external">并发之痛 Thread，Goroutine，Actor</a></li>
+<li><p>gitignore 很多时候我们都是参考 <a href="https://www.gitignore.io/api/xcode%2Cobjective-c%2Cswift" target="_blank" rel="external">gitignore.io</a>, 但具体情况还是需要具体分析，下面两种情况需要增改 gitignore 文件</p>
+<ul>
+<li>git 库 为 Library 库时，完全可以过滤掉 *.xcworkspace 和 Podfile.lock 文件，参考 <a href="https://github.com/orta/ORStackView/blob/master/.gitignore" target="_blank" rel="external">ORStackView</a></li>
+<li>git 库 为项目库时，可以考虑忽略 xcshareddata *.xcscmblueprint 等<br>参考开源项目 <a href="https://github.com/artsy/eigen/blob/master/.gitignore" target="_blank" rel="external">eigen</a><br>此外当你的 gitigonre 发生了变化，新增了一些忽略文件的时候，一定要记得使用 <code>git rm --cached</code> 命令删除 git 库的索引，不然 gitignore 不会生效。</li>
+</ul>
+</li>
+<li><p>@import 和 使用 Objective-C++ 生成的 *.mm 的文件不兼容，遇到这种情况暂时只能回退到老的方式，期待后续支持。参考 <a href="https://github.com/stripe/stripe-ios/issues/220" target="_blank" rel="external">https://github.com/stripe/stripe-ios/issues/220</a></p>
+</li>
 </ul>
 	  
 	</div>
@@ -177,7 +174,7 @@
   <h2 class="title">评论</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016/03/06/ios-technology-magazine-2/" data-title="iOS技术周刊第2期" data-url="http://yoursite.com/2016/03/06/ios-technology-magazine-2/"></div>  
+  	 <div class="ds-thread" data-thread-key="2016/03/13/ios-technology-magazine-3/" data-title="iOS技术周刊第3期" data-url="http://yoursite.com/2016/03/13/ios-technology-magazine-3/"></div>  
   
 </section>
 
@@ -191,7 +188,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-03-06 
+	2016-03-13 
 	</div>
 	
 
@@ -199,7 +196,7 @@
 	
 	<div class="meta-widget">
 	<i class="fa fa-user"></i>
-	元相 
+	东子 
 	</div>
 	
 
