@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-13T14:18:36.000Z</updated>
+  <updated>2016-03-13T14:29:38.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,19 +20,24 @@
     <link href="http://yoursite.com/2016/03/13/ios-technology-magazine-3/"/>
     <id>http://yoursite.com/2016/03/13/ios-technology-magazine-3/</id>
     <published>2016-03-12T16:00:00.000Z</published>
-    <updated>2016-03-13T14:18:36.000Z</updated>
+    <updated>2016-03-13T14:29:38.000Z</updated>
     
-    <content type="html">&lt;p&gt;本周我们开源了下载模块，还有两位同学贡献了自己的原创文章~&lt;/p&gt;
+    <content type="html">&lt;p&gt;本周重点推荐新开源的通用下载模块，另外&lt;code&gt;本地数据存储&lt;/code&gt;和&lt;code&gt;页面布局&lt;/code&gt;标签有新内容了~&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;开源&quot;&gt;&lt;a href=&quot;#开源&quot; class=&quot;headerlink&quot; title=&quot;开源&quot;&gt;&lt;/a&gt;开源&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;通用下载模块&lt;/a&gt;开源了，基于 NSURLSession 开发，支持多任务、后台下载、断点续传。介绍文章见&lt;a href=&quot;&quot;&gt;这里&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;通用下载模块&lt;/a&gt;开源了，基于 NSURLSession 开发，支持多任务、后台下载、断点续传。介绍文章见&lt;a href=&quot;http://mobilev5.github.io/2016/03/13/meeting-common-urldownloader/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://liuduo.me/2016/03/12/gointocoredata/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;走进 Core Data 的世界&lt;/a&gt;&lt;/li&gt;
+&lt;h2 id=&quot;Swift&quot;&gt;&lt;a href=&quot;#Swift&quot; class=&quot;headerlink&quot; title=&quot;Swift&quot;&gt;&lt;/a&gt;Swift&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://firestudio.cn/2016/03/11/take-screenshot-of-eaglview-may-easily-cause-memory-leaks-in-swift/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swift 下 OpenGL 截图容易导致的内存泄露&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/turbolinks/turbolinks-ios&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Basecamp 新出的一个 hybrid 框架&lt;/a&gt; Basecamp 一直都在尝试 hybird 这套开发方式，技术方案选用了 WKWebView，需要 iOS 9 以上，初步看下来是一套很不错的整套方案，期待后续文章专门介绍。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;页面布局&quot;&gt;&lt;a href=&quot;#页面布局&quot; class=&quot;headerlink&quot; title=&quot;页面布局&quot;&gt;&lt;/a&gt;页面布局&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/654eaf0c63c1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UIStackView介绍&lt;/a&gt;，iOS 9之后增加了新的布局神器UIStackView, 文中介绍了UIStackView的常用属性，并根据相应的demo阐述其在实际生产中的作用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;本地数据存储&quot;&gt;&lt;a href=&quot;#本地数据存储&quot; class=&quot;headerlink&quot; title=&quot;本地数据存储&quot;&gt;&lt;/a&gt;本地数据存储&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://liuduo.me/2016/03/12/gointocoredata/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;走进 Core Data 的世界&lt;/a&gt; ，Core Data作为一个OS X和iOS中自带的数据存储框架，很早就存在了。因其存在一些缺点使得很多人放弃使用而采用其它方案。但苹果依然在每个iOS版本中不断对其改进，例如在iOS 8中加入了BetchUpdate，解决了之前一直令人诟病的批量更新问题，使得Core Data更为强大。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;动画&quot;&gt;&lt;a href=&quot;#动画&quot; class=&quot;headerlink&quot; title=&quot;动画&quot;&gt;&lt;/a&gt;动画&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/scotteg/LayerPlayer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LayerPlayer&lt;/a&gt;，LayerPlayer - Layer Player explores the capabilities of Apple’s Core Animation API&lt;br&gt;一套可以快速熟悉 Core Animation API 的项目，可以调节各种参数，非常适合入门学习&lt;/li&gt;
@@ -55,7 +60,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;本周我们开源了下载模块，还有两位同学贡献了自己的原创文章~&lt;/p&gt;
+      &lt;p&gt;本周重点推荐新开源的通用下载模块，另外&lt;code&gt;本地数据存储&lt;/code&gt;和&lt;code&gt;页面布局&lt;/code&gt;标签有新内容了~&lt;/p&gt;
     
     </summary>
     
