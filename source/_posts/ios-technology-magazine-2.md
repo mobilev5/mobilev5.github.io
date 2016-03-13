@@ -9,9 +9,9 @@ author: 元相
 
 <!--more-->
 
-## 沪江原创
-* [深度实践 AsyncDisplayKit](http://hujiangtechnology.github.io/2016/03/05/asyncdisplaykit-practice/)
-* [用RAML来构建API文档](http://hujiangtechnology.github.io/2016/03/06/using-raml-build-api-doc/#Examples)
+## 原创
+* [深度实践 AsyncDisplayKit](http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/)
+* [用RAML来构建API文档](http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/)
 
 ## Hybrid
 * [UIWebView与JS的深度交互](http://www.cocoachina.com/ios/20150811/12985.html)，禁用获取的HTML文本中自带的 < img > 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。
