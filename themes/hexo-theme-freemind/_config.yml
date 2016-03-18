@@ -6,9 +6,12 @@ inverse: inverse
 menu:
   - title: 周刊
     url: "tags/iOS技术周刊/"
-    intro: "技术周刊"
+    intro: "iOS技术周刊"
     icon: "fa fa-apple"
-
+  - title: 周刊
+    url: "tags/Android技术周刊/"
+    intro: "Android技术周刊"
+    icon: "fa fa-android"
   - title: 归档
     url: archives
     intro: "All the articles."
