@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-20T13:53:05.000Z</updated>
+  <updated>2016-03-20T14:02:44.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2016/03/20/android-technology-magazine-1/"/>
     <id>http://yoursite.com/2016/03/20/android-technology-magazine-1/</id>
     <published>2016-03-19T16:00:00.000Z</published>
-    <updated>2016-03-20T13:53:05.000Z</updated>
+    <updated>2016-03-20T14:02:44.000Z</updated>
     
-    <content type="html">&lt;p&gt;待补充&lt;/p&gt;
+    <content type="html">&lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs，希望更多的伙伴们参与。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;AwesomeSource&quot;&gt;&lt;a href=&quot;#AwesomeSource&quot; class=&quot;headerlink&quot; title=&quot;AwesomeSource&quot;&gt;&lt;/a&gt;AwesomeSource&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/HujiangTechnology/RestVolley&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RestVolley&lt;/a&gt; A http request engine based on Volley and OkHttp, giving up Apache HttpClient request. supports image loading, restful api requesting, and file downloading.&lt;/li&gt;
@@ -75,7 +75,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;待补充&lt;/p&gt;
+      &lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs，希望更多的伙伴们参与。&lt;/p&gt;
     
     </summary>
     
