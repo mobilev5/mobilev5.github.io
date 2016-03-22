@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>现有iOS端图片缓存解决方案 | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="现有iOS端图片缓存解决方案"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 现有iOS端图片缓存解决方案</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>移动App中使用网络图片的情况很常见，如果缓存问题处理不好会很大程度上影响App的性能。本文简单介绍一下图片缓存流程及<code>GitHub</code>上现有解决方案。</p>
+<a id="more"></a>
+<h2 id="一般图片缓存及使用流程"><a href="#一般图片缓存及使用流程" class="headerlink" title="一般图片缓存及使用流程"></a>一般图片缓存及使用流程</h2><p>最简单的缓存方式：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> imgData = <span class="type">NSData</span>(contentsOfURL: <span class="type">NSURL</span>(string: <span class="string">"http://7narze.com1.z0.glb.clouddn.com/1.jpg"</span>)!)</span><br><span class="line">imgData?.writeToFile(<span class="string">"cache patch"</span>, atomically: <span class="literal">true</span>)</span><br><span class="line"><span class="keyword">let</span> img = <span class="type">UIImage</span>(data: imgData!)</span><br><span class="line">imgView.image = img</span><br></pre></td></tr></table></figure>
+<p>很明显，下载图片和缓存图片时有主线程阻塞。那么优化成下面的样子：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dispatch_async(dispatch_get_global_queue(<span class="type">QOS_CLASS_DEFAULT</span>, <span class="number">0</span>)) &#123; () -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">let</span> imgData = <span class="type">NSData</span>(contentsOfURL: <span class="type">NSURL</span>(string: <span class="string">"http://7narze.com1.z0.glb.clouddn.com/1.jpg"</span>)!)</span><br><span class="line">    imgData?.writeToFile(<span class="string">"cache patch"</span>, atomically: <span class="literal">true</span>)</span><br><span class="line">    dispatch_async(dispatch_get_main_queue(), &#123; () -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">        <span class="keyword">let</span> img = <span class="type">UIImage</span>(data: imgData!)</span><br><span class="line">        imgView.image = img</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样是在子线程下载并缓存，性能上会好很多，但很明显这样不够用。</p>
+<h3 id="一般缓存流程"><a href="#一般缓存流程" class="headerlink" title="一般缓存流程"></a>一般缓存流程</h3><p><img src="flow.png" alt="一般流程"></p>
+<p>从上图，可以看出还有很多可优化点</p>
+<pre><code>异步下载
+子线程解压缩
+使用缓存 (内存/磁盘)
+缓存解压缩后的图片
+减少内存级别的拷贝
+良好的接口
+图片预下载
+</code></pre><h2 id="现有解决方案"><a href="#现有解决方案" class="headerlink" title="现有解决方案"></a>现有解决方案</h2><p>好，下面我们简单介绍下目前<code>GitHub</code>上比较流行（star数据大于2000）的图片缓存库。</p>
+<h3 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h3><p>基础流程<br><img src="SDWebImage.png" alt="SDWebImage流程"></p>
+<ul>
+<li>优点<ul>
+<li>健全的Category</li>
+<li><code>SDWebImagePrefetcher</code>预加载</li>
+<li>独立的下载模块/缓存模块</li>
+<li>自定义<code>age</code></li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>因缓存的图片数据已解码，故占用空间变大(这个也算不上缺点)</li>
+<li>没有处理减少内存级别的拷贝和<code>字节对齐</code>(<code>FastImageCache</code>对此有处理)</li>
+<li>图片属于静态资源，没有判断<code>Cache-Control</code>、<code>Last-Modified</code>或<code>ETag</code>(通用库做到这点有些麻烦)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Kingfisher"><a href="#Kingfisher" class="headerlink" title="Kingfisher"></a>Kingfisher</h3><p><code>SDWebImage</code>的<code>Swift</code>版</p>
+<p>流程基本和<code>SDWebImage</code>一致</p>
+<ul>
+<li>优点<ul>
+<li><code>Swift</code>编写</li>
+<li>使用很多最新API</li>
+<li>其他同<code>SDWebImage</code></li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>iOS 8 later</li>
+<li>其他同<code>SDWebImage</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="AFNetworking"><a href="#AFNetworking" class="headerlink" title="AFNetworking"></a>AFNetworking</h3><p>基础流程图<br><img src="AFNetworking.png" alt="AFNetworking流程"></p>
+<ul>
+<li>优点<ul>
+<li>健全的Category</li>
+<li>缓存机制可定制(实现<code>AFImageCache</code>)</li>
+<li>依附<code>AFNetworking</code></li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>功能单一</li>
+<li>缓存仅在内存中(默认实现)</li>
+</ul>
+</li>
+</ul>
+<h3 id="FastImageCache"><a href="#FastImageCache" class="headerlink" title="FastImageCache"></a>FastImageCache</h3><p>无网络缓存功能，但却是<a href="http://blog.cnbang.net/tech/2578/" target="_blank" rel="external">图片加载速度极限优化</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>实际应用中推荐<code>SDWebImage</code>/<code>Kingfisher</code>结合<code>FastImageCache</code>使用。若要考虑HTTP的缓存机制，可以自己继承/实现封装。</p>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/03/22/image-cache-solution/" data-title="现有iOS端图片缓存解决方案" data-url="http://yoursite.com/2016/03/22/image-cache-solution/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-22 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	阿P 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
