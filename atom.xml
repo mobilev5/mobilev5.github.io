@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-22T12:26:59.000Z</updated>
+  <updated>2016-03-22T12:29:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/22/image-cache-solution/"/>
     <id>http://yoursite.com/2016/03/22/image-cache-solution/</id>
     <published>2016-03-21T16:00:00.000Z</published>
-    <updated>2016-03-22T12:26:59.000Z</updated>
+    <updated>2016-03-22T12:29:54.000Z</updated>
     
     <content type="html">&lt;p&gt;移动App中使用网络图片的情况很常见，如果缓存问题处理不好会很大程度上影响App的性能。本文简单介绍一下图片缓存流程及&lt;code&gt;GitHub&lt;/code&gt;上现有解决方案。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -31,14 +31,8 @@
 &lt;p&gt;这样是在子线程下载并缓存，性能上会好很多，但很明显这样不够用。&lt;/p&gt;
 &lt;h3 id=&quot;一般缓存流程&quot;&gt;&lt;a href=&quot;#一般缓存流程&quot; class=&quot;headerlink&quot; title=&quot;一般缓存流程&quot;&gt;&lt;/a&gt;一般缓存流程&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;flow.png&quot; alt=&quot;一般流程&quot;&gt;&lt;/p&gt;
 &lt;p&gt;从上图，可以看出还有很多可优化点&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;异步下载
-子线程解压缩
-使用缓存 (内存/磁盘)
-缓存解压缩后的图片
-减少内存级别的拷贝
-良好的接口
-图片预下载
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;现有解决方案&quot;&gt;&lt;a href=&quot;#现有解决方案&quot; class=&quot;headerlink&quot; title=&quot;现有解决方案&quot;&gt;&lt;/a&gt;现有解决方案&lt;/h2&gt;&lt;p&gt;好，下面我们简单介绍下目前&lt;code&gt;GitHub&lt;/code&gt;上比较流行（star数据大于2000）的图片缓存库。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;异步下载&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;子线程解压缩&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用缓存 (内存/磁盘)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;缓存解压缩后的图片&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;减少内存级别的拷贝&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;良好的接口&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;图片预下载&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;现有解决方案&quot;&gt;&lt;a href=&quot;#现有解决方案&quot; class=&quot;headerlink&quot; title=&quot;现有解决方案&quot;&gt;&lt;/a&gt;现有解决方案&lt;/h2&gt;&lt;p&gt;好，下面我们简单介绍下目前&lt;code&gt;GitHub&lt;/code&gt;上比较流行（star数据大于2000）的图片缓存库。&lt;/p&gt;
 &lt;h3 id=&quot;SDWebImage&quot;&gt;&lt;a href=&quot;#SDWebImage&quot; class=&quot;headerlink&quot; title=&quot;SDWebImage&quot;&gt;&lt;/a&gt;SDWebImage&lt;/h3&gt;&lt;p&gt;基础流程&lt;br&gt;&lt;img src=&quot;SDWebImage.png&quot; alt=&quot;SDWebImage流程&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;优点&lt;ul&gt;

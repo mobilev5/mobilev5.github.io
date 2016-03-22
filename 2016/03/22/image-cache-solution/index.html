@@ -126,14 +126,8 @@
 <p>这样是在子线程下载并缓存，性能上会好很多，但很明显这样不够用。</p>
 <h3 id="一般缓存流程"><a href="#一般缓存流程" class="headerlink" title="一般缓存流程"></a>一般缓存流程</h3><p><img src="flow.png" alt="一般流程"></p>
 <p>从上图，可以看出还有很多可优化点</p>
-<pre><code>异步下载
-子线程解压缩
-使用缓存 (内存/磁盘)
-缓存解压缩后的图片
-减少内存级别的拷贝
-良好的接口
-图片预下载
-</code></pre><h2 id="现有解决方案"><a href="#现有解决方案" class="headerlink" title="现有解决方案"></a>现有解决方案</h2><p>好，下面我们简单介绍下目前<code>GitHub</code>上比较流行（star数据大于2000）的图片缓存库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">异步下载</span><br><span class="line">子线程解压缩</span><br><span class="line">使用缓存 (内存/磁盘)</span><br><span class="line">缓存解压缩后的图片</span><br><span class="line">减少内存级别的拷贝</span><br><span class="line">良好的接口</span><br><span class="line">图片预下载</span><br></pre></td></tr></table></figure>
+<h2 id="现有解决方案"><a href="#现有解决方案" class="headerlink" title="现有解决方案"></a>现有解决方案</h2><p>好，下面我们简单介绍下目前<code>GitHub</code>上比较流行（star数据大于2000）的图片缓存库。</p>
 <h3 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h3><p>基础流程<br><img src="SDWebImage.png" alt="SDWebImage流程"></p>
 <ul>
 <li>优点<ul>
