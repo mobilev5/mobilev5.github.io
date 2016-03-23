@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-22T12:29:54.000Z</updated>
+  <updated>2016-03-23T10:15:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS微信浏览器直接打开App的解决方案</title>
+    <link href="http://yoursite.com/2016/03/23/wexin-open-app/"/>
+    <id>http://yoursite.com/2016/03/23/wexin-open-app/</id>
+    <published>2016-03-22T16:00:00.000Z</published>
+    <updated>2016-03-23T10:15:31.000Z</updated>
+    
+    <content type="html">&lt;p&gt;微信浏览器默认屏蔽了App的Scheme跳转，我们无法直接从微信中跳转至App中。但神奇的是市面上有两类App可以正常跳转。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;大众点评，小红书，BiliBili，京东等&lt;/li&gt;
+&lt;li&gt;豆瓣等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第一类，这些是腾讯入股的，应该有白名单一说，让腾讯给你100万，或许你就能获得这个能力。&lt;/p&gt;
+&lt;p&gt;第二类，查看豆瓣页面在微信中跳转的地址：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https://www.douban.com/doubanapp/dispatch?uri=/movie/5327268&amp;amp;from=mdouban&amp;amp;page=movie&amp;amp;model=B&amp;amp;copy=1&amp;amp;channel=card_movie&amp;amp;download=1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而不是我们看到的自定义scheme，原因只有一个，它就是 &lt;code&gt;Universal Links&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;配置 Universal Links 可参看&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;苹果文档&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;第二类解决方案有几个注意点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Universal Links 可以由系统来做选择，在短信或其他应用中，常按选择打开方式，若选择Safari打开，则后续的跳转会默认跳Safari&lt;/li&gt;
+&lt;li&gt;Universal Links只在iOS 9及以上系统支持&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;App Search API Validation Tool， &lt;a href=&quot;https://search.developer.apple.com/appsearch-validation-tool/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://search.developer.apple.com/appsearch-validation-tool/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;配置Universal Links，可参看&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;苹果文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;微信浏览器默认屏蔽了App的Scheme跳转，我们无法直接从微信中跳转至App中。但神奇的是市面上有两类App可以正常跳转。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="疑难杂症" scheme="http://yoursite.com/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+  </entry>
   
   <entry>
     <title>现有iOS端图片缓存解决方案</title>
@@ -96,6 +139,52 @@
   </entry>
   
   <entry>
+    <title>iOS技术周刊第4期</title>
+    <link href="http://yoursite.com/2016/03/20/ios-technology-magazine-4/"/>
+    <id>http://yoursite.com/2016/03/20/ios-technology-magazine-4/</id>
+    <published>2016-03-19T16:00:00.000Z</published>
+    <updated>2016-03-20T11:20:29.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/17/wkwebview-study-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView（入门篇）&lt;/a&gt; WkWebView是IOS8中引入的新组件，苹果将UIWebViewDelegate 与 UIWebView 重构成了 14 个类和 3 个协议并引入了不少新的功能和接口。由于一直以来苹果对于WebView内核封锁的程度是令人发指的，WkWebView的引入无疑是另广大开发者兴奋的事。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.makeex.com/2016/03/16/objc-context-design-pattern/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ObjC 基于上下文的设计&lt;/a&gt; 本篇文章主要介绍了关于上下文（Context）的一些概念，并提出了在设计上下文时应该考虑到的问题，最后通过一个实例来演示如何用Objective-C实现一个上下文。相信通过阅读本篇文章，大家能够基本掌握软件设计中上下文的使用，并且，我相信，想象力如此丰富的你们，会将此推演到更高的境界。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;页面布局&quot;&gt;&lt;a href=&quot;#页面布局&quot; class=&quot;headerlink&quot; title=&quot;页面布局&quot;&gt;&lt;/a&gt;页面布局&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gsdios/SDAutoLayout&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SDAutoLayout&lt;/a&gt; 一行代码搞定自动布局！支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/s4cha/Stevia&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stevia&lt;/a&gt; 一个把Auto Layout封装得很不错的库，写法很小清新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react-native/blob/9069bdf1c2e4ffd78b634d015b32dfec2cd3a371/React/Profiler/RCTFPSGraph.m&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native监测界面流畅度&lt;/a&gt; React Native中监测界面流畅度（FPS）的代码要比GT的中好很多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;音视频&quot;&gt;&lt;a href=&quot;#音视频&quot; class=&quot;headerlink&quot; title=&quot;音视频&quot;&gt;&lt;/a&gt;音视频&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangdan.qiniudn.com/qiniu2.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浅析视频内容加密技术&lt;/a&gt; 七牛的一个PPT，介绍了视频内容加密技术。 &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pili-engineering/PLPlayerKit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PLPlayerKit&lt;/a&gt; PLPlayerKit 是一个适用于 iOS 的音视频播放器 SDK，可高度定制化和二次开发，特色是支持 RTMP 和 HLS 直播流媒体播放。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://checkmate.gissen.nl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Checkmate MP3 Checker&lt;/a&gt; 可以方便的查看MP3文件的信息，并且检查错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mwlio.github.io/2016/03/19/wwdc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WWDC攻略&lt;/a&gt; 今年的WWDC抢票快要来了，大家准备好了吗？不用担心，攻略在手，出行无忧。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android技术周刊第1期</title>
     <link href="http://yoursite.com/2016/03/20/android-technology-magazine-1/"/>
     <id>http://yoursite.com/2016/03/20/android-technology-magazine-1/</id>
@@ -163,52 +252,6 @@
     
     
       <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS技术周刊第4期</title>
-    <link href="http://yoursite.com/2016/03/20/ios-technology-magazine-4/"/>
-    <id>http://yoursite.com/2016/03/20/ios-technology-magazine-4/</id>
-    <published>2016-03-19T16:00:00.000Z</published>
-    <updated>2016-03-20T11:20:29.000Z</updated>
-    
-    <content type="html">&lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/17/wkwebview-study-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView（入门篇）&lt;/a&gt; WkWebView是IOS8中引入的新组件，苹果将UIWebViewDelegate 与 UIWebView 重构成了 14 个类和 3 个协议并引入了不少新的功能和接口。由于一直以来苹果对于WebView内核封锁的程度是令人发指的，WkWebView的引入无疑是另广大开发者兴奋的事。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.makeex.com/2016/03/16/objc-context-design-pattern/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ObjC 基于上下文的设计&lt;/a&gt; 本篇文章主要介绍了关于上下文（Context）的一些概念，并提出了在设计上下文时应该考虑到的问题，最后通过一个实例来演示如何用Objective-C实现一个上下文。相信通过阅读本篇文章，大家能够基本掌握软件设计中上下文的使用，并且，我相信，想象力如此丰富的你们，会将此推演到更高的境界。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;页面布局&quot;&gt;&lt;a href=&quot;#页面布局&quot; class=&quot;headerlink&quot; title=&quot;页面布局&quot;&gt;&lt;/a&gt;页面布局&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/gsdios/SDAutoLayout&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SDAutoLayout&lt;/a&gt; 一行代码搞定自动布局！支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/s4cha/Stevia&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stevia&lt;/a&gt; 一个把Auto Layout封装得很不错的库，写法很小清新。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react-native/blob/9069bdf1c2e4ffd78b634d015b32dfec2cd3a371/React/Profiler/RCTFPSGraph.m&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native监测界面流畅度&lt;/a&gt; React Native中监测界面流畅度（FPS）的代码要比GT的中好很多。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;音视频&quot;&gt;&lt;a href=&quot;#音视频&quot; class=&quot;headerlink&quot; title=&quot;音视频&quot;&gt;&lt;/a&gt;音视频&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangdan.qiniudn.com/qiniu2.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浅析视频内容加密技术&lt;/a&gt; 七牛的一个PPT，介绍了视频内容加密技术。 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/pili-engineering/PLPlayerKit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PLPlayerKit&lt;/a&gt; PLPlayerKit 是一个适用于 iOS 的音视频播放器 SDK，可高度定制化和二次开发，特色是支持 RTMP 和 HLS 直播流媒体播放。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://checkmate.gissen.nl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Checkmate MP3 Checker&lt;/a&gt; 可以方便的查看MP3文件的信息，并且检查错误。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mwlio.github.io/2016/03/19/wwdc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WWDC攻略&lt;/a&gt; 今年的WWDC抢票快要来了，大家准备好了吗？不用担心，攻略在手，出行无忧。&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
@@ -404,6 +447,60 @@
   </entry>
   
   <entry>
+    <title>iOS技术周刊第2期</title>
+    <link href="http://yoursite.com/2016/03/06/ios-technology-magazine-2/"/>
+    <id>http://yoursite.com/2016/03/06/ios-technology-magazine-2/</id>
+    <published>2016-03-05T16:00:00.000Z</published>
+    <updated>2016-03-13T13:51:59.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深度实践 AsyncDisplayKit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用RAML来构建API文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/20150811/12985.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UIWebView与JS的深度交互&lt;/a&gt;，禁用获取的HTML文本中自带的 &amp;lt; img &amp;gt; 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSPatch 实现原理详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ele828/react-native-guide#%E5%B7%A5%E5%85%B7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React-Native各类学习资源&lt;/a&gt;，资料很全面，包含开源app，以及一些工具和组件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/#more-41893&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 保持界面流畅的技巧&lt;/a&gt;，很详细的分析了界面卡顿的原因，以及对应的解决方法的研究方向（&lt;em&gt;异步绘制&lt;/em&gt;，&lt;em&gt;预排版&lt;/em&gt;，&lt;em&gt;预渲染&lt;/em&gt;，&lt;em&gt;全局并发控制&lt;/em&gt;）和实践，相当不错哦，值得你拥有。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;amp;mid=447105405&amp;amp;idx=1&amp;amp;sn=054dc54289a98e8a39f2b9386f4f620e&amp;amp;scene=23&amp;amp;srcid=0108RhyzhXk9wUwQvnW3cmZT#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内存恶鬼drawRect - 谈画图功能的内存优化&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;网络&quot;&gt;&lt;a href=&quot;#网络&quot; class=&quot;headerlink&quot; title=&quot;网络&quot;&gt;&lt;/a&gt;网络&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/cc756016243b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS的TCP/IP协议族剖析&amp;amp;&amp;amp;Socket&lt;/a&gt;，主要介绍了TCP/IP的工作原理以及Socket的原理和实现细节。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;绘图&quot;&gt;&lt;a href=&quot;#绘图&quot; class=&quot;headerlink&quot; title=&quot;绘图&quot;&gt;&lt;/a&gt;绘图&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ciechanowski.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;神奇的Transform&lt;/a&gt;，看看我们可以通过transform来做点什么，简直太好玩了，不服来看😏😏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apple/swift/tree/master/benchmark&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swift基准测试套件&lt;/a&gt;，包含基准测试驱动以及显示性能的一些度量，协助开发者创建更快更高效的代码。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.cnbluebox.com/blog/2015/03/05/chisel/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chisel-LLDB命令插件，让调试更Easy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://camsong.github.io/redux-in-chinese/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Redux可预测化的状态管理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402973995&amp;amp;idx=1&amp;amp;sn=87625ad8a3e3d5b16baa0890d6eedfe8&amp;amp;scene=23&amp;amp;srcid=03050zf9BxGthj6HoRiTCmb3#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员VS武林高手：技术为外功，思维乃内力&lt;/a&gt;，真气雄浑，滚滚不可测，吐气如剑，拈花摘叶，老司机今天带你重新认识当代武林高手－程序员。&lt;/li&gt;
+&lt;li&gt;大妈喊你还债了，&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402964742&amp;amp;idx=1&amp;amp;sn=60a657a4eeca714bee80e861406c6443&amp;amp;scene=23&amp;amp;srcid=0305FCtWZQFUXz2Xx4PePzCx#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;年前挖的坑都填了吗？技术债务偿还计划&lt;/a&gt;😄😄&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/ff4a34a5a136&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你不可错过的50部电影清单！（附评分、推荐语）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&amp;amp;mid=404242829&amp;amp;idx=1&amp;amp;sn=aacddf1c2c828281e6202eff8cd374f5&amp;amp;scene=1&amp;amp;srcid=0302Q1dT8nUezoEZLZzistUl&amp;amp;key=710a5d99946419d96e1c7481a2d8dae6400769cbc8bc9015cca38f9694d8c1ae46c0ff571ec714de57c149dd6aef6796&amp;amp;ascene=0&amp;amp;uin=Mzg1OTg2NQ%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;并发之痛 Thread，Goroutine，Actor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用RAML构建API文档</title>
     <link href="http://yoursite.com/2016/03/06/using-raml-build-api-doc/"/>
     <id>http://yoursite.com/2016/03/06/using-raml-build-api-doc/</id>
@@ -471,60 +568,6 @@
     
     
       <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS技术周刊第2期</title>
-    <link href="http://yoursite.com/2016/03/06/ios-technology-magazine-2/"/>
-    <id>http://yoursite.com/2016/03/06/ios-technology-magazine-2/</id>
-    <published>2016-03-05T16:00:00.000Z</published>
-    <updated>2016-03-13T13:51:59.000Z</updated>
-    
-    <content type="html">&lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深度实践 AsyncDisplayKit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用RAML来构建API文档&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/20150811/12985.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UIWebView与JS的深度交互&lt;/a&gt;，禁用获取的HTML文本中自带的 &amp;lt; img &amp;gt; 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSPatch 实现原理详解&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ele828/react-native-guide#%E5%B7%A5%E5%85%B7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React-Native各类学习资源&lt;/a&gt;，资料很全面，包含开源app，以及一些工具和组件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/#more-41893&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 保持界面流畅的技巧&lt;/a&gt;，很详细的分析了界面卡顿的原因，以及对应的解决方法的研究方向（&lt;em&gt;异步绘制&lt;/em&gt;，&lt;em&gt;预排版&lt;/em&gt;，&lt;em&gt;预渲染&lt;/em&gt;，&lt;em&gt;全局并发控制&lt;/em&gt;）和实践，相当不错哦，值得你拥有。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;amp;mid=447105405&amp;amp;idx=1&amp;amp;sn=054dc54289a98e8a39f2b9386f4f620e&amp;amp;scene=23&amp;amp;srcid=0108RhyzhXk9wUwQvnW3cmZT#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内存恶鬼drawRect - 谈画图功能的内存优化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;网络&quot;&gt;&lt;a href=&quot;#网络&quot; class=&quot;headerlink&quot; title=&quot;网络&quot;&gt;&lt;/a&gt;网络&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/cc756016243b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS的TCP/IP协议族剖析&amp;amp;&amp;amp;Socket&lt;/a&gt;，主要介绍了TCP/IP的工作原理以及Socket的原理和实现细节。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;绘图&quot;&gt;&lt;a href=&quot;#绘图&quot; class=&quot;headerlink&quot; title=&quot;绘图&quot;&gt;&lt;/a&gt;绘图&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ciechanowski.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;神奇的Transform&lt;/a&gt;，看看我们可以通过transform来做点什么，简直太好玩了，不服来看😏😏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apple/swift/tree/master/benchmark&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swift基准测试套件&lt;/a&gt;，包含基准测试驱动以及显示性能的一些度量，协助开发者创建更快更高效的代码。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.cnbluebox.com/blog/2015/03/05/chisel/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chisel-LLDB命令插件，让调试更Easy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://camsong.github.io/redux-in-chinese/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Redux可预测化的状态管理&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402973995&amp;amp;idx=1&amp;amp;sn=87625ad8a3e3d5b16baa0890d6eedfe8&amp;amp;scene=23&amp;amp;srcid=03050zf9BxGthj6HoRiTCmb3#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员VS武林高手：技术为外功，思维乃内力&lt;/a&gt;，真气雄浑，滚滚不可测，吐气如剑，拈花摘叶，老司机今天带你重新认识当代武林高手－程序员。&lt;/li&gt;
-&lt;li&gt;大妈喊你还债了，&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402964742&amp;amp;idx=1&amp;amp;sn=60a657a4eeca714bee80e861406c6443&amp;amp;scene=23&amp;amp;srcid=0305FCtWZQFUXz2Xx4PePzCx#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;年前挖的坑都填了吗？技术债务偿还计划&lt;/a&gt;😄😄&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/ff4a34a5a136&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你不可错过的50部电影清单！（附评分、推荐语）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&amp;amp;mid=404242829&amp;amp;idx=1&amp;amp;sn=aacddf1c2c828281e6202eff8cd374f5&amp;amp;scene=1&amp;amp;srcid=0302Q1dT8nUezoEZLZzistUl&amp;amp;key=710a5d99946419d96e1c7481a2d8dae6400769cbc8bc9015cca38f9694d8c1ae46c0ff571ec714de57c149dd6aef6796&amp;amp;ascene=0&amp;amp;uin=Mzg1OTg2NQ%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;并发之痛 Thread，Goroutine，Actor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
