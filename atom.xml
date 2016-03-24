@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-24T12:10:03.000Z</updated>
+  <updated>2016-03-24T12:12:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2016/03/24/crack-share/"/>
     <id>http://yoursite.com/2016/03/24/crack-share/</id>
     <published>2016-03-23T16:00:00.000Z</published>
-    <updated>2016-03-24T12:10:03.000Z</updated>
+    <updated>2016-03-24T12:12:13.000Z</updated>
     
-    <content type="html">&lt;p&gt;逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
+    <content type="html">&lt;p&gt;逆向工程一般说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;对Windows平台的研究可以追溯到win32时代，因此目前发展比较成熟，而且拥有大量的工具和插件，比较有名的工具如ollydbg和ida pro。魔高一尺道高一丈,在逆向研究发展的火热的同时对软件的保护的研究也迅速发展起来。目前Windows下的收费软件大多数都有一定的保护措施如加壳，对逆向的研究增加了一些难度。&lt;/li&gt;
@@ -76,7 +76,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
+      &lt;p&gt;逆向工程一般说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
     
     </summary>
     
