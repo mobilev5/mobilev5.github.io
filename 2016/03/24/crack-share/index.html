@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>逆向工程实战分享 | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="逆向工程实战分享"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 逆向工程实战分享</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在windows, ardroid,mac和ios这几个平台，各平台的发展也参差不齐。</p>
+<a id="more"></a>
+<ul>
+<li>对windows平台的研究可以追溯到win32时代，因此目前发展比较成熟，而且拥有大量的工具和插件，比较有名的工具如ollydbg和ida pro。魔高一尺道高一丈,在逆向研究发展的火热的同时对软件的保护的研究也迅速发展起来。目前windows下的收费软件大多数都有一定的保护措施如加壳，对逆向的研究增加了一些难度。</li>
+<li>android是一个后兴起的平台，由于拥有大量的用户，所以对android的逆向也很成熟。android app 逆向后是一种高层次的汇编语言，也有一些工具可将之转换为更高级的java语言，虽然有部分代码混淆，但是可以很方便的注入代码，因此逆向相对容易一些。android逆向一般要经过反编译，dex转换，代码修改，重新打包，重新签名，运行调试这几个过程。</li>
+<li>mac平台用的人更少，对之研究相对少些，不过windows平台的技术可以借鉴，只不过逆向的工具或插件比较少，好在这个平台的大多数软件都没有壳，难度系数一般。</li>
+<li>iOS未接触, 但感觉跟Mac平台的逆向差不多</li>
+</ul>
+<h2 id="开始真正的逆向之前先逆向一个简单的程序"><a href="#开始真正的逆向之前先逆向一个简单的程序" class="headerlink" title="开始真正的逆向之前先逆向一个简单的程序"></a>开始真正的逆向之前先逆向一个简单的程序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// return a &gt; b ? a : b;</span></span><br><span class="line">	<span class="keyword">if</span> (a &gt; b)</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = max(<span class="number">56</span>, <span class="number">32</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Result: "</span> &lt;&lt; result;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>未优化编译并逆向后的主要代码如下（在右侧增加了一些注释）:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">__Z3maxii:        // max(int, int)    ; have 8B on stack or two vars</span><br><span class="line">00000001000010d0         push       rbp         ; XREF=0x1000000d0, _main+25</span><br><span class="line">00000001000010d1         mov        rbp, rsp</span><br><span class="line">00000001000010d4         mov        dword [ss:rbp+var_8], edi ; assign first var</span><br><span class="line">00000001000010d7         mov        dword [ss:rbp+var_C], esi ; assign second var</span><br><span class="line">00000001000010da         mov        esi, dword [ss:rbp+var_8] ; stack: rbp, rsi</span><br><span class="line">00000001000010dd         cmp        esi, dword [ss:rbp+var_C]</span><br><span class="line">00000001000010e0         jle        0x1000010f1 ; &gt;=</span><br><span class="line"></span><br><span class="line">00000001000010e6         mov        eax, dword [ss:rbp+var_8]</span><br><span class="line">00000001000010e9         mov        dword [ss:rbp+var_4], eax</span><br><span class="line">00000001000010ec         jmp        0x1000010f7</span><br><span class="line"></span><br><span class="line">00000001000010f1         mov        eax, dword [ss:rbp+var_C] ; XREF=__Z3maxii+16</span><br><span class="line">00000001000010f4         mov        dword [ss:rbp+var_4], eax</span><br><span class="line"></span><br><span class="line">00000001000010f7         mov        eax, dword [ss:rbp+var_4] ; XREF=__Z3maxii+28</span><br><span class="line">00000001000010fa         pop        rbp</span><br><span class="line">00000001000010fb         ret</span><br><span class="line"></span><br><span class="line">_main:</span><br><span class="line">0000000100001100         push       rbp</span><br><span class="line">0000000100001101         mov        rbp, rsp</span><br><span class="line">0000000100001104         sub        rsp, 0x10   ; alloc some memory on stack</span><br><span class="line">0000000100001108         mov        edi, 0x38   ; argument #1 for method __Z3maxii</span><br><span class="line">000000010000110d         mov        esi, 0x20   ; argument #2 for method __Z3maxii</span><br><span class="line">0000000100001112         mov        dword [ss:rbp+var_4], 0x0 ; init a var with 0</span><br><span class="line">0000000100001119         call       __Z3maxii   ; max(int, int) ; result assigned to eax</span><br><span class="line">000000010000111e         mov        rdi, qword [ds:imp___got___ZNSt3__14coutE] ; load object(cout) address</span><br><span class="line">0000000100001125         lea        rsi, qword [ds:0x100001f3c]  ; &quot;Result: &quot;</span><br><span class="line">000000010000112c         mov        dword [ss:rbp+var_8], eax ; max result assign to 2th var</span><br><span class="line">000000010000112f         call       imp___stubs___ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc ; std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt; &gt;&amp; std::__1::operator&lt;&lt; &lt;std::__1::char_traits&lt;char&gt; &gt;(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt; &gt;&amp;, char const*)</span><br><span class="line">0000000100001134         mov        esi, dword [ss:rbp+var_8]</span><br><span class="line">0000000100001137         mov        rdi, rax ; eax != rdi, cout object has changed </span><br><span class="line">000000010000113a         call       imp___stubs___ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEi ; std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt; &gt;::operator&lt;&lt;(int)</span><br><span class="line">000000010000113f         xor        esi, esi ; reset</span><br><span class="line">0000000100001141         mov        qword [ss:rbp+var_10], rax ; assign result(output stream) to  last var</span><br><span class="line">0000000100001145         mov        eax, esi</span><br><span class="line">0000000100001147         add        rsp, 0x10 ; balance stack</span><br><span class="line">000000010000114b         pop        rbp       ; restore rbp</span><br><span class="line">000000010000114c         ret</span><br></pre></td></tr></table></figure>
+<p>理解上面的代码需要注意一些调用规定，上面的代码使用的fastcall调用约定</p>
+<ul>
+<li>调用约定<ul>
+<li>stdcall 参数从右向左压入堆栈；函数自身平衡堆栈；</li>
+<li>cdecl 参数首先由有向左压入堆栈；调用者负责平衡堆栈</li>
+<li>fastcall 使用寄存器传递参数        </li>
+</ul>
+</li>
+</ul>
+<h2 id="实战Reveal-Download-from-offical-website"><a href="#实战Reveal-Download-from-offical-website" class="headerlink" title="实战Reveal Download from offical website"></a>实战Reveal <a href="http://revealapp.com/download/" target="_blank" rel="external">Download from offical website</a></h2><p>本次破解使用的reveal版本是1.6.3(5790)，也是目前的最新版。由于编写一个注册机的难度较高，本次破解只是针对打补丁的方式，想挑战的话可以尝试编写一个注册机。</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>工欲善其事，必先利其器，mac下的破解工具主要有俩个，一个是hopper，另外一个是ida pro。本次破解使用hopper，这个软件更容易上手，注意需要装额外的调试工具，也可从官网下载到。</p>
+<h3 id="破解流程"><a href="#破解流程" class="headerlink" title="破解流程"></a>破解流程</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
+<li>直接打开Reveal, 复制提示的字符串<code>Your free trial of Reveal has expire</code>，也可能是其它的，取决于你的reveal是否过期</li>
+<li>使用Hopper加载Reveal</li>
+<li>搜索前面复制的字符串<code>Your free trial of Reveal has expire</code>，跳到引用该字符串的地方，这时会跳到<code>[IBATrialModeReminderWindowController trialExpiresTitle]</code>·函数中间的某个地方，查找函数调用的对照，只要在根源处注释掉即可达到破解的目的</li>
+<li>继续查找引用或调用这个函数·trialExpiresTitle·的地方，没有找到。换个思路，搜索字符串<code>IBATrialModeReminderWindowController</code>，这是会调到<code>[IBATrialModeReminderWindowController controller]</code>函数里面</li>
+<li>继续向上查找调用该函数<code>[IBATrialModeReminderWindowController controller]</code>的地方，会跟进这个函数<code>[IBATrialModeReminderPresenter showTrialModeSheetForWindow:]</code></li>
+<li>继续向上查找，会进入<code>[IBATrialModeReminderPresenter presentTrialModeReminderIfNecessaryForWindow:]</code>·这个函数，观察如下的代码，已经定位到我们想要的地方</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">000000010007f306         mov        r14, rax</span><br><span class="line">000000010007f309         mov        rsi, qword [ds:0x1001b3150]                 ; @selector(shouldShowTrialModeSheet), argument &quot;selector&quot; for method imp___got__objc_msgSend</span><br><span class="line">000000010007f310         mov        rdi, rbx</span><br><span class="line">000000010007f313         call       qword [ds:imp___got__objc_msgSend]</span><br><span class="line">000000010007f319         test       al, al</span><br><span class="line">000000010007f31b         je         0x10007f330</span><br><span class="line"></span><br><span class="line">000000010007f31d         mov        rsi, qword [ds:0x1001b3158]                 ; @selector(showTrialModeSheetForWindow:), argument &quot;selector&quot; for method imp___got__objc_msgSend</span><br><span class="line">000000010007f324         mov        rdi, rbx                                    ; argument &quot;instance&quot; for method imp___got__objc_msgSend</span><br><span class="line">000000010007f327         mov        rdx, r14</span><br><span class="line">000000010007f32a         call       qword [ds:imp___got__objc_msgSend]</span><br><span class="line"></span><br><span class="line">000000010007f330         mov        rdi, r14                                    ; argument &quot;instance&quot; for method imp___got__objc_release, XREF=-[IBATrialModeReminderPresenter presentTrialModeReminderIfNecessaryForWindow:]+40</span><br><span class="line">000000010007f333         pop        rbx</span><br><span class="line">000000010007f334         pop        r14</span><br><span class="line">000000010007f336         pop        rbp</span><br><span class="line">000000010007f337         jmp        qword [ds:imp___got__objc_release]</span><br></pre></td></tr></table></figure>
+<ol>
+<li>注意地址000000010007f31b处的代码<code>je 0x10007f330</code>，如果不跳转回执行下面的代码就会显示提示对话框，因此把条件取反，或者无条件跳转改成<code>jmp je 0x10007f330</code>即可</li>
+</ol>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>如果觉得上面步骤繁琐的话，其实还有更简单的方法，按照一般的编程思维，一般都会写一个shouldShow…的方法来显示提示对话框，所以直接搜索字符串·shouldShow·，调到这个函数<code>[IBATrialModeReminderPresenter shouldShowTrialModeSheet]</code>，这个函数的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-[IBATrialModeReminderPresenter shouldShowTrialModeSheet]:</span><br><span class="line">000000010007fde3         push       rbp                                         ; Objective C Implementation defined at 0x10018dc40 (instance)</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">000000010007fdf1         mov        r15, rdi</span><br><span class="line">000000010007fdf4         call       sub_10007e91a</span><br><span class="line">000000010007fdf9         test       al, al</span><br><span class="line">000000010007fdfb         jne        0x10007fe06</span><br><span class="line"></span><br><span class="line">000000010007fdfd         call       sub_10007e95e</span><br><span class="line">000000010007fe02         test       al, al</span><br><span class="line">000000010007fe04         je         0x10007fe1a</span><br><span class="line"></span><br><span class="line">000000010007fe06         xor        ebx, ebx                                    ; XREF=-[IBATrialModeReminderPresenter shouldShowTrialModeSheet]+24</span><br><span class="line"></span><br><span class="line">000000010007fe08         movzx      eax, bl </span><br><span class="line">...</span><br><span class="line">...                                    </span><br><span class="line">000000010007fe19         ret</span><br></pre></td></tr></table></figure>
+<p>觉得汇编不好理解不直观的话,可以来点黑科技，看自动生成的高级语言代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> -[IBATrialModeReminderPresenter shouldShowTrialModeSheet](<span class="keyword">void</span> * self, <span class="keyword">void</span> * _cmd) &#123;</span><br><span class="line">    r15 = self;</span><br><span class="line">    <span class="keyword">if</span> ((sub_10007e91a() != <span class="number">0x0</span>) &amp;&amp; (sub_10007e95e() == <span class="number">0x0</span>)) &#123;</span><br><span class="line">            r14 = [[NSDate date] retain];</span><br><span class="line">            r13 = [[[r15 <span class="keyword">class</span>] lastPresentationDateTime] retain];</span><br><span class="line">            [r13 release];</span><br><span class="line">            rbx = <span class="number">0x1</span>;</span><br><span class="line">            <span class="keyword">if</span> (r13 != <span class="number">0x0</span>) &#123;</span><br><span class="line">                    [r14 timeIntervalSinceReferenceDate];</span><br><span class="line">                    var_30 = intrinsic_movsd(var_30, xmm0);</span><br><span class="line">							...</span><br><span class="line">							...</span><br><span class="line">                    COND = xmm1 &gt; <span class="number">0x0</span>;</span><br><span class="line">                    rbx = COND ? <span class="number">0x1</span> : <span class="number">0x0</span>;</span><br><span class="line">                    [r13 release];</span><br><span class="line">            &#125;</span><br><span class="line">            [r14 release];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">            rbx = <span class="number">0x0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    rax = rbx &amp; <span class="number">0xff</span>;</span><br><span class="line">    <span class="keyword">return</span> rax;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>仔细分析代码，发现两处关键代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">000000010007fdfb         jne        0x10007fe06</span><br><span class="line">000000010007fe04         je         0x10007fe1a</span><br></pre></td></tr></table></figure>
+<p>所以只需要把000000010007fdfb地址处的代码改为<code>jmp 0x10007fe1a</code>即可</p>
+<p>以上的操作都是在内存中修改的，关闭后重新打开还是无法使用，执行File -&gt; Produce New Executable file, 这是会提示你签名无效，是否移除签名，选择否，(如果选择是的话，每次启动都会有个提示很烦人的),替换原来的可执行文件，重新启动Reveal,会提示<code>This copy of Reveal is damaged</code>，解决方法同上，不在这里赘述。</p>
+<h2 id="安全防范"><a href="#安全防范" class="headerlink" title="安全防范"></a>安全防范</h2><ul>
+<li>web请求加入Authorization header<br>  REST服务的web请求中加入Authorization header验证，对资源进行校验。可有效阻止爬虫。</li>
+<li>代码混淆（Android）</li>
+<li>花指令<br>  伪装其他编译器的特征码，干扰反汇编，绕过杀毒软件。</li>
+<li>加壳<br>  在二进制的程序中植入一段代码，在运行的时候优先取得程序的控制权，做一些额外的工作。常见的壳分为压缩壳和加密壳，加壳的软件直接破解难度很大需要先进行脱壳处理。</li>
+<li>加密, 代码签名<br>  一定程度上阻止逆向。</li>
+<li>调试检测<br>  用ring3级下的调试器对可执行程序进行调试时,调试器会把被调试的可执行程序作为一个子线程进行跟踪.这时被调试的可执行程序的PEB结构偏移0x02处的BeingDebugged的值为1,如果可执行程序未被调试,则值为0,所以可以利用这个值来检测程序是否被ring3级下的调试器调试。可以有效阻止动态调试。</li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/03/24/crack-share/" data-title="逆向工程实战分享" data-url="http://yoursite.com/2016/03/24/crack-share/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-24 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	金山 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>

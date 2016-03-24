@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-23T10:30:13.000Z</updated>
+  <updated>2016-03-24T11:56:09.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>逆向工程实战分享</title>
+    <link href="http://yoursite.com/2016/03/24/crack-share/"/>
+    <id>http://yoursite.com/2016/03/24/crack-share/</id>
+    <published>2016-03-23T16:00:00.000Z</published>
+    <updated>2016-03-24T11:56:09.000Z</updated>
+    
+    <content type="html">&lt;p&gt;逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在windows, ardroid,mac和ios这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;对windows平台的研究可以追溯到win32时代，因此目前发展比较成熟，而且拥有大量的工具和插件，比较有名的工具如ollydbg和ida pro。魔高一尺道高一丈,在逆向研究发展的火热的同时对软件的保护的研究也迅速发展起来。目前windows下的收费软件大多数都有一定的保护措施如加壳，对逆向的研究增加了一些难度。&lt;/li&gt;
+&lt;li&gt;android是一个后兴起的平台，由于拥有大量的用户，所以对android的逆向也很成熟。android app 逆向后是一种高层次的汇编语言，也有一些工具可将之转换为更高级的java语言，虽然有部分代码混淆，但是可以很方便的注入代码，因此逆向相对容易一些。android逆向一般要经过反编译，dex转换，代码修改，重新打包，重新签名，运行调试这几个过程。&lt;/li&gt;
+&lt;li&gt;mac平台用的人更少，对之研究相对少些，不过windows平台的技术可以借鉴，只不过逆向的工具或插件比较少，好在这个平台的大多数软件都没有壳，难度系数一般。&lt;/li&gt;
+&lt;li&gt;iOS未接触, 但感觉跟Mac平台的逆向差不多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;开始真正的逆向之前先逆向一个简单的程序&quot;&gt;&lt;a href=&quot;#开始真正的逆向之前先逆向一个简单的程序&quot; class=&quot;headerlink&quot; title=&quot;开始真正的逆向之前先逆向一个简单的程序&quot;&gt;&lt;/a&gt;开始真正的逆向之前先逆向一个简单的程序&lt;/h2&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// return a &amp;gt; b ? a : b;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (a &amp;gt; b)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; result = max(&lt;span class=&quot;number&quot;&gt;56&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;Result: &quot;&lt;/span&gt; &amp;lt;&amp;lt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;未优化编译并逆向后的主要代码如下（在右侧增加了一些注释）:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;__Z3maxii:        // max(int, int)    ; have 8B on stack or two vars&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010d0         push       rbp         ; XREF=0x1000000d0, _main+25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010d1         mov        rbp, rsp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010d4         mov        dword [ss:rbp+var_8], edi ; assign first var&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010d7         mov        dword [ss:rbp+var_C], esi ; assign second var&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010da         mov        esi, dword [ss:rbp+var_8] ; stack: rbp, rsi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010dd         cmp        esi, dword [ss:rbp+var_C]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010e0         jle        0x1000010f1 ; &amp;gt;=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010e6         mov        eax, dword [ss:rbp+var_8]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010e9         mov        dword [ss:rbp+var_4], eax&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010ec         jmp        0x1000010f7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010f1         mov        eax, dword [ss:rbp+var_C] ; XREF=__Z3maxii+16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010f4         mov        dword [ss:rbp+var_4], eax&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010f7         mov        eax, dword [ss:rbp+var_4] ; XREF=__Z3maxii+28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010fa         pop        rbp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00000001000010fb         ret&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_main:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001100         push       rbp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001101         mov        rbp, rsp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001104         sub        rsp, 0x10   ; alloc some memory on stack&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001108         mov        edi, 0x38   ; argument #1 for method __Z3maxii&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000110d         mov        esi, 0x20   ; argument #2 for method __Z3maxii&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001112         mov        dword [ss:rbp+var_4], 0x0 ; init a var with 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001119         call       __Z3maxii   ; max(int, int) ; result assigned to eax&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000111e         mov        rdi, qword [ds:imp___got___ZNSt3__14coutE] ; load object(cout) address&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001125         lea        rsi, qword [ds:0x100001f3c]  ; &amp;quot;Result: &amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000112c         mov        dword [ss:rbp+var_8], eax ; max result assign to 2th var&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000112f         call       imp___stubs___ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc ; std::__1::basic_ostream&amp;lt;char, std::__1::char_traits&amp;lt;char&amp;gt; &amp;gt;&amp;amp; std::__1::operator&amp;lt;&amp;lt; &amp;lt;std::__1::char_traits&amp;lt;char&amp;gt; &amp;gt;(std::__1::basic_ostream&amp;lt;char, std::__1::char_traits&amp;lt;char&amp;gt; &amp;gt;&amp;amp;, char const*)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001134         mov        esi, dword [ss:rbp+var_8]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001137         mov        rdi, rax ; eax != rdi, cout object has changed &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000113a         call       imp___stubs___ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEi ; std::__1::basic_ostream&amp;lt;char, std::__1::char_traits&amp;lt;char&amp;gt; &amp;gt;::operator&amp;lt;&amp;lt;(int)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000113f         xor        esi, esi ; reset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001141         mov        qword [ss:rbp+var_10], rax ; assign result(output stream) to  last var&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001145         mov        eax, esi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;0000000100001147         add        rsp, 0x10 ; balance stack&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000114b         pop        rbp       ; restore rbp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010000114c         ret&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;理解上面的代码需要注意一些调用规定，上面的代码使用的fastcall调用约定&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调用约定&lt;ul&gt;
+&lt;li&gt;stdcall 参数从右向左压入堆栈；函数自身平衡堆栈；&lt;/li&gt;
+&lt;li&gt;cdecl 参数首先由有向左压入堆栈；调用者负责平衡堆栈&lt;/li&gt;
+&lt;li&gt;fastcall 使用寄存器传递参数        &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;实战Reveal-Download-from-offical-website&quot;&gt;&lt;a href=&quot;#实战Reveal-Download-from-offical-website&quot; class=&quot;headerlink&quot; title=&quot;实战Reveal Download from offical website&quot;&gt;&lt;/a&gt;实战Reveal &lt;a href=&quot;http://revealapp.com/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Download from offical website&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;本次破解使用的reveal版本是1.6.3(5790)，也是目前的最新版。由于编写一个注册机的难度较高，本次破解只是针对打补丁的方式，想挑战的话可以尝试编写一个注册机。&lt;/p&gt;
+&lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h3&gt;&lt;p&gt;工欲善其事，必先利其器，mac下的破解工具主要有俩个，一个是hopper，另外一个是ida pro。本次破解使用hopper，这个软件更容易上手，注意需要装额外的调试工具，也可从官网下载到。&lt;/p&gt;
+&lt;h3 id=&quot;破解流程&quot;&gt;&lt;a href=&quot;#破解流程&quot; class=&quot;headerlink&quot; title=&quot;破解流程&quot;&gt;&lt;/a&gt;破解流程&lt;/h3&gt;&lt;h4 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;直接打开Reveal, 复制提示的字符串&lt;code&gt;Your free trial of Reveal has expire&lt;/code&gt;，也可能是其它的，取决于你的reveal是否过期&lt;/li&gt;
+&lt;li&gt;使用Hopper加载Reveal&lt;/li&gt;
+&lt;li&gt;搜索前面复制的字符串&lt;code&gt;Your free trial of Reveal has expire&lt;/code&gt;，跳到引用该字符串的地方，这时会跳到&lt;code&gt;[IBATrialModeReminderWindowController trialExpiresTitle]&lt;/code&gt;·函数中间的某个地方，查找函数调用的对照，只要在根源处注释掉即可达到破解的目的&lt;/li&gt;
+&lt;li&gt;继续查找引用或调用这个函数·trialExpiresTitle·的地方，没有找到。换个思路，搜索字符串&lt;code&gt;IBATrialModeReminderWindowController&lt;/code&gt;，这是会调到&lt;code&gt;[IBATrialModeReminderWindowController controller]&lt;/code&gt;函数里面&lt;/li&gt;
+&lt;li&gt;继续向上查找调用该函数&lt;code&gt;[IBATrialModeReminderWindowController controller]&lt;/code&gt;的地方，会跟进这个函数&lt;code&gt;[IBATrialModeReminderPresenter showTrialModeSheetForWindow:]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;继续向上查找，会进入&lt;code&gt;[IBATrialModeReminderPresenter presentTrialModeReminderIfNecessaryForWindow:]&lt;/code&gt;·这个函数，观察如下的代码，已经定位到我们想要的地方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;000000010007f306         mov        r14, rax&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f309         mov        rsi, qword [ds:0x1001b3150]                 ; @selector(shouldShowTrialModeSheet), argument &amp;quot;selector&amp;quot; for method imp___got__objc_msgSend&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f310         mov        rdi, rbx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f313         call       qword [ds:imp___got__objc_msgSend]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f319         test       al, al&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f31b         je         0x10007f330&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f31d         mov        rsi, qword [ds:0x1001b3158]                 ; @selector(showTrialModeSheetForWindow:), argument &amp;quot;selector&amp;quot; for method imp___got__objc_msgSend&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f324         mov        rdi, rbx                                    ; argument &amp;quot;instance&amp;quot; for method imp___got__objc_msgSend&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f327         mov        rdx, r14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f32a         call       qword [ds:imp___got__objc_msgSend]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f330         mov        rdi, r14                                    ; argument &amp;quot;instance&amp;quot; for method imp___got__objc_release, XREF=-[IBATrialModeReminderPresenter presentTrialModeReminderIfNecessaryForWindow:]+40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f333         pop        rbx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f334         pop        r14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f336         pop        rbp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007f337         jmp        qword [ds:imp___got__objc_release]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;注意地址000000010007f31b处的代码&lt;code&gt;je 0x10007f330&lt;/code&gt;，如果不跳转回执行下面的代码就会显示提示对话框，因此把条件取反，或者无条件跳转改成&lt;code&gt;jmp je 0x10007f330&lt;/code&gt;即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;方法二&quot;&gt;&lt;a href=&quot;#方法二&quot; class=&quot;headerlink&quot; title=&quot;方法二&quot;&gt;&lt;/a&gt;方法二&lt;/h4&gt;&lt;p&gt;如果觉得上面步骤繁琐的话，其实还有更简单的方法，按照一般的编程思维，一般都会写一个shouldShow…的方法来显示提示对话框，所以直接搜索字符串·shouldShow·，调到这个函数&lt;code&gt;[IBATrialModeReminderPresenter shouldShowTrialModeSheet]&lt;/code&gt;，这个函数的代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-[IBATrialModeReminderPresenter shouldShowTrialModeSheet]:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fde3         push       rbp                                         ; Objective C Implementation defined at 0x10018dc40 (instance)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fdf1         mov        r15, rdi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fdf4         call       sub_10007e91a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fdf9         test       al, al&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fdfb         jne        0x10007fe06&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fdfd         call       sub_10007e95e&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fe02         test       al, al&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fe04         je         0x10007fe1a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fe06         xor        ebx, ebx                                    ; XREF=-[IBATrialModeReminderPresenter shouldShowTrialModeSheet]+24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fe08         movzx      eax, bl &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...                                    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fe19         ret&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;觉得汇编不好理解不直观的话,可以来点黑科技，看自动生成的高级语言代码：&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; -[IBATrialModeReminderPresenter shouldShowTrialModeSheet](&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; * self, &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; * _cmd) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    r15 = self;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ((sub_10007e91a() != &lt;span class=&quot;number&quot;&gt;0x0&lt;/span&gt;) &amp;amp;&amp;amp; (sub_10007e95e() == &lt;span class=&quot;number&quot;&gt;0x0&lt;/span&gt;)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            r14 = [[NSDate date] retain];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            r13 = [[[r15 &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;] lastPresentationDateTime] retain];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            [r13 release];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            rbx = &lt;span class=&quot;number&quot;&gt;0x1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (r13 != &lt;span class=&quot;number&quot;&gt;0x0&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    [r14 timeIntervalSinceReferenceDate];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    var_30 = intrinsic_movsd(var_30, xmm0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;							...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;							...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    COND = xmm1 &amp;gt; &lt;span class=&quot;number&quot;&gt;0x0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    rbx = COND ? &lt;span class=&quot;number&quot;&gt;0x1&lt;/span&gt; : &lt;span class=&quot;number&quot;&gt;0x0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    [r13 release];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            [r14 release];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            rbx = &lt;span class=&quot;number&quot;&gt;0x0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    rax = rbx &amp;amp; &lt;span class=&quot;number&quot;&gt;0xff&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; rax;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;仔细分析代码，发现两处关键代码：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;000000010007fdfb         jne        0x10007fe06&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;000000010007fe04         je         0x10007fe1a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;所以只需要把000000010007fdfb地址处的代码改为&lt;code&gt;jmp 0x10007fe1a&lt;/code&gt;即可&lt;/p&gt;
+&lt;p&gt;以上的操作都是在内存中修改的，关闭后重新打开还是无法使用，执行File -&amp;gt; Produce New Executable file, 这是会提示你签名无效，是否移除签名，选择否，(如果选择是的话，每次启动都会有个提示很烦人的),替换原来的可执行文件，重新启动Reveal,会提示&lt;code&gt;This copy of Reveal is damaged&lt;/code&gt;，解决方法同上，不在这里赘述。&lt;/p&gt;
+&lt;h2 id=&quot;安全防范&quot;&gt;&lt;a href=&quot;#安全防范&quot; class=&quot;headerlink&quot; title=&quot;安全防范&quot;&gt;&lt;/a&gt;安全防范&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;web请求加入Authorization header&lt;br&gt;  REST服务的web请求中加入Authorization header验证，对资源进行校验。可有效阻止爬虫。&lt;/li&gt;
+&lt;li&gt;代码混淆（Android）&lt;/li&gt;
+&lt;li&gt;花指令&lt;br&gt;  伪装其他编译器的特征码，干扰反汇编，绕过杀毒软件。&lt;/li&gt;
+&lt;li&gt;加壳&lt;br&gt;  在二进制的程序中植入一段代码，在运行的时候优先取得程序的控制权，做一些额外的工作。常见的壳分为压缩壳和加密壳，加壳的软件直接破解难度很大需要先进行脱壳处理。&lt;/li&gt;
+&lt;li&gt;加密, 代码签名&lt;br&gt;  一定程度上阻止逆向。&lt;/li&gt;
+&lt;li&gt;调试检测&lt;br&gt;  用ring3级下的调试器对可执行程序进行调试时,调试器会把被调试的可执行程序作为一个子线程进行跟踪.这时被调试的可执行程序的PEB结构偏移0x02处的BeingDebugged的值为1,如果可执行程序未被调试,则值为0,所以可以利用这个值来检测程序是否被ring3级下的调试器调试。可以有效阻止动态调试。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在windows, ardroid,mac和ios这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="逆向工程" scheme="http://yoursite.com/categories/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="逆向工程" scheme="http://yoursite.com/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS微信浏览器直接打开App的解决方案</title>
@@ -140,52 +212,6 @@
   </entry>
   
   <entry>
-    <title>iOS技术周刊第4期</title>
-    <link href="http://yoursite.com/2016/03/20/ios-technology-magazine-4/"/>
-    <id>http://yoursite.com/2016/03/20/ios-technology-magazine-4/</id>
-    <published>2016-03-19T16:00:00.000Z</published>
-    <updated>2016-03-20T11:20:29.000Z</updated>
-    
-    <content type="html">&lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/17/wkwebview-study-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView（入门篇）&lt;/a&gt; WkWebView是IOS8中引入的新组件，苹果将UIWebViewDelegate 与 UIWebView 重构成了 14 个类和 3 个协议并引入了不少新的功能和接口。由于一直以来苹果对于WebView内核封锁的程度是令人发指的，WkWebView的引入无疑是另广大开发者兴奋的事。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.makeex.com/2016/03/16/objc-context-design-pattern/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ObjC 基于上下文的设计&lt;/a&gt; 本篇文章主要介绍了关于上下文（Context）的一些概念，并提出了在设计上下文时应该考虑到的问题，最后通过一个实例来演示如何用Objective-C实现一个上下文。相信通过阅读本篇文章，大家能够基本掌握软件设计中上下文的使用，并且，我相信，想象力如此丰富的你们，会将此推演到更高的境界。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;页面布局&quot;&gt;&lt;a href=&quot;#页面布局&quot; class=&quot;headerlink&quot; title=&quot;页面布局&quot;&gt;&lt;/a&gt;页面布局&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/gsdios/SDAutoLayout&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SDAutoLayout&lt;/a&gt; 一行代码搞定自动布局！支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/s4cha/Stevia&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stevia&lt;/a&gt; 一个把Auto Layout封装得很不错的库，写法很小清新。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react-native/blob/9069bdf1c2e4ffd78b634d015b32dfec2cd3a371/React/Profiler/RCTFPSGraph.m&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native监测界面流畅度&lt;/a&gt; React Native中监测界面流畅度（FPS）的代码要比GT的中好很多。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;音视频&quot;&gt;&lt;a href=&quot;#音视频&quot; class=&quot;headerlink&quot; title=&quot;音视频&quot;&gt;&lt;/a&gt;音视频&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangdan.qiniudn.com/qiniu2.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浅析视频内容加密技术&lt;/a&gt; 七牛的一个PPT，介绍了视频内容加密技术。 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/pili-engineering/PLPlayerKit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PLPlayerKit&lt;/a&gt; PLPlayerKit 是一个适用于 iOS 的音视频播放器 SDK，可高度定制化和二次开发，特色是支持 RTMP 和 HLS 直播流媒体播放。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://checkmate.gissen.nl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Checkmate MP3 Checker&lt;/a&gt; 可以方便的查看MP3文件的信息，并且检查错误。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mwlio.github.io/2016/03/19/wwdc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WWDC攻略&lt;/a&gt; 今年的WWDC抢票快要来了，大家准备好了吗？不用担心，攻略在手，出行无忧。&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Android技术周刊第1期</title>
     <link href="http://yoursite.com/2016/03/20/android-technology-magazine-1/"/>
     <id>http://yoursite.com/2016/03/20/android-technology-magazine-1/</id>
@@ -253,6 +279,52 @@
     
     
       <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS技术周刊第4期</title>
+    <link href="http://yoursite.com/2016/03/20/ios-technology-magazine-4/"/>
+    <id>http://yoursite.com/2016/03/20/ios-technology-magazine-4/</id>
+    <published>2016-03-19T16:00:00.000Z</published>
+    <updated>2016-03-20T11:20:29.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/17/wkwebview-study-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView（入门篇）&lt;/a&gt; WkWebView是IOS8中引入的新组件，苹果将UIWebViewDelegate 与 UIWebView 重构成了 14 个类和 3 个协议并引入了不少新的功能和接口。由于一直以来苹果对于WebView内核封锁的程度是令人发指的，WkWebView的引入无疑是另广大开发者兴奋的事。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.makeex.com/2016/03/16/objc-context-design-pattern/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ObjC 基于上下文的设计&lt;/a&gt; 本篇文章主要介绍了关于上下文（Context）的一些概念，并提出了在设计上下文时应该考虑到的问题，最后通过一个实例来演示如何用Objective-C实现一个上下文。相信通过阅读本篇文章，大家能够基本掌握软件设计中上下文的使用，并且，我相信，想象力如此丰富的你们，会将此推演到更高的境界。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;页面布局&quot;&gt;&lt;a href=&quot;#页面布局&quot; class=&quot;headerlink&quot; title=&quot;页面布局&quot;&gt;&lt;/a&gt;页面布局&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gsdios/SDAutoLayout&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SDAutoLayout&lt;/a&gt; 一行代码搞定自动布局！支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/s4cha/Stevia&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stevia&lt;/a&gt; 一个把Auto Layout封装得很不错的库，写法很小清新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/react-native/blob/9069bdf1c2e4ffd78b634d015b32dfec2cd3a371/React/Profiler/RCTFPSGraph.m&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native监测界面流畅度&lt;/a&gt; React Native中监测界面流畅度（FPS）的代码要比GT的中好很多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;音视频&quot;&gt;&lt;a href=&quot;#音视频&quot; class=&quot;headerlink&quot; title=&quot;音视频&quot;&gt;&lt;/a&gt;音视频&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangdan.qiniudn.com/qiniu2.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浅析视频内容加密技术&lt;/a&gt; 七牛的一个PPT，介绍了视频内容加密技术。 &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pili-engineering/PLPlayerKit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PLPlayerKit&lt;/a&gt; PLPlayerKit 是一个适用于 iOS 的音视频播放器 SDK，可高度定制化和二次开发，特色是支持 RTMP 和 HLS 直播流媒体播放。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://checkmate.gissen.nl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Checkmate MP3 Checker&lt;/a&gt; 可以方便的查看MP3文件的信息，并且检查错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mwlio.github.io/2016/03/19/wwdc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WWDC攻略&lt;/a&gt; 今年的WWDC抢票快要来了，大家准备好了吗？不用担心，攻略在手，出行无忧。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本周Hybrid、设计模式，都有原创文章，另外还有篇WWDC攻略。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
@@ -448,60 +520,6 @@
   </entry>
   
   <entry>
-    <title>iOS技术周刊第2期</title>
-    <link href="http://yoursite.com/2016/03/06/ios-technology-magazine-2/"/>
-    <id>http://yoursite.com/2016/03/06/ios-technology-magazine-2/</id>
-    <published>2016-03-05T16:00:00.000Z</published>
-    <updated>2016-03-13T13:51:59.000Z</updated>
-    
-    <content type="html">&lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深度实践 AsyncDisplayKit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用RAML来构建API文档&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/20150811/12985.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UIWebView与JS的深度交互&lt;/a&gt;，禁用获取的HTML文本中自带的 &amp;lt; img &amp;gt; 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSPatch 实现原理详解&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ele828/react-native-guide#%E5%B7%A5%E5%85%B7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React-Native各类学习资源&lt;/a&gt;，资料很全面，包含开源app，以及一些工具和组件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/#more-41893&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 保持界面流畅的技巧&lt;/a&gt;，很详细的分析了界面卡顿的原因，以及对应的解决方法的研究方向（&lt;em&gt;异步绘制&lt;/em&gt;，&lt;em&gt;预排版&lt;/em&gt;，&lt;em&gt;预渲染&lt;/em&gt;，&lt;em&gt;全局并发控制&lt;/em&gt;）和实践，相当不错哦，值得你拥有。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;amp;mid=447105405&amp;amp;idx=1&amp;amp;sn=054dc54289a98e8a39f2b9386f4f620e&amp;amp;scene=23&amp;amp;srcid=0108RhyzhXk9wUwQvnW3cmZT#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内存恶鬼drawRect - 谈画图功能的内存优化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;网络&quot;&gt;&lt;a href=&quot;#网络&quot; class=&quot;headerlink&quot; title=&quot;网络&quot;&gt;&lt;/a&gt;网络&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/cc756016243b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS的TCP/IP协议族剖析&amp;amp;&amp;amp;Socket&lt;/a&gt;，主要介绍了TCP/IP的工作原理以及Socket的原理和实现细节。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;绘图&quot;&gt;&lt;a href=&quot;#绘图&quot; class=&quot;headerlink&quot; title=&quot;绘图&quot;&gt;&lt;/a&gt;绘图&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ciechanowski.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;神奇的Transform&lt;/a&gt;，看看我们可以通过transform来做点什么，简直太好玩了，不服来看😏😏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/apple/swift/tree/master/benchmark&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swift基准测试套件&lt;/a&gt;，包含基准测试驱动以及显示性能的一些度量，协助开发者创建更快更高效的代码。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.cnbluebox.com/blog/2015/03/05/chisel/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chisel-LLDB命令插件，让调试更Easy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://camsong.github.io/redux-in-chinese/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Redux可预测化的状态管理&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402973995&amp;amp;idx=1&amp;amp;sn=87625ad8a3e3d5b16baa0890d6eedfe8&amp;amp;scene=23&amp;amp;srcid=03050zf9BxGthj6HoRiTCmb3#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员VS武林高手：技术为外功，思维乃内力&lt;/a&gt;，真气雄浑，滚滚不可测，吐气如剑，拈花摘叶，老司机今天带你重新认识当代武林高手－程序员。&lt;/li&gt;
-&lt;li&gt;大妈喊你还债了，&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402964742&amp;amp;idx=1&amp;amp;sn=60a657a4eeca714bee80e861406c6443&amp;amp;scene=23&amp;amp;srcid=0305FCtWZQFUXz2Xx4PePzCx#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;年前挖的坑都填了吗？技术债务偿还计划&lt;/a&gt;😄😄&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/ff4a34a5a136&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你不可错过的50部电影清单！（附评分、推荐语）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&amp;amp;mid=404242829&amp;amp;idx=1&amp;amp;sn=aacddf1c2c828281e6202eff8cd374f5&amp;amp;scene=1&amp;amp;srcid=0302Q1dT8nUezoEZLZzistUl&amp;amp;key=710a5d99946419d96e1c7481a2d8dae6400769cbc8bc9015cca38f9694d8c1ae46c0ff571ec714de57c149dd6aef6796&amp;amp;ascene=0&amp;amp;uin=Mzg1OTg2NQ%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;并发之痛 Thread，Goroutine，Actor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
-  
-  <entry>
     <title>用RAML构建API文档</title>
     <link href="http://yoursite.com/2016/03/06/using-raml-build-api-doc/"/>
     <id>http://yoursite.com/2016/03/06/using-raml-build-api-doc/</id>
@@ -569,6 +587,60 @@
     
     
       <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS技术周刊第2期</title>
+    <link href="http://yoursite.com/2016/03/06/ios-technology-magazine-2/"/>
+    <id>http://yoursite.com/2016/03/06/ios-technology-magazine-2/</id>
+    <published>2016-03-05T16:00:00.000Z</published>
+    <updated>2016-03-13T13:51:59.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;原创&quot;&gt;&lt;a href=&quot;#原创&quot; class=&quot;headerlink&quot; title=&quot;原创&quot;&gt;&lt;/a&gt;原创&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/05/asyncdisplaykit-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深度实践 AsyncDisplayKit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilev5.github.io/2016/03/06/using-raml-build-api-doc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用RAML来构建API文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Hybrid&quot;&gt;&lt;a href=&quot;#Hybrid&quot; class=&quot;headerlink&quot; title=&quot;Hybrid&quot;&gt;&lt;/a&gt;Hybrid&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/20150811/12985.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UIWebView与JS的深度交互&lt;/a&gt;，禁用获取的HTML文本中自带的 &amp;lt; img &amp;gt; 标签自动加载，并把下载图片的操作放在native端来处理，提高响应速度并且节省用户流量，同时也能在本地对图片各种操作，一个不错的交互实践。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bang590/JSPatch/wiki/JSPatch-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSPatch 实现原理详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ele828/react-native-guide#%E5%B7%A5%E5%85%B7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React-Native各类学习资源&lt;/a&gt;，资料很全面，包含开源app，以及一些工具和组件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;性能优化&quot;&gt;&lt;a href=&quot;#性能优化&quot; class=&quot;headerlink&quot; title=&quot;性能优化&quot;&gt;&lt;/a&gt;性能优化&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/#more-41893&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 保持界面流畅的技巧&lt;/a&gt;，很详细的分析了界面卡顿的原因，以及对应的解决方法的研究方向（&lt;em&gt;异步绘制&lt;/em&gt;，&lt;em&gt;预排版&lt;/em&gt;，&lt;em&gt;预渲染&lt;/em&gt;，&lt;em&gt;全局并发控制&lt;/em&gt;）和实践，相当不错哦，值得你拥有。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;amp;mid=447105405&amp;amp;idx=1&amp;amp;sn=054dc54289a98e8a39f2b9386f4f620e&amp;amp;scene=23&amp;amp;srcid=0108RhyzhXk9wUwQvnW3cmZT#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;内存恶鬼drawRect - 谈画图功能的内存优化&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;网络&quot;&gt;&lt;a href=&quot;#网络&quot; class=&quot;headerlink&quot; title=&quot;网络&quot;&gt;&lt;/a&gt;网络&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/cc756016243b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS的TCP/IP协议族剖析&amp;amp;&amp;amp;Socket&lt;/a&gt;，主要介绍了TCP/IP的工作原理以及Socket的原理和实现细节。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;绘图&quot;&gt;&lt;a href=&quot;#绘图&quot; class=&quot;headerlink&quot; title=&quot;绘图&quot;&gt;&lt;/a&gt;绘图&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ciechanowski.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;神奇的Transform&lt;/a&gt;，看看我们可以通过transform来做点什么，简直太好玩了，不服来看😏😏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/apple/swift/tree/master/benchmark&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swift基准测试套件&lt;/a&gt;，包含基准测试驱动以及显示性能的一些度量，协助开发者创建更快更高效的代码。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.cnbluebox.com/blog/2015/03/05/chisel/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chisel-LLDB命令插件，让调试更Easy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://camsong.github.io/redux-in-chinese/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Redux可预测化的状态管理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;后花园&quot;&gt;&lt;a href=&quot;#后花园&quot; class=&quot;headerlink&quot; title=&quot;后花园&quot;&gt;&lt;/a&gt;后花园&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402973995&amp;amp;idx=1&amp;amp;sn=87625ad8a3e3d5b16baa0890d6eedfe8&amp;amp;scene=23&amp;amp;srcid=03050zf9BxGthj6HoRiTCmb3#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员VS武林高手：技术为外功，思维乃内力&lt;/a&gt;，真气雄浑，滚滚不可测，吐气如剑，拈花摘叶，老司机今天带你重新认识当代武林高手－程序员。&lt;/li&gt;
+&lt;li&gt;大妈喊你还债了，&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;amp;mid=402964742&amp;amp;idx=1&amp;amp;sn=60a657a4eeca714bee80e861406c6443&amp;amp;scene=23&amp;amp;srcid=0305FCtWZQFUXz2Xx4PePzCx#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;年前挖的坑都填了吗？技术债务偿还计划&lt;/a&gt;😄😄&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/ff4a34a5a136&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你不可错过的50部电影清单！（附评分、推荐语）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&amp;amp;mid=404242829&amp;amp;idx=1&amp;amp;sn=aacddf1c2c828281e6202eff8cd374f5&amp;amp;scene=1&amp;amp;srcid=0302Q1dT8nUezoEZLZzistUl&amp;amp;key=710a5d99946419d96e1c7481a2d8dae6400769cbc8bc9015cca38f9694d8c1ae46c0ff571ec714de57c149dd6aef6796&amp;amp;ascene=0&amp;amp;uin=Mzg1OTg2NQ%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;并发之痛 Thread，Goroutine，Actor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本周重点在性能优化和Hybrid方面，包含&lt;code&gt;AsyncDisplayKit&lt;/code&gt;的实践，RN相关等，另外App开发人员也应该了解一些API设计，本期重点介绍API建模工具RAML，希望大家能够有所收获。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
