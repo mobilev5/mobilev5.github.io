@@ -6,7 +6,7 @@
   <title>逆向工程实战分享 | 移动开发</title>
   <meta name="author" content="移动开发">
   
-  <meta name="description" content="逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在windows, ardroid,mac和ios这几个平台，各平台的发展也参差不齐。">
+  <meta name="description" content="逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -117,12 +117,12 @@
 	<div class="mypage">		
 	  		
 
-	  <p>逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在windows, ardroid,mac和ios这几个平台，各平台的发展也参差不齐。</p>
+	  <p>逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。</p>
 <a id="more"></a>
 <ul>
-<li>对windows平台的研究可以追溯到win32时代，因此目前发展比较成熟，而且拥有大量的工具和插件，比较有名的工具如ollydbg和ida pro。魔高一尺道高一丈,在逆向研究发展的火热的同时对软件的保护的研究也迅速发展起来。目前windows下的收费软件大多数都有一定的保护措施如加壳，对逆向的研究增加了一些难度。</li>
-<li>android是一个后兴起的平台，由于拥有大量的用户，所以对android的逆向也很成熟。android app 逆向后是一种高层次的汇编语言，也有一些工具可将之转换为更高级的java语言，虽然有部分代码混淆，但是可以很方便的注入代码，因此逆向相对容易一些。android逆向一般要经过反编译，dex转换，代码修改，重新打包，重新签名，运行调试这几个过程。</li>
-<li>mac平台用的人更少，对之研究相对少些，不过windows平台的技术可以借鉴，只不过逆向的工具或插件比较少，好在这个平台的大多数软件都没有壳，难度系数一般。</li>
+<li>对Windows平台的研究可以追溯到win32时代，因此目前发展比较成熟，而且拥有大量的工具和插件，比较有名的工具如ollydbg和ida pro。魔高一尺道高一丈,在逆向研究发展的火热的同时对软件的保护的研究也迅速发展起来。目前Windows下的收费软件大多数都有一定的保护措施如加壳，对逆向的研究增加了一些难度。</li>
+<li>Android是一个后兴起的平台，由于拥有大量的用户，所以对Android的逆向也很成熟。Android app 逆向后是一种高层次的汇编语言，也有一些工具可将之转换为更高级的java语言，虽然有部分代码混淆，但是可以很方便的注入代码，因此逆向相对容易一些。Android逆向一般要经过反编译，dex转换，代码修改，重新打包，重新签名，运行调试这几个过程。</li>
+<li>mac平台用的人更少，对之研究相对少些，不过Windows平台的技术可以借鉴，只不过逆向的工具或插件比较少，好在这个平台的大多数软件都没有壳，难度系数一般。</li>
 <li>iOS未接触, 但感觉跟Mac平台的逆向差不多</li>
 </ul>
 <h2 id="开始真正的逆向之前先逆向一个简单的程序"><a href="#开始真正的逆向之前先逆向一个简单的程序" class="headerlink" title="开始真正的逆向之前先逆向一个简单的程序"></a>开始真正的逆向之前先逆向一个简单的程序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// return a &gt; b ? a : b;</span></span><br><span class="line">	<span class="keyword">if</span> (a &gt; b)</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = max(<span class="number">56</span>, <span class="number">32</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Result: "</span> &lt;&lt; result;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -160,7 +160,7 @@
 <p>所以只需要把000000010007fdfb地址处的代码改为<code>jmp 0x10007fe1a</code>即可</p>
 <p>以上的操作都是在内存中修改的，关闭后重新打开还是无法使用，执行File -&gt; Produce New Executable file, 这是会提示你签名无效，是否移除签名，选择否，(如果选择是的话，每次启动都会有个提示很烦人的),替换原来的可执行文件，重新启动Reveal,会提示<code>This copy of Reveal is damaged</code>，解决方法同上，不在这里赘述。</p>
 <h2 id="安全防范"><a href="#安全防范" class="headerlink" title="安全防范"></a>安全防范</h2><ul>
-<li>web请求加入Authorization header<br>  REST服务的web请求中加入Authorization header验证，对资源进行校验。可有效阻止爬虫。</li>
+<li>Web请求加入<code>Authorization header</code><br>  REST服务的web请求中加入Authorization header验证，对资源进行校验。可有效阻止爬虫。</li>
 <li>代码混淆（Android）</li>
 <li>花指令<br>  伪装其他编译器的特征码，干扰反汇编，绕过杀毒软件。</li>
 <li>加壳<br>  在二进制的程序中植入一段代码，在运行的时候优先取得程序的控制权，做一些额外的工作。常见的壳分为压缩壳和加密壳，加壳的软件直接破解难度很大需要先进行脱壳处理。</li>
