@@ -72,7 +72,7 @@
     <link href="http://yoursite.com/2016/03/24/crack-share/"/>
     <id>http://yoursite.com/2016/03/24/crack-share/</id>
     <published>2016-03-23T16:00:00.000Z</published>
-    <updated>2016-03-25T01:58:04.000Z</updated>
+    <updated>2016-03-27T12:13:03.000Z</updated>
     
     <content type="html">&lt;p&gt;逆向工程一般说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -98,7 +98,7 @@
 &lt;h3 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h3&gt;&lt;p&gt;工欲善其事，必先利其器，mac下的破解工具主要有俩个，一个是hopper，另外一个是ida pro。本次破解使用hopper，这个软件更容易上手，注意需要装额外的调试工具，也可从官网下载到。&lt;/p&gt;
 &lt;h3 id=&quot;破解流程&quot;&gt;&lt;a href=&quot;#破解流程&quot; class=&quot;headerlink&quot; title=&quot;破解流程&quot;&gt;&lt;/a&gt;破解流程&lt;/h3&gt;&lt;h4 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;直接打开Reveal, 复制提示的字符串&lt;code&gt;Your free trial of Reveal has expire&lt;/code&gt;，也可能是其它的，取决于你的reveal是否过期&lt;/li&gt;
-&lt;li&gt;使用Hopper加载Reveal，&lt;a href=&quot;HopperDisassemblerV3.zip&quot;&gt;点击下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用Hopper加载Reveal，&lt;a href=&quot;http://pan.baidu.com/s/1mh5K1Hu&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击下载&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;搜索前面复制的字符串&lt;code&gt;Your free trial of Reveal has expire&lt;/code&gt;，跳到引用该字符串的地方，这时会跳到&lt;code&gt;[IBATrialModeReminderWindowController trialExpiresTitle]&lt;/code&gt;·函数中间的某个地方，查找函数调用的对照，只要在根源处注释掉即可达到破解的目的&lt;/li&gt;
 &lt;li&gt;继续查找引用或调用这个函数·trialExpiresTitle·的地方，没有找到。换个思路，搜索字符串&lt;code&gt;IBATrialModeReminderWindowController&lt;/code&gt;，这是会调到&lt;code&gt;[IBATrialModeReminderWindowController controller]&lt;/code&gt;函数里面&lt;/li&gt;
 &lt;li&gt;继续向上查找调用该函数&lt;code&gt;[IBATrialModeReminderWindowController controller]&lt;/code&gt;的地方，会跟进这个函数&lt;code&gt;[IBATrialModeReminderPresenter showTrialModeSheetForWindow:]&lt;/code&gt;&lt;/li&gt;

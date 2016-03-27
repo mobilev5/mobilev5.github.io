@@ -141,7 +141,7 @@
 <h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>工欲善其事，必先利其器，mac下的破解工具主要有俩个，一个是hopper，另外一个是ida pro。本次破解使用hopper，这个软件更容易上手，注意需要装额外的调试工具，也可从官网下载到。</p>
 <h3 id="破解流程"><a href="#破解流程" class="headerlink" title="破解流程"></a>破解流程</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
 <li>直接打开Reveal, 复制提示的字符串<code>Your free trial of Reveal has expire</code>，也可能是其它的，取决于你的reveal是否过期</li>
-<li>使用Hopper加载Reveal，<a href="HopperDisassemblerV3.zip">点击下载</a></li>
+<li>使用Hopper加载Reveal，<a href="http://pan.baidu.com/s/1mh5K1Hu" target="_blank" rel="external">点击下载</a></li>
 <li>搜索前面复制的字符串<code>Your free trial of Reveal has expire</code>，跳到引用该字符串的地方，这时会跳到<code>[IBATrialModeReminderWindowController trialExpiresTitle]</code>·函数中间的某个地方，查找函数调用的对照，只要在根源处注释掉即可达到破解的目的</li>
 <li>继续查找引用或调用这个函数·trialExpiresTitle·的地方，没有找到。换个思路，搜索字符串<code>IBATrialModeReminderWindowController</code>，这是会调到<code>[IBATrialModeReminderWindowController controller]</code>函数里面</li>
 <li>继续向上查找调用该函数<code>[IBATrialModeReminderWindowController controller]</code>的地方，会跟进这个函数<code>[IBATrialModeReminderPresenter showTrialModeSheetForWindow:]</code></li>
