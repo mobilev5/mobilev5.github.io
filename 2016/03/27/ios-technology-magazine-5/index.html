@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS技术周刊第5期 | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="本周重点关注iOS 9.3，iPhone SE，Azer NPM撤包事件；iOS 微信浏览器打开App的解决方案；现有 iOS 端图片缓存解决方案">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="iOS技术周刊第5期"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> iOS技术周刊第5期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本周重点关注iOS 9.3，iPhone SE，Azer NPM撤包事件；iOS 微信浏览器打开App的解决方案；现有 iOS 端图片缓存解决方案</p>
+<a id="more"></a>
+<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><ul>
+<li><a href="https://github.com/stepanhruda/dyld-image-loading-performance?utm_campaign=iOS%2BDev%2BWeekly&amp;utm_medium=email&amp;utm_source=iOS_Dev_Weekly_Issue_243" target="_blank" rel="external">iOS 9.3 中的动态库加载速度</a> 本周 iOS 更新到了 9.3，这个代码库发现在 iOS 9.3 中，动态库的加载速度比之前快了 75% 左右。</li>
+<li>Azer NPM 撤包事件 <a href="http://zhuanlan.zhihu.com/codestory/20669077" target="_blank" rel="external">链接1</a> <a href="http://zhuanlan.zhihu.com/ibuick/20671763" target="_blank" rel="external">链接2</a> 这是本周发生在 Node 社区中的一件大事情。作者因为对 NPM 公司处理版权问题的不满，撤下了自己所有的代码，导致很多著名项目如 Babel、React Native 等因为依赖问题而无法正常使用。这也引起了人们对于集中式依赖管理器的思考——看来通过 CocoaPods 引用的项目很有必要将第三方的代码也一起放进自己的仓库中。</li>
+</ul>
+<h2 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h2><ul>
+<li><a href="http://mobilev5.github.io/2016/03/23/wexin-open-app/" target="_blank" rel="external">iOS 微信浏览器直接打开 App 的解决方案</a> 本文介绍了如何通过 iOS 9 中的 Universal Links 特性来突破微信浏览器的限制，直接在微信跳转至自己的 app。</li>
+<li><a href="http://scottberrevoets.com/2016/03/21/outlets-strong-or-weak/" target="_blank" rel="external">Outlets: Strong! Or Weak?</a> 通过 @IBOutlet 定义的变量，到底应该是 strong 还是 weak 呢？</li>
+</ul>
+<h2 id="网络交互"><a href="#网络交互" class="headerlink" title="网络交互"></a>网络交互</h2><ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn" target="_blank" rel="external">HTTP 缓存</a> Google 对于 HTTP 缓存机制的介绍。</li>
+<li><a href="http://mobilev5.github.io/2016/03/22/image-cache-solution/" target="_blank" rel="external">现有 iOS 端图片缓存解决方案</a> 移动 App 中使用网络图片的情况很常见，如果缓存问题处理不好会很大程度上影响 App 的性能。本文简单介绍一下图片缓存流程及 GitHub 上现有解决方案。</li>
+</ul>
+<h2 id="逆向"><a href="#逆向" class="headerlink" title="逆向"></a>逆向</h2><ul>
+<li><a href="http://mobilev5.github.io/2016/03/24/crack-share/" target="_blank" rel="external">逆向工程实战分享</a> 本文介绍了逆向工程的基本概念，以及分享一个逆向工程的实例。</li>
+</ul>
+<h2 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h2><ul>
+<li><a href="https://swift.org/blog/swift-2-2-released/" target="_blank" rel="external">Swift 2.2 发布</a> Swift 2.2 发布，比较大的变化是用 <code>associatedtype</code> 代替了原先的 <code>typealias</code> 关键字；以及用 <code>#selector</code> 来指定 Objective-C 中的 selector。文章中有更详细的更新内容。</li>
+<li><a href="https://pspdfkit.com/blog/2016/surprises-with-swift-extensions/?utm_campaign=iOS%2BDev%2BWeekly&amp;utm_medium=web&amp;utm_source=iOS_Dev_Weekly_Issue_243" target="_blank" rel="external">Surprises with Swift Extensions</a> 如果通过 Swift 给 Objective-C 中的类加扩展仍然需要添加前缀。</li>
+</ul>
+<h2 id="Hybrid"><a href="#Hybrid" class="headerlink" title="Hybrid"></a>Hybrid</h2><ul>
+<li><a href="https://medium.com/teach-code/your-hybrid-app-is-going-to-kill-you-416041d27eac#.hzajpo3y1" target="_blank" rel="external">You Hybrid App is Going to Kill You</a> 关于 Hybrid 应用，来听听一些不同的声音。</li>
+</ul>
+<h2 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h2><ul>
+<li><a href="https://github.com/mirego/MCUIViewLayout" target="_blank" rel="external">MCUIViewLayout</a> 一个页面布局的框架。</li>
+</ul>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><ul>
+<li><a href="http://www.jackrabbitmobile.com/design/ios-bubble-animation-tutorial/" target="_blank" rel="external">iOS Bubble Animation Tutorial</a> 一个实现气泡动画的教程。</li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/03/27/ios-technology-magazine-5/" data-title="iOS技术周刊第5期" data-url="http://yoursite.com/2016/03/27/ios-technology-magazine-5/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-03-27 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	罗晟 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
