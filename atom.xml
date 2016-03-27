@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-27T11:58:01.000Z</updated>
+  <updated>2016-03-27T13:21:16.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android技术周刊第2期</title>
+    <link href="http://yoursite.com/2016/03/27/android-technology-magazine-2/"/>
+    <id>http://yoursite.com/2016/03/27/android-technology-magazine-2/</id>
+    <published>2016-03-26T16:00:00.000Z</published>
+    <updated>2016-03-27T13:21:16.000Z</updated>
+    
+    <content type="html">&lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;AwesomeSource&quot;&gt;&lt;a href=&quot;#AwesomeSource&quot; class=&quot;headerlink&quot; title=&quot;AwesomeSource&quot;&gt;&lt;/a&gt;AwesomeSource&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/KotlinThree&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KotlinThree&lt;/a&gt; 一群热血的互联网江湖人发起的Organization：KotlinThree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;KnowledgePool&quot;&gt;&lt;a href=&quot;#KnowledgePool&quot; class=&quot;headerlink&quot; title=&quot;KnowledgePool&quot;&gt;&lt;/a&gt;KnowledgePool&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://renkangke.github.io/2016/01/22/%E7%94%A8Android-Studio%E8%BF%9B%E8%A1%8CNDK%E5%BC%80%E5%8F%91%E7%9A%84%E6%96%B9%E6%B3%95/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用Android Studio进行NDK开发的方法&lt;/a&gt; 本篇文章将会教你学会如何用Android Studio创建一个使用C/C++开发的NDK项目。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/18/how-to-work-weakhandler/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WeakHandler是怎么解决Handler的内存问题的&lt;/a&gt; 这篇文章会让你知道Handler如何造成内存泄露的，也会让你知道如何避免此种内存泄露&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/02/object-class-class/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;kotlin类与对象 —— 类（一）&lt;/a&gt; 简洁明了地告诉你，kotlin如何实现类&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;amp;mid=400785752&amp;amp;idx=1&amp;amp;sn=e1c166e7fad0892811c9ca9bca6d1540&amp;amp;scene=1&amp;amp;srcid=0123GUJQPmVpHwko66R2kWZj&amp;amp;key=710a5d99946419d943c5e124b4a4ba7bc9ccafbca26d0a06e6502bd27b7c6b3e893225c4e4a14beeecb5bcb2e6ba32a2&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&amp;amp;devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.10.5+build\(14F1021\&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;给创业码农的话–如何提升开发效率&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=G14Tx40jnGQZ%2FZ7EjNbpKrGwe9MfgIxyDWR938lfSnrXoLI9N%2FZBpjQHP6EYBnuB) 来自微信团队的工程师（现在应该在创业公司）的感悟：那些提高了我的开发效率的工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://drops.wooyun.org/mobile/12172?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android应用安全开发之源码安全&lt;/a&gt; Android apk很容易通过逆向工程进行反编译，从而是其代码完全暴露给攻击者，使apk面临破解，软件逻辑修改，插入恶意代码，替换广告商ID等风险。我们可以采用以下方法对apk进行保护.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000004263182?f=tt&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hybrid APP架构设计思路&lt;/a&gt; 从通讯，界面交互，H5容器等几个方面阐述Hybrid app架构设计的一些经验和思考&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.hollischuang.com/archives/1036?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;各大互联网公司架构演进之路汇总&lt;/a&gt;  平时是不是突然有一种冲动：想看看阿里、京东、滴滴、腾讯等各大互联网公司相关产品的架构设计，那这篇文章你得好好收藏下！一篇文章索引出几乎所有互联网公司产品的架构演进之路！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;DevTools&quot;&gt;&lt;a href=&quot;#DevTools&quot; class=&quot;headerlink&quot; title=&quot;DevTools&quot;&gt;&lt;/a&gt;DevTools&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&amp;amp;mid=402456714&amp;amp;idx=1&amp;amp;sn=e94ecb65432bb705778a6e0ff357bd9a&amp;amp;scene=1&amp;amp;srcid=0201R8UMY3yGl97DUCrLolAD&amp;amp;key=710a5d99946419d9c553c92b86c2b234fc0d50c94292fafd386b972d43253663619e0504f767b1245f9f701d01489d77&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&amp;amp;devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.10.5+build\(14F1021\&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多长时间更新一次 Android Studio？用哪个更新渠道？&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=n3SkcbGuld4qWyE84%2BT38qwJ9QheYrY5dWqziaIptNgPqgMcezywZQFosROcMdjh)  Android Studio 迭代周期快、不断改进，这是它的一大优点。每次新版本都带来一批新特性、新工具以及 bug 修复，所有这些都可以潜在地提高你的生产力。想尝试所有这些新玩意，但是又不想冒险离开现在稳定的开发环境。你会用哪个更新渠道？多长时间接受一次更新呢？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/androidmalin/ILOVEYOU&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ILOVEYOU&lt;/a&gt; 进入有惊喜！&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS技术周刊第5期</title>
@@ -64,57 +115,6 @@
     
     
       <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android技术周刊第2期</title>
-    <link href="http://yoursite.com/2016/03/27/android-technology-magazine-2/"/>
-    <id>http://yoursite.com/2016/03/27/android-technology-magazine-2/</id>
-    <published>2016-03-26T16:00:00.000Z</published>
-    <updated>2016-03-27T13:21:16.000Z</updated>
-    
-    <content type="html">&lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;AwesomeSource&quot;&gt;&lt;a href=&quot;#AwesomeSource&quot; class=&quot;headerlink&quot; title=&quot;AwesomeSource&quot;&gt;&lt;/a&gt;AwesomeSource&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/KotlinThree&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KotlinThree&lt;/a&gt; 一群热血的互联网江湖人发起的Organization：KotlinThree&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;KnowledgePool&quot;&gt;&lt;a href=&quot;#KnowledgePool&quot; class=&quot;headerlink&quot; title=&quot;KnowledgePool&quot;&gt;&lt;/a&gt;KnowledgePool&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://renkangke.github.io/2016/01/22/%E7%94%A8Android-Studio%E8%BF%9B%E8%A1%8CNDK%E5%BC%80%E5%8F%91%E7%9A%84%E6%96%B9%E6%B3%95/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用Android Studio进行NDK开发的方法&lt;/a&gt; 本篇文章将会教你学会如何用Android Studio创建一个使用C/C++开发的NDK项目。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/18/how-to-work-weakhandler/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WeakHandler是怎么解决Handler的内存问题的&lt;/a&gt; 这篇文章会让你知道Handler如何造成内存泄露的，也会让你知道如何避免此种内存泄露&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/02/object-class-class/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;kotlin类与对象 —— 类（一）&lt;/a&gt; 简洁明了地告诉你，kotlin如何实现类&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;amp;mid=400785752&amp;amp;idx=1&amp;amp;sn=e1c166e7fad0892811c9ca9bca6d1540&amp;amp;scene=1&amp;amp;srcid=0123GUJQPmVpHwko66R2kWZj&amp;amp;key=710a5d99946419d943c5e124b4a4ba7bc9ccafbca26d0a06e6502bd27b7c6b3e893225c4e4a14beeecb5bcb2e6ba32a2&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&amp;amp;devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.10.5+build\(14F1021\&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;给创业码农的话–如何提升开发效率&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=G14Tx40jnGQZ%2FZ7EjNbpKrGwe9MfgIxyDWR938lfSnrXoLI9N%2FZBpjQHP6EYBnuB) 来自微信团队的工程师（现在应该在创业公司）的感悟：那些提高了我的开发效率的工具&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://drops.wooyun.org/mobile/12172?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android应用安全开发之源码安全&lt;/a&gt; Android apk很容易通过逆向工程进行反编译，从而是其代码完全暴露给攻击者，使apk面临破解，软件逻辑修改，插入恶意代码，替换广告商ID等风险。我们可以采用以下方法对apk进行保护.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000004263182?f=tt&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hybrid APP架构设计思路&lt;/a&gt; 从通讯，界面交互，H5容器等几个方面阐述Hybrid app架构设计的一些经验和思考&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.hollischuang.com/archives/1036?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;各大互联网公司架构演进之路汇总&lt;/a&gt;  平时是不是突然有一种冲动：想看看阿里、京东、滴滴、腾讯等各大互联网公司相关产品的架构设计，那这篇文章你得好好收藏下！一篇文章索引出几乎所有互联网公司产品的架构演进之路！&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;DevTools&quot;&gt;&lt;a href=&quot;#DevTools&quot; class=&quot;headerlink&quot; title=&quot;DevTools&quot;&gt;&lt;/a&gt;DevTools&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&amp;amp;mid=402456714&amp;amp;idx=1&amp;amp;sn=e94ecb65432bb705778a6e0ff357bd9a&amp;amp;scene=1&amp;amp;srcid=0201R8UMY3yGl97DUCrLolAD&amp;amp;key=710a5d99946419d9c553c92b86c2b234fc0d50c94292fafd386b972d43253663619e0504f767b1245f9f701d01489d77&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&amp;amp;devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.10.5+build\(14F1021\&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多长时间更新一次 Android Studio？用哪个更新渠道？&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=n3SkcbGuld4qWyE84%2BT38qwJ9QheYrY5dWqziaIptNgPqgMcezywZQFosROcMdjh)  Android Studio 迭代周期快、不断改进，这是它的一大优点。每次新版本都带来一批新特性、新工具以及 bug 修复，所有这些都可以潜在地提高你的生产力。想尝试所有这些新玩意，但是又不想冒险离开现在稳定的开发环境。你会用哪个更新渠道？多长时间接受一次更新呢？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/androidmalin/ILOVEYOU&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ILOVEYOU&lt;/a&gt; 进入有惊喜！&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
@@ -319,9 +319,9 @@
     <link href="http://yoursite.com/2016/03/20/android-technology-magazine-1/"/>
     <id>http://yoursite.com/2016/03/20/android-technology-magazine-1/</id>
     <published>2016-03-19T16:00:00.000Z</published>
-    <updated>2016-03-20T14:02:44.000Z</updated>
+    <updated>2016-03-27T13:25:37.000Z</updated>
     
-    <content type="html">&lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs，希望更多的伙伴们参与。&lt;/p&gt;
+    <content type="html">&lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs、HotNews，希望更多的伙伴们参与。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;AwesomeSource&quot;&gt;&lt;a href=&quot;#AwesomeSource&quot; class=&quot;headerlink&quot; title=&quot;AwesomeSource&quot;&gt;&lt;/a&gt;AwesomeSource&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/HujiangTechnology/RestVolley&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RestVolley&lt;/a&gt; A http request engine based on Volley and OkHttp, giving up Apache HttpClient request. supports image loading, restful api requesting, and file downloading.&lt;/li&gt;
@@ -374,7 +374,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs，希望更多的伙伴们参与。&lt;/p&gt;
+      &lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs、HotNews，希望更多的伙伴们参与。&lt;/p&gt;
     
     </summary>
     
@@ -511,62 +511,6 @@
   </entry>
   
   <entry>
-    <title>iOS通用下载管理器-HJMURLDownloader</title>
-    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
-    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
-    <published>2016-03-12T16:00:00.000Z</published>
-    <updated>2016-03-13T14:13:18.000Z</updated>
-    
-    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
-&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
-&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
-&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
-&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iOS技术周刊第3期</title>
     <link href="http://yoursite.com/2016/03/13/ios-technology-magazine-3/"/>
     <id>http://yoursite.com/2016/03/13/ios-technology-magazine-3/</id>
@@ -619,6 +563,62 @@
     
     
       <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS通用下载管理器-HJMURLDownloader</title>
+    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
+    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
+    <published>2016-03-12T16:00:00.000Z</published>
+    <updated>2016-03-13T14:13:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
+&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
+&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
+&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
+&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
