@@ -5,7 +5,7 @@ categories: Android开发
 author: 银银
 ---
 
-本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs，希望更多的伙伴们参与。
+本技术周刊旨在汇总每周的技术知识及行业动态，以Android为主，但不限Android，内容分为5大板块：AwesomeSource、KnowledgePool、BestArticle、DevTools、FantasticLibs、HotNews，希望更多的伙伴们参与。
 
 <!--more-->
 
