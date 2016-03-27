@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-27T13:21:16.000Z</updated>
+  <updated>2016-03-27T11:58:01.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,57 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Android技术周刊第2期</title>
-    <link href="http://yoursite.com/2016/03/27/android-technology-magazine-2/"/>
-    <id>http://yoursite.com/2016/03/27/android-technology-magazine-2/</id>
-    <published>2016-03-26T16:00:00.000Z</published>
-    <updated>2016-03-27T13:21:16.000Z</updated>
-    
-    <content type="html">&lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;AwesomeSource&quot;&gt;&lt;a href=&quot;#AwesomeSource&quot; class=&quot;headerlink&quot; title=&quot;AwesomeSource&quot;&gt;&lt;/a&gt;AwesomeSource&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/KotlinThree&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KotlinThree&lt;/a&gt; 一群热血的互联网江湖人发起的Organization：KotlinThree&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;KnowledgePool&quot;&gt;&lt;a href=&quot;#KnowledgePool&quot; class=&quot;headerlink&quot; title=&quot;KnowledgePool&quot;&gt;&lt;/a&gt;KnowledgePool&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://renkangke.github.io/2016/01/22/%E7%94%A8Android-Studio%E8%BF%9B%E8%A1%8CNDK%E5%BC%80%E5%8F%91%E7%9A%84%E6%96%B9%E6%B3%95/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用Android Studio进行NDK开发的方法&lt;/a&gt; 本篇文章将会教你学会如何用Android Studio创建一个使用C/C++开发的NDK项目。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/18/how-to-work-weakhandler/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WeakHandler是怎么解决Handler的内存问题的&lt;/a&gt; 这篇文章会让你知道Handler如何造成内存泄露的，也会让你知道如何避免此种内存泄露&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/02/object-class-class/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;kotlin类与对象 —— 类（一）&lt;/a&gt; 简洁明了地告诉你，kotlin如何实现类&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;amp;mid=400785752&amp;amp;idx=1&amp;amp;sn=e1c166e7fad0892811c9ca9bca6d1540&amp;amp;scene=1&amp;amp;srcid=0123GUJQPmVpHwko66R2kWZj&amp;amp;key=710a5d99946419d943c5e124b4a4ba7bc9ccafbca26d0a06e6502bd27b7c6b3e893225c4e4a14beeecb5bcb2e6ba32a2&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&amp;amp;devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.10.5+build\(14F1021\&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;给创业码农的话–如何提升开发效率&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=G14Tx40jnGQZ%2FZ7EjNbpKrGwe9MfgIxyDWR938lfSnrXoLI9N%2FZBpjQHP6EYBnuB) 来自微信团队的工程师（现在应该在创业公司）的感悟：那些提高了我的开发效率的工具&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://drops.wooyun.org/mobile/12172?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android应用安全开发之源码安全&lt;/a&gt; Android apk很容易通过逆向工程进行反编译，从而是其代码完全暴露给攻击者，使apk面临破解，软件逻辑修改，插入恶意代码，替换广告商ID等风险。我们可以采用以下方法对apk进行保护.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000004263182?f=tt&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hybrid APP架构设计思路&lt;/a&gt; 从通讯，界面交互，H5容器等几个方面阐述Hybrid app架构设计的一些经验和思考&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.hollischuang.com/archives/1036?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;各大互联网公司架构演进之路汇总&lt;/a&gt;  平时是不是突然有一种冲动：想看看阿里、京东、滴滴、腾讯等各大互联网公司相关产品的架构设计，那这篇文章你得好好收藏下！一篇文章索引出几乎所有互联网公司产品的架构演进之路！&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;DevTools&quot;&gt;&lt;a href=&quot;#DevTools&quot; class=&quot;headerlink&quot; title=&quot;DevTools&quot;&gt;&lt;/a&gt;DevTools&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&amp;amp;mid=402456714&amp;amp;idx=1&amp;amp;sn=e94ecb65432bb705778a6e0ff357bd9a&amp;amp;scene=1&amp;amp;srcid=0201R8UMY3yGl97DUCrLolAD&amp;amp;key=710a5d99946419d9c553c92b86c2b234fc0d50c94292fafd386b972d43253663619e0504f767b1245f9f701d01489d77&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&amp;amp;devicetype=iMac+MacBookPro11%2C2+OSX+OSX+10.10.5+build\(14F1021\&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多长时间更新一次 Android Studio？用哪个更新渠道？&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=n3SkcbGuld4qWyE84%2BT38qwJ9QheYrY5dWqziaIptNgPqgMcezywZQFosROcMdjh)  Android Studio 迭代周期快、不断改进，这是它的一大优点。每次新版本都带来一批新特性、新工具以及 bug 修复，所有这些都可以潜在地提高你的生产力。想尝试所有这些新玩意，但是又不想冒险离开现在稳定的开发环境。你会用哪个更新渠道？多长时间接受一次更新呢？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/androidmalin/ILOVEYOU&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ILOVEYOU&lt;/a&gt; 进入有惊喜！&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
   
   <entry>
     <title>iOS技术周刊第5期</title>
@@ -115,6 +64,57 @@
     
     
       <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android技术周刊第2期</title>
+    <link href="http://yoursite.com/2016/03/27/android-technology-magazine-2/"/>
+    <id>http://yoursite.com/2016/03/27/android-technology-magazine-2/</id>
+    <published>2016-03-26T16:00:00.000Z</published>
+    <updated>2016-03-27T13:29:30.000Z</updated>
+    
+    <content type="html">&lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;AwesomeSource&quot;&gt;&lt;a href=&quot;#AwesomeSource&quot; class=&quot;headerlink&quot; title=&quot;AwesomeSource&quot;&gt;&lt;/a&gt;AwesomeSource&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/KotlinThree&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KotlinThree&lt;/a&gt; 一群热血的互联网江湖人发起的Organization：KotlinThree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;KnowledgePool&quot;&gt;&lt;a href=&quot;#KnowledgePool&quot; class=&quot;headerlink&quot; title=&quot;KnowledgePool&quot;&gt;&lt;/a&gt;KnowledgePool&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://renkangke.github.io/2016/01/22/%E7%94%A8Android-Studio%E8%BF%9B%E8%A1%8CNDK%E5%BC%80%E5%8F%91%E7%9A%84%E6%96%B9%E6%B3%95/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用Android Studio进行NDK开发的方法&lt;/a&gt; 本篇文章将会教你学会如何用Android Studio创建一个使用C/C++开发的NDK项目。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/18/how-to-work-weakhandler/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WeakHandler是怎么解决Handler的内存问题的&lt;/a&gt; 这篇文章会让你知道Handler如何造成内存泄露的，也会让你知道如何避免此种内存泄露&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ohmerhe.com/2016/01/02/object-class-class/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;kotlin类与对象 —— 类（一）&lt;/a&gt; 简洁明了地告诉你，kotlin如何实现类&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;amp;mid=400785752&amp;amp;idx=1&amp;amp;sn=e1c166e7fad0892811c9ca9bca6d1540&amp;amp;scene=1&amp;amp;srcid=0123GUJQPmVpHwko66R2kWZj&amp;amp;key=710a5d99946419d943c5e124b4a4ba7bc9ccafbca26d0a06e6502bd27b7c6b3e893225c4e4a14beeecb5bcb2e6ba32a2&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;给创业码农的话–如何提升开发效率&lt;/a&gt; 来自微信团队的工程师（现在应该在创业公司）的感悟：那些提高了我的开发效率的工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://drops.wooyun.org/mobile/12172?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android应用安全开发之源码安全&lt;/a&gt; Android apk很容易通过逆向工程进行反编译，从而是其代码完全暴露给攻击者，使apk面临破解，软件逻辑修改，插入恶意代码，替换广告商ID等风险。我们可以采用以下方法对apk进行保护.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000004263182?f=tt&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hybrid APP架构设计思路&lt;/a&gt; 从通讯，界面交互，H5容器等几个方面阐述Hybrid app架构设计的一些经验和思考&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.hollischuang.com/archives/1036?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;各大互联网公司架构演进之路汇总&lt;/a&gt;  平时是不是突然有一种冲动：想看看阿里、京东、滴滴、腾讯等各大互联网公司相关产品的架构设计，那这篇文章你得好好收藏下！一篇文章索引出几乎所有互联网公司产品的架构演进之路！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;DevTools&quot;&gt;&lt;a href=&quot;#DevTools&quot; class=&quot;headerlink&quot; title=&quot;DevTools&quot;&gt;&lt;/a&gt;DevTools&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&amp;amp;mid=402456714&amp;amp;idx=1&amp;amp;sn=e94ecb65432bb705778a6e0ff357bd9a&amp;amp;scene=1&amp;amp;srcid=0201R8UMY3yGl97DUCrLolAD&amp;amp;key=710a5d99946419d9c553c92b86c2b234fc0d50c94292fafd386b972d43253663619e0504f767b1245f9f701d01489d77&amp;amp;ascene=0&amp;amp;uin=MjI1NTE5NDA2Mw%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多长时间更新一次 Android Studio？用哪个更新渠道？&lt;/a&gt;  Android Studio 迭代周期快、不断改进，这是它的一大优点。每次新版本都带来一批新特性、新工具以及 bug 修复，所有这些都可以潜在地提高你的生产力。想尝试所有这些新玩意，但是又不想冒险离开现在稳定的开发环境。你会用哪个更新渠道？多长时间接受一次更新呢？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/androidmalin/ILOVEYOU&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ILOVEYOU&lt;/a&gt; 进入有惊喜！&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
