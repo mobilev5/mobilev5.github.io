@@ -6,7 +6,7 @@ categories: 逆向工程
 author: 金山
 ---
 
-逆向工程一般与说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。
+逆向工程一般说来就是在没有源代码的情况下，通过一定手段分析软件结构，挖掘出有用的信息或绕过软件自身的一些限制。目前对逆向的研究主要集中在Windows, Android，Mac和iOS这几个平台，各平台的发展也参差不齐。
 
 <!--more-->
 
@@ -98,7 +98,7 @@ _main:
 ### 破解流程
 #### 方法一
 1. 直接打开Reveal, 复制提示的字符串`Your free trial of Reveal has expire`，也可能是其它的，取决于你的reveal是否过期
-2. 使用Hopper加载Reveal
+2. 使用Hopper加载Reveal，[点击下载](http://pan.baidu.com/s/1mh5K1Hu)
 3. 搜索前面复制的字符串`Your free trial of Reveal has expire`，跳到引用该字符串的地方，这时会跳到`[IBATrialModeReminderWindowController trialExpiresTitle]`·函数中间的某个地方，查找函数调用的对照，只要在根源处注释掉即可达到破解的目的
 4. 继续查找引用或调用这个函数·trialExpiresTitle·的地方，没有找到。换个思路，搜索字符串`IBATrialModeReminderWindowController`，这是会调到`[IBATrialModeReminderWindowController controller]`函数里面
 5. 继续向上查找调用该函数`[IBATrialModeReminderWindowController controller]`的地方，会跟进这个函数`[IBATrialModeReminderPresenter showTrialModeSheetForWindow:]`
