@@ -178,7 +178,9 @@
 </ul>
 <h3 id="账户登录问题"><a href="#账户登录问题" class="headerlink" title="账户登录问题"></a>账户登录问题</h3><h4 id="背景-1"><a href="#背景-1" class="headerlink" title="背景"></a>背景</h4><p>苹果允许应用存在注册登录，但是不允许应用在使用他们看似和账号无关的功能时要求登录。</p>
 <p>实际场景如下：主页中有个商品，匿名户点击购买，然后应用弹出了登录框。这个流程及其普遍，而且这个登录的用意也很好理解。但是如果这个商品使用IAP支付，那么苹果就认为这个过程非法。他们会说：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">17.2 Details</span><br><span class="line">We noticed that your app requires users to register with personal information to access non account-based features, which is not allowed on the App Store.</span><br><span class="line">Specifically, your app requires users to register prior to In App Purchase. We’ve attached screenshot(s) for your reference.</span><br><span class="line">Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>17.2 Details,<br>We noticed that your app requires users to register with personal information to access non account-based features, which is not allowed on the App Store.<br>Specifically, your app requires users to register prior to In App Purchase. We’ve attached screenshot(s) for your reference.<br>Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.</p>
+</blockquote>
 <p>Oh my god~~</p>
 <h4 id="原因分析-1"><a href="#原因分析-1" class="headerlink" title="原因分析"></a>原因分析</h4><p>苹果认为IAP本身是不需要用户登录的。因为这个是苹果提供的支付方法，和应用本身的账号无关。这个解释我们虽然看得懂，但是非常难理解。</p>
 <h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><p>为此我们使用了几种方式去解决，供大家参考选用。</p>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-30T14:25:36.000Z</updated>
+  <updated>2016-03-30T14:28:28.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/28/appstore-review-attention/"/>
     <id>http://yoursite.com/2016/03/28/appstore-review-attention/</id>
     <published>2016-03-27T16:00:00.000Z</published>
-    <updated>2016-03-30T14:25:36.000Z</updated>
+    <updated>2016-03-30T14:28:28.000Z</updated>
     
     <content type="html">&lt;p&gt;提审是iOS app上架前的必经之路，95%的应用在第一次审核的时候会被打回，让我们一起看下审核中可能遇到的问题以及对应的解决办法。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -83,7 +83,9 @@
 &lt;/ul&gt;
 &lt;h3 id=&quot;账户登录问题&quot;&gt;&lt;a href=&quot;#账户登录问题&quot; class=&quot;headerlink&quot; title=&quot;账户登录问题&quot;&gt;&lt;/a&gt;账户登录问题&lt;/h3&gt;&lt;h4 id=&quot;背景-1&quot;&gt;&lt;a href=&quot;#背景-1&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;p&gt;苹果允许应用存在注册登录，但是不允许应用在使用他们看似和账号无关的功能时要求登录。&lt;/p&gt;
 &lt;p&gt;实际场景如下：主页中有个商品，匿名户点击购买，然后应用弹出了登录框。这个流程及其普遍，而且这个登录的用意也很好理解。但是如果这个商品使用IAP支付，那么苹果就认为这个过程非法。他们会说：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;17.2 Details&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;We noticed that your app requires users to register with personal information to access non account-based features, which is not allowed on the App Store.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Specifically, your app requires users to register prior to In App Purchase. We’ve attached screenshot(s) for your reference.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;17.2 Details,&lt;br&gt;We noticed that your app requires users to register with personal information to access non account-based features, which is not allowed on the App Store.&lt;br&gt;Specifically, your app requires users to register prior to In App Purchase. We’ve attached screenshot(s) for your reference.&lt;br&gt;Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Oh my god~~&lt;/p&gt;
 &lt;h4 id=&quot;原因分析-1&quot;&gt;&lt;a href=&quot;#原因分析-1&quot; class=&quot;headerlink&quot; title=&quot;原因分析&quot;&gt;&lt;/a&gt;原因分析&lt;/h4&gt;&lt;p&gt;苹果认为IAP本身是不需要用户登录的。因为这个是苹果提供的支付方法，和应用本身的账号无关。这个解释我们虽然看得懂，但是非常难理解。&lt;/p&gt;
 &lt;h4 id=&quot;解决方案-1&quot;&gt;&lt;a href=&quot;#解决方案-1&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h4&gt;&lt;p&gt;为此我们使用了几种方式去解决，供大家参考选用。&lt;/p&gt;
