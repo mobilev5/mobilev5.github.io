@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-27T11:58:01.000Z</updated>
+  <updated>2016-03-30T14:25:36.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,158 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AppStore 审核经验总结</title>
+    <link href="http://yoursite.com/2016/03/28/appstore-review-attention/"/>
+    <id>http://yoursite.com/2016/03/28/appstore-review-attention/</id>
+    <published>2016-03-27T16:00:00.000Z</published>
+    <updated>2016-03-30T14:25:36.000Z</updated>
+    
+    <content type="html">&lt;p&gt;提审是iOS app上架前的必经之路，95%的应用在第一次审核的时候会被打回，让我们一起看下审核中可能遇到的问题以及对应的解决办法。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;常见问题&quot;&gt;&lt;a href=&quot;#常见问题&quot; class=&quot;headerlink&quot; title=&quot;常见问题&quot;&gt;&lt;/a&gt;常见问题&lt;/h2&gt;&lt;h3 id=&quot;低级问题&quot;&gt;&lt;a href=&quot;#低级问题&quot; class=&quot;headerlink&quot; title=&quot;低级问题&quot;&gt;&lt;/a&gt;低级问题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;APP存在bug。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：修复bug。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;“iPhone” “iPad”等专业字样写错。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：修正。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;数据存储违反《iOS Data Storage Guidelines》。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：仔细阅读条款，特别注意临时数据的存储位置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;图片、文字含安卓信息。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：去除相应描述。        &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;应用内含有beta字样。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：完整app功能，去除beta字样。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有检测更新功能。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：去除检测提醒。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;高级问题&quot;&gt;&lt;a href=&quot;#高级问题&quot; class=&quot;headerlink&quot; title=&quot;高级问题&quot;&gt;&lt;/a&gt;高级问题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;需要账号的应用没有提供测试账号。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：凡是涉及到用户登录的APP必须提供有效的测试账号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;内购产品被赠送。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：调整APP规则，不能赠送IAP可购买的内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;iPhone程序不能在iPad运行或者运行异常。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：修复兼容性问题，不要求应用适配iPad，但是需要应用可以在iPad中以兼容模式运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;提示用户好评打分。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：应用中不能出现引导让用户好评，可以去评论，但是不能是给好评。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;产品仅提供手机号注册，要求提供账号。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：苹果不允许只有手机号注册，需要提供邮箱或者用户名等注册方式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;提供了月卡功能，但是不支持玩家在不同设备中使用。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  解决方法：这个问题相当棘手，月卡功能是通过iap支付的可恢复的产品。iap支付只和AppleID相关，和应用中的ID没有关系，所以应用中应该避免使用直接购买月卡的功能，以免遇到相关逻辑问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;实际经验分享&quot;&gt;&lt;a href=&quot;#实际经验分享&quot; class=&quot;headerlink&quot; title=&quot;实际经验分享&quot;&gt;&lt;/a&gt;实际经验分享&lt;/h2&gt;&lt;h3 id=&quot;IAP支付需求&quot;&gt;&lt;a href=&quot;#IAP支付需求&quot; class=&quot;headerlink&quot; title=&quot;IAP支付需求&quot;&gt;&lt;/a&gt;IAP支付需求&lt;/h3&gt;&lt;h4 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;p&gt;网校的APP有出售课程的功能，使用的支付方式是第三方支付。在审核过程中使用开关，关闭了购买的入口，只有内容介绍。结果被拒。&lt;/p&gt;
+&lt;h4 id=&quot;原因分析&quot;&gt;&lt;a href=&quot;#原因分析&quot; class=&quot;headerlink&quot; title=&quot;原因分析&quot;&gt;&lt;/a&gt;原因分析&lt;/h4&gt;&lt;p&gt;起初使用开关控制入口是可以的，但是突然某一次提审苹果认为应用存在支付，并且需要接入IAP。其中有个比较致命的问题是，应用内出现了促销信息，信息中包含了价格。一旦苹果认准了的问题，简单的去除和沟通几乎是不可能解决的。&lt;/p&gt;
+&lt;h4 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h4&gt;&lt;p&gt;经过研究，我们增加了特定的应用内购商品，并且通过了审核。以下是解决方案的要点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;增加代币购买，使用IAP购买。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  为什么增加的是代币不是直接购买商品？&lt;/p&gt;
+&lt;p&gt;  首先，代币是消耗品，和应用的账号做绑定，这样苹果理解起来简单。如果直接购买商品，苹果就会引商品的性质做一系列理解，万一出现非消耗品，那就要做IAP中的恢复购买，这点非常麻烦。&lt;/p&gt;
+&lt;p&gt;  其次，代币购买的商品可以自由变更。每个IAP的商品需要上传苹果后台，并且审核。如果我们直接购买商品，那么每个商品都要上传审核，后期维护十分麻烦。如果是代币，一次定义，以后就只要调整可购买的内容就可以了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;增加特定商品，仅供代币购买。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  苹果希望所有IAP购买的商品只能在苹果设备使用。所以最好的策略是，IAP购买的商品是独立的，其他平台无法购买，也无法使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;增加开关，控制商品显示。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  IAP支付并不能很好的在实际购买中使用，所以它只是为了审核特别存在的。如何启用第三方支付，购买更多普通课程，才是需要我们考虑的。在此，我们使用了开关，用来显示/隐藏普通商品的显示和购买。&lt;/p&gt;
+&lt;p&gt;  从苹果审核过程中的反馈可以看出，苹果意识到应用商会使用开关的方式去做很多事情。比如，显示额外信息、跳转safari显示更多内容等。虽然苹果禁止，但是也有事后包容。所以推荐应用有这么一个开关，具体开关哪些东西就由产品定位考虑了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;账户登录问题&quot;&gt;&lt;a href=&quot;#账户登录问题&quot; class=&quot;headerlink&quot; title=&quot;账户登录问题&quot;&gt;&lt;/a&gt;账户登录问题&lt;/h3&gt;&lt;h4 id=&quot;背景-1&quot;&gt;&lt;a href=&quot;#背景-1&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;p&gt;苹果允许应用存在注册登录，但是不允许应用在使用他们看似和账号无关的功能时要求登录。&lt;/p&gt;
+&lt;p&gt;实际场景如下：主页中有个商品，匿名户点击购买，然后应用弹出了登录框。这个流程及其普遍，而且这个登录的用意也很好理解。但是如果这个商品使用IAP支付，那么苹果就认为这个过程非法。他们会说：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;17.2 Details&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;We noticed that your app requires users to register with personal information to access non account-based features, which is not allowed on the App Store.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Specifically, your app requires users to register prior to In App Purchase. We’ve attached screenshot(s) for your reference.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Apps cannot require user registration prior to allowing access to app content and features that are not associated specifically to the user.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Oh my god~~&lt;/p&gt;
+&lt;h4 id=&quot;原因分析-1&quot;&gt;&lt;a href=&quot;#原因分析-1&quot; class=&quot;headerlink&quot; title=&quot;原因分析&quot;&gt;&lt;/a&gt;原因分析&lt;/h4&gt;&lt;p&gt;苹果认为IAP本身是不需要用户登录的。因为这个是苹果提供的支付方法，和应用本身的账号无关。这个解释我们虽然看得懂，但是非常难理解。&lt;/p&gt;
+&lt;h4 id=&quot;解决方案-1&quot;&gt;&lt;a href=&quot;#解决方案-1&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h4&gt;&lt;p&gt;为此我们使用了几种方式去解决，供大家参考选用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;触发入口的隐藏/显示&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  这个方法很好理解。应用在用户未登录的情况下，隐藏商品的购买按钮。这样应用看上去就像是一个信息浏览工具，并没有支付功能。当用户登录了账号，这个购买按钮显示。&lt;/p&gt;
+&lt;p&gt;  我们使用这个机制的触发入口有几种，收藏夹入口、购买入口、充值入口等。基本和账号相关的都使用了。&lt;/p&gt;
+&lt;p&gt;  去年9月，在使用这种机制情况下，我们通过了审核。并且是在苹果质疑过我们关于账号登录相关问题的情况下通过的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;匿名用户登录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  在经过几个版本的迭代后，今年3月苹果突然质疑了我们显示、隐藏入口的做法。他们的理解是，在用户不登录的情况，应用有bug，没有显示入口，属于功能不完整。&lt;/p&gt;
+&lt;p&gt;  经过几次挣扎，根据以往的经验，我们决定使用匿名登录的方式，彻底解决这个问题。&lt;/p&gt;
+&lt;p&gt;  匿名登录本身使用了登录模块的匿名登录方法。登录模块在匿名登录后会返回有效的token，这是解决问题的关键。这个token可以让应用本身感受不到用户的特殊，当作一般登录用户处理就可以了。匿名登录是以deviceId生成一个用户账号，所以就算审核的过程中苹果删除应用，也不会出现账号混乱的情况。&lt;/p&gt;
+&lt;p&gt;  这里有个前提，这种机制是需要配合送审开关的。只有在送审的时候才能使用匿名登录，审核后，上线前必须关闭。&lt;/p&gt;
+&lt;p&gt;  增加了这个机制后，整个应用的用户体验就会非常流畅。安装后打开，应用会静默登录，用户无任何感知。在使用应用的过程中也不会有账号退出登录相关的操作。应用几乎是账号无关的，然而用户的信息又都能保存，无论是购买内容还是收藏夹。&lt;/p&gt;
+&lt;p&gt;  至此，完全解决了账号相关的问题，而且效果也比较完美。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;附录：重点审核条款&quot;&gt;&lt;a href=&quot;#附录：重点审核条款&quot; class=&quot;headerlink&quot; title=&quot;附录：重点审核条款&quot;&gt;&lt;/a&gt;附录：重点审核条款&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;2.2 Apps that exhibit bugs will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：存在错误的程序将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2.9 Apps that are “demo”, “trial”, or “test” versions will be rejected. Beta Apps may only be submitted through TestFlight and must follow the TestFlight guidelines&lt;/p&gt;
+&lt;p&gt;  译文：Demo版、trial版和test版的程序将会被拒绝。Beta版应用程序可通过TestFlight提交，并且必须遵守相关指南。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2.17 Apps that browse the web must use the iOS WebKit framework and WebKit Javascript&lt;/p&gt;
+&lt;p&gt;  译文：应用程序只允许使用iOS WebKit框架和WebKit Javascript浏览web内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2.23 Apps must follow the iOS Data Storage Guidelines or they will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：应用必须遵守iOS数据储存指导方针(iOS Data Storage Guidelines)，否则应用将被拒。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;3.1 Apps or metadata that mentions the name of any other mobile platform will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：应用或者元数据中提到其他任何移动平台将会被拒。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;3.3 Apps with names, descriptions, screenshots, or previews not relevant to the content and functionality of the App will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：应用程序的名称、描述、截图或者预览与应用的内容和功能不相关将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;5.6 Apps cannot use Push Notifications to send advertising, promotions, or direct marketing of any kind&lt;/p&gt;
+&lt;p&gt;  译文：应用程序不可使用推送通知发送广告、促销或任何类型的直销信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;11.1 Apps that unlock or enable additional features or functionality with mechanisms other than the App Store will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：使用App Store以外的渠道解锁或开启附加属性和功能的应用程序将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;11.2 Apps utilizing a system other than the In-App Purchase API (IAP) to purchase content, functionality, or services in an App will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：使用应用内支付系统(IAP)以外的系统购买内容、功能或服务的应用软件将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;11.7 Apps that use IAP to purchase items must assign the correct Purchasability type&lt;/p&gt;
+&lt;p&gt;  译文：使用IAP购买项目的应用程序必须指派正确的购买类型。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;11.8 Apps that use IAP to purchase access to built-in capabilities provided by iOS, watchOS, and tvOS, such as the camera or the gyroscope, or Apple-branded peripherals, such as Apple Pencil or Apple Keyboard, will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：使用IAP购买iOS内置功能(如照相机，陀螺仪)的应用程序将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;11.11 In general, the more expensive your App, the more thoroughly we will review it&lt;/p&gt;
+&lt;p&gt;  译文：一般而言，你的应用程序越贵，我们的评审会越深入。(对不起，我们国产大部分是免费网游)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;11.13 Apps that link to external mechanisms for purchases or subscriptions to be used in the App, such as a “buy” button that goes to a web site to purchase a digital book, will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：在应用内使用跳转至外部购买或订阅链接的应用将会被拒，比如”buy”按钮跳转至一个购买电子书的web页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;17.2 Apps that require users to share personal information, such as email address and date of birth, in order to function will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：要求用户共享电子邮箱地址和出生日期等私人信息才可使用其功能的应用程序将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;17.5 Apps that include account registration or access a user’s existing account must include a privacy policy or they will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：包含账号注册或者访问用户现有账号的应用程序必须包含隐私策略，否则将会被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;29.1 Apps containing references or commentary about a religious, cultural or ethnic group that are defamatory, offensive, mean-spirited or likely to expose the targeted group to harm or violence will be rejected&lt;/p&gt;
+&lt;p&gt;  译文：使用Apple Pay的应用程序必须在出售任何商品或者服务之前为用户提供所有材料的购买信息，否则将会被拒绝。使用Apple Pay进行定期付款的应用程序必须提供最低限度续费期限，付费将持续直至被取消，每个阶段所付款额，费用付款归属，以及如何取消等。(增加了对于定期付款的规定)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;提审是iOS app上架前的必经之路，95%的应用在第一次审核的时候会被打回，让我们一起看下审核中可能遇到的问题以及对应的解决办法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="疑难杂症" scheme="http://yoursite.com/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS技术周刊第5期</title>
