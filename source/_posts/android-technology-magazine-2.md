@@ -1,10 +1,9 @@
+---
 title: Android技术周刊第2期
-date: 2016-3-27
+date: 2016-01-25
 tags: Android技术周刊
 categories: Android开发
-author: 银银
 ---
-
 ILOVEYOU, 这个字是程序员内心底里对妳的宣称！！
 
 <!--more-->
