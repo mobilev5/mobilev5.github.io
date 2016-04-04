@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTTP缓存策略 | 移动开发</title>
+  <meta name="author" content="移动开发">
+  
+  <meta name="description" content="通过网络获取内容既缓慢，成本又高，有些响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。
+HTTP 协议中定义了一些数据缓存的策略，每个浏览器都进行了实现。我们所要做的就是，确保每个服务器响应都提供正确的 HTTP 头，以指导浏览器何时可以缓存响应以及可以缓存多久。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="HTTP缓存策略"/>
+  <meta property="og:site_name" content="移动开发"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">移动开发</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> HTTP缓存策略</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>通过网络获取内容既缓慢，成本又高，有些响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。</p>
+<p>HTTP 协议中定义了一些数据缓存的策略，每个浏览器都进行了实现。我们所要做的就是，确保每个服务器响应都提供正确的 HTTP 头，以指导浏览器何时可以缓存响应以及可以缓存多久。</p>
+<a id="more"></a>
+<h2 id="缓存方式"><a href="#缓存方式" class="headerlink" title="缓存方式"></a>缓存方式</h2><p>对于 HTTP Cache，我们最常用的有以下方式：</p>
+<ul>
+<li>Last-Modified / If-Modified-Since (HTTP 1.0)</li>
+<li>ETag / If-None-Match (HTTP 1.1)</li>
+<li>Cache-Control (HTTP 1.1)</li>
+</ul>
+<h3 id="1、Last-Modified-If-Modified-Since-HTTP-1-0"><a href="#1、Last-Modified-If-Modified-Since-HTTP-1-0" class="headerlink" title="1、Last-Modified / If-Modified-Since (HTTP 1.0)"></a>1、Last-Modified / If-Modified-Since (HTTP 1.0)</h3><p><em>不能减少请求，但是可以减少应用服务的重复计算，并减少返回数据流量。</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># response header</span><br><span class="line">Last-Modified: Mon, 03 Jan 2016 17:45:57 GMT</span><br><span class="line"></span><br><span class="line"># request header</span><br><span class="line">If-Modified-Since: Mon, 03 Jan 2016 17:45:57 GMT</span><br></pre></td></tr></table></figure>
+<p>如果服务器每次都重新发送请求，获取完整的数据。这样做效率较低，因为如果资源未被更改过，就没有理由再去下载与缓存中已有的完全相同的字节。</p>
+<p>原理是：浏览器第二次请求一个资源，会带上上次请求返回的一些 HTTP 头： If-Modified-Since，服务端判断浏览器所请求资源在此期间是否发生了变化，如未变化，直接返回 304 和空body。</p>
+<h3 id="2、-ETag-If-None-Match-HTTP-1-1"><a href="#2、-ETag-If-None-Match-HTTP-1-1" class="headerlink" title="2、 ETag / If-None-Match (HTTP 1.1)"></a>2、 ETag / If-None-Match (HTTP 1.1)</h3><p><em>(Entity Tag) 和Last-Modified功能一致。</em></p>
+<p>不同于 Last-Modified，ETag 使用的是一个令牌值，这对于一些无法用时间来标识的资源为更方便。</p>
+<h5 id="Request-Headers"><a href="#Request-Headers" class="headerlink" title="Request Headers"></a>Request Headers</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If-None-Match:&quot;1edec-3e3073913b100&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># General</span><br><span class="line">Request URL:https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</span><br><span class="line">Request Method:GET</span><br><span class="line">Status Code:304 Not Modified</span><br><span class="line"></span><br><span class="line"># Headers</span><br><span class="line">ETag:&quot;1edec-3e3073913b100&quot;</span><br></pre></td></tr></table></figure>
+<p>在请求中，多了一个 <code>If-None-Match</code>，服务器端返回的 <code>Status Code</code> 为 <code>304 Not Modified</code>。</p>
+<h3 id="3、Cache-Control-HTTP-1-1"><a href="#3、Cache-Control-HTTP-1-1" class="headerlink" title="3、Cache-Control (HTTP 1.1)"></a>3、Cache-Control (HTTP 1.1)</h3><p><em>真正减少请求数量。指定客户端什么要缓存，什么不要。而且可以指定中间设备是否应该缓存（路由器，CDN等）。</em></p>
+<p>Cache-Directive 有很多值，可以用来配置缓存的策略。</p>
+<ul>
+<li>no-cache / no-store：<ul>
+<li>no-cache：这个很容易让人产生误解，使人误以为是响应不被缓存。实际上 no-cache 是会被缓存的，只不过每次在向客户端（浏览器）提供响应数据时，缓存都要向服务器评估缓存响应的有效性。？？？？如果有了 etag，还要 no-cache 干啥？</li>
+<li>no-store：这个才是响应不被缓存的意思。每个请求必须获取完整的响应。</li>
+</ul>
+</li>
+<li>public / private：<ul>
+<li>public 意思是中间服务设备（路由器，CDN）能缓存内容。<ul>
+<li>private 是指只有用户浏览器才可以缓存。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>must-revalidation / proxy-revalidation <ul>
+<li>如果缓存的内容失效，请求必须发送到服务器/代理以进行重新验证。如果失效，本身就是要重新验证的。。。为什么还要 must-revalidation?</li>
+</ul>
+</li>
+<li>max-age<ul>
+<li>max-age=xxx (xxx 为数值) 缓存的内容将在 xxx 秒后失效。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4、HTTP-1-1-Protocol"><a href="#4、HTTP-1-1-Protocol" class="headerlink" title="4、HTTP/1.1 Protocol"></a>4、HTTP/1.1 Protocol</h3><p>HTTP/1.1 规范中定义了新的规范，取代了之前用来定义响应缓存策略的头.</p>
+<ul>
+<li>ETag / If-None-Match (HTTP 1.1)</li>
+<li>Cache-Control (HTTP 1.1)</li>
+</ul>
+<p>当前的所有浏览器都支持 Cache-Control，因此，使用它就够了。新的规范会重写旧的值（Cache-Control 会重写 Expires 的规则）。</p>
+<h2 id="最优策略"><a href="#最优策略" class="headerlink" title="最优策略"></a>最优策略</h2><p><img src="http-cache-decision-tree.png" alt=""></p>
+<h2 id="参见："><a href="#参见：" class="headerlink" title="参见："></a>参见：</h2><ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn" target="_blank" rel="external">HTTP 缓存</a></li>
+<li><a href="https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers" target="_blank" rel="external">Increasing Application Performance with HTTP Cache Headers</a></li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/04/01/http-cache/" data-title="HTTP缓存策略" data-url="http://yoursite.com/2016/04/01/http-cache/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-04-01 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	Lanvige 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 移动开发
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
