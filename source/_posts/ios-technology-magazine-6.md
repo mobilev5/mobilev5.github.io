@@ -5,7 +5,7 @@ categories: iOS开发
 author: 阿P
 ---
 
-本周重点关注iPhone SE发售；SQLite的锁机制和WAL技术。
+本周重点关注iPhone SE发售；SQLite的锁机制和WAL技术；Http缓存策略；AppStore 审核经验。
 
 <!--more-->
 
@@ -21,7 +21,7 @@ author: 阿P
 - [React-Native痛点解析之开发环境搭建及扩展](http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&mid=403225766&idx=1&sn=acd8e3ab7f234b97827c3e210c2d8673&scene=4#wechat_redirect) `Hello World`是学习的开始，搭建环境是`Hello World`的开始。
 
 ## 网络交互
-- [Http缓存策略详解]()
+- [Http缓存策略](http://mobilev5.github.io/2016/04/01/http-cache/) 通过网络获取内容既缓慢，成本又高，有些响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。
 
 ## 后花园
 - iPhone SE发售。“迄今最高性能的4英寸iPhone”、“一小部的一大步”。
