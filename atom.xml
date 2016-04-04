@@ -380,52 +380,6 @@
   </entry>
   
   <entry>
-    <title>Android技术周刊第8期</title>
-    <link href="http://yoursite.com/2016/03/22/android-technology-magazine-8/"/>
-    <id>http://yoursite.com/2016/03/22/android-technology-magazine-8/</id>
-    <published>2016-03-21T16:00:00.000Z</published>
-    <updated>2016-04-04T13:24:11.000Z</updated>
-    
-    <content type="html">&lt;p&gt;程序员，一种生物，能把咖啡和汉堡转化成软件的生物！&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://artemzin.com/blog/why-i-dont-want-to-use-kotlin-for-android-development-yet/?utm_source=Android+Weekly&amp;amp;utm_campaign=1172c35594-Android_Weekly_196&amp;amp;utm_medium=email&amp;amp;utm_term=0_4eb677ad19-1172c35594-337979953&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why I don’t want to use Kotlin for Android Development yet&lt;/a&gt; Even though Kotlin is better than Java in many points it still has significant (in my opinion) drawbacks. &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA4NDM2MjAwNw==&amp;amp;mid=401750457&amp;amp;idx=1&amp;amp;sn=e59785deb47c1e2fc6845bbfad6346b5&amp;amp;scene=1&amp;amp;srcid=0314MCxuZ1lTMKgZRVmVT6aM&amp;amp;key=710a5d99946419d9453ad7f332e226220c10ab61cd89b34235281c135cd38750ed2857d5d3ec1c541e88a29067fec03e&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JVM内幕：Java虚拟机详解&lt;/a&gt; 这篇文章解释了Java 虚拟机（JVM）的内部架构。下图显示了遵守 Java SE 7 规范的典型的 JVM 核心内部组件。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&amp;amp;mid=410252715&amp;amp;idx=1&amp;amp;sn=d1d5f95de8d1905c4530955f862f735b&amp;amp;scene=1&amp;amp;srcid=0314f27h2PiA2rFrHFqcN6vd&amp;amp;key=710a5d99946419d937366e44ff1d99ad36bfb96517cd294c0ad0aae0710179714b2db5e3ca0bea3e063e981a6409ee21&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何成为架构师？7个关键的思考、习惯和经验&lt;/a&gt; 工作了挺久，发现有个挺有意思的现象，从程序员、高级程序员，到现在挂着架构师、专家之类的头衔，伴随着技术和能力的提高，想不明白的事情反而越来越多了。这些疑问有些来自于跟小伙伴交流，有些是我的自问自答，有些到现在也想不清楚，这篇文章就来写一写这些问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;DevTools&quot;&gt;&lt;a href=&quot;#DevTools&quot; class=&quot;headerlink&quot; title=&quot;DevTools&quot;&gt;&lt;/a&gt;DevTools&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://thx.github.io/RAP/index_zh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RAP&lt;/a&gt; RAP(Rigel Automation Platform)，随时随地编辑、查看、使用、校验接口数据，它的口号是：提高效率，回家吃晚饭！！&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://rap.fe.yeshj.com/platform/home.do&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;沪江API系统&lt;/a&gt; 沪江API系统一个可视化接口管理工具 基于阿里妈妈RAP系统开发，通过分析接口结构，动态生成模拟数据，校验真实接口正确性， 围绕接口定义，通过一系列自动化工具提升我们的协作效率。我们的口号：提高效率，回家吃晚饭！(哈哈，看样子想回家吃晚饭是所有程序员的心声)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/JakeWharton/hugo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hugo&lt;/a&gt; Annotation-triggered method call logging for your debug builds.&lt;br&gt;does not support kotlin&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Marswin/MarsDaemon&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarsDaemon&lt;/a&gt; 这是一个轻量级的库，配置几行代码，就可以实现在android上实现进程常驻，也就是在系统强杀下，以及360获取root权限下，clean master获取root权限下都无法杀死进程；支持系统2.3到6.0、支持大部分设备，包括三星，华为，oppo，nexus，魅族等等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;HotNews&quot;&gt;&lt;a href=&quot;#HotNews&quot; class=&quot;headerlink&quot; title=&quot;HotNews&quot;&gt;&lt;/a&gt;HotNews&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ithome.com/html/digi/211327.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;路由器刷第三方固件遭美官方封杀&lt;/a&gt; 如今，路由器也开始智能化，除了厂商在固件上加入很多个性化定制的选择，不少也支持刷入第三方的固件，比如DD-WRT、Tomato、OpenWRT等，从而实现方便多拨、信号放大、白名单、离线下载等功能&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnbeta.com/articles/483953.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google向山景城递交了最新的总部园区设计方案&lt;/a&gt; Google于去年透露会向苹果那样，在当前位于加州山景城附近的地方建造一个充满艺术感的新园区。根据该公司最新展示的效果图，可看出新园区像极了一个未来的节日营地。该公司已经向该市递交了最新的方案和效果图，当然我们也留意到了某些变动。最初，Google意在搭建轻量、可移动的建筑，但最新方案看起来会是更扎实的那种&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/e/1160000004510150&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SegmentFault D-Day 上海：云服务专场&lt;/a&gt; SegmentFault D-Day，全称 SegmentFault Developer Day，是由 SegmentFault 发起主办的系列技术沙⻰。自 2014 年启动，D-Day 技术沙龙已在北、上、广、深、杭等 10 个城市巡回举办了 19 场，涉及前端、云计算、后端、大数据、移动开发等众多主题，活动覆盖数千位开发者。2016 年，SegmentFault 将继续立足社区，传播前沿的技术实践内容：今年 5 个月，D-Day 将跨越 10 个城市，邀请重量级嘉宾，贴合业务需求，精选分享议题，为开发者打造更具价值的线下技术交流。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://aidanfollestad.com/about&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这货95年的&lt;/a&gt; 这个小伙子年少有为，你值得一看&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&amp;amp;mid=404321327&amp;amp;idx=1&amp;amp;sn=2d851ab953b7bce7d8734b0fdd94ef57&amp;amp;scene=1&amp;amp;srcid=0314Ml3EVRrxM97kqOLugyZJ&amp;amp;key=710a5d99946419d93f5d9d6f2c3d98d18d055bcc73fb7928a3c0917d2f4a45276269576400899ff2151edcb1de3d41c4&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员实力撩妹指南&lt;/a&gt; 猴喽~~猿猿们雷们猴啊！教你们如何毫无PS痕迹地实力撩妹！！ 笑笑就好，千万别当真！&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA4NTQwNDcyMA==&amp;amp;mid=402771384&amp;amp;idx=1&amp;amp;sn=d5386de694c0cdb0250d258743744e2f&amp;amp;scene=1&amp;amp;srcid=0316uWxad7Bm5NtL4Sfz7ZAo&amp;amp;key=710a5d99946419d98acec59e4705d4eec8255ea10f4d2d3cf92b60150b0f33e7d6a8a32b00dfbe1bd248a31ccd71a88d&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;上海Android交流会安排与分享嘉宾&lt;/a&gt; 嘿嘿，等了这么久，我们终于确定了大会的具体安排与邀请嘉宾，本次分享嘉宾由我跟「大头鬼」一起邀请，场地由薄荷提供，在这里感谢「大头鬼」以及这些嘉宾百忙之中对这次活动的支持与配合。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzIzNzE4NjkxMw==&amp;amp;mid=403135639&amp;amp;idx=1&amp;amp;sn=0e5b8da2beb165d56b0d208773117eb2&amp;amp;scene=1&amp;amp;srcid=03172s3Vu9j3AMP7s9ygBt3I&amp;amp;key=710a5d99946419d989b5ca4fb7c598c00497dced00ff1a34bb7882ff4c9edaf6d26dc57ae6f4bdb2326275d44d9ae3be&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里巴巴终于忍不住了，宣布成立VR（虚拟现实）实验室&lt;/a&gt; 凤凰科技讯 3月17日消息，阿里巴巴宣布成立VR（虚拟现实）实验室，并首次对外透露集团VR战略。据介绍，阿里将发挥平台优势，同步推动VR内容培育和硬件孵化。在内容方面，阿里已经全面启动Buy＋计划引领未来购物体验，并将协同旗下的影业、音乐、视频网站等，推动优质VR内容产出。在硬件方面，阿里将依托全球最大电商平台，搭建VR商业生态，加速VR设备普及，助力硬件厂商发展&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;程序员，一种生物，能把咖啡和汉堡转化成软件的生物！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
-  
-  <entry>
     <title>现有iOS端图片缓存解决方案</title>
     <link href="http://yoursite.com/2016/03/22/image-cache-solution/"/>
     <id>http://yoursite.com/2016/03/22/image-cache-solution/</id>
@@ -502,6 +456,52 @@
     
     
       <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android技术周刊第8期</title>
+    <link href="http://yoursite.com/2016/03/22/android-technology-magazine-8/"/>
+    <id>http://yoursite.com/2016/03/22/android-technology-magazine-8/</id>
+    <published>2016-03-21T16:00:00.000Z</published>
+    <updated>2016-04-04T13:24:11.000Z</updated>
+    
+    <content type="html">&lt;p&gt;程序员，一种生物，能把咖啡和汉堡转化成软件的生物！&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://artemzin.com/blog/why-i-dont-want-to-use-kotlin-for-android-development-yet/?utm_source=Android+Weekly&amp;amp;utm_campaign=1172c35594-Android_Weekly_196&amp;amp;utm_medium=email&amp;amp;utm_term=0_4eb677ad19-1172c35594-337979953&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why I don’t want to use Kotlin for Android Development yet&lt;/a&gt; Even though Kotlin is better than Java in many points it still has significant (in my opinion) drawbacks. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA4NDM2MjAwNw==&amp;amp;mid=401750457&amp;amp;idx=1&amp;amp;sn=e59785deb47c1e2fc6845bbfad6346b5&amp;amp;scene=1&amp;amp;srcid=0314MCxuZ1lTMKgZRVmVT6aM&amp;amp;key=710a5d99946419d9453ad7f332e226220c10ab61cd89b34235281c135cd38750ed2857d5d3ec1c541e88a29067fec03e&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JVM内幕：Java虚拟机详解&lt;/a&gt; 这篇文章解释了Java 虚拟机（JVM）的内部架构。下图显示了遵守 Java SE 7 规范的典型的 JVM 核心内部组件。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&amp;amp;mid=410252715&amp;amp;idx=1&amp;amp;sn=d1d5f95de8d1905c4530955f862f735b&amp;amp;scene=1&amp;amp;srcid=0314f27h2PiA2rFrHFqcN6vd&amp;amp;key=710a5d99946419d937366e44ff1d99ad36bfb96517cd294c0ad0aae0710179714b2db5e3ca0bea3e063e981a6409ee21&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何成为架构师？7个关键的思考、习惯和经验&lt;/a&gt; 工作了挺久，发现有个挺有意思的现象，从程序员、高级程序员，到现在挂着架构师、专家之类的头衔，伴随着技术和能力的提高，想不明白的事情反而越来越多了。这些疑问有些来自于跟小伙伴交流，有些是我的自问自答，有些到现在也想不清楚，这篇文章就来写一写这些问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;DevTools&quot;&gt;&lt;a href=&quot;#DevTools&quot; class=&quot;headerlink&quot; title=&quot;DevTools&quot;&gt;&lt;/a&gt;DevTools&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://thx.github.io/RAP/index_zh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RAP&lt;/a&gt; RAP(Rigel Automation Platform)，随时随地编辑、查看、使用、校验接口数据，它的口号是：提高效率，回家吃晚饭！！&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rap.fe.yeshj.com/platform/home.do&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;沪江API系统&lt;/a&gt; 沪江API系统一个可视化接口管理工具 基于阿里妈妈RAP系统开发，通过分析接口结构，动态生成模拟数据，校验真实接口正确性， 围绕接口定义，通过一系列自动化工具提升我们的协作效率。我们的口号：提高效率，回家吃晚饭！(哈哈，看样子想回家吃晚饭是所有程序员的心声)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JakeWharton/hugo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hugo&lt;/a&gt; Annotation-triggered method call logging for your debug builds.&lt;br&gt;does not support kotlin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Marswin/MarsDaemon&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarsDaemon&lt;/a&gt; 这是一个轻量级的库，配置几行代码，就可以实现在android上实现进程常驻，也就是在系统强杀下，以及360获取root权限下，clean master获取root权限下都无法杀死进程；支持系统2.3到6.0、支持大部分设备，包括三星，华为，oppo，nexus，魅族等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;HotNews&quot;&gt;&lt;a href=&quot;#HotNews&quot; class=&quot;headerlink&quot; title=&quot;HotNews&quot;&gt;&lt;/a&gt;HotNews&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ithome.com/html/digi/211327.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;路由器刷第三方固件遭美官方封杀&lt;/a&gt; 如今，路由器也开始智能化，除了厂商在固件上加入很多个性化定制的选择，不少也支持刷入第三方的固件，比如DD-WRT、Tomato、OpenWRT等，从而实现方便多拨、信号放大、白名单、离线下载等功能&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnbeta.com/articles/483953.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google向山景城递交了最新的总部园区设计方案&lt;/a&gt; Google于去年透露会向苹果那样，在当前位于加州山景城附近的地方建造一个充满艺术感的新园区。根据该公司最新展示的效果图，可看出新园区像极了一个未来的节日营地。该公司已经向该市递交了最新的方案和效果图，当然我们也留意到了某些变动。最初，Google意在搭建轻量、可移动的建筑，但最新方案看起来会是更扎实的那种&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/e/1160000004510150&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SegmentFault D-Day 上海：云服务专场&lt;/a&gt; SegmentFault D-Day，全称 SegmentFault Developer Day，是由 SegmentFault 发起主办的系列技术沙⻰。自 2014 年启动，D-Day 技术沙龙已在北、上、广、深、杭等 10 个城市巡回举办了 19 场，涉及前端、云计算、后端、大数据、移动开发等众多主题，活动覆盖数千位开发者。2016 年，SegmentFault 将继续立足社区，传播前沿的技术实践内容：今年 5 个月，D-Day 将跨越 10 个城市，邀请重量级嘉宾，贴合业务需求，精选分享议题，为开发者打造更具价值的线下技术交流。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://aidanfollestad.com/about&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这货95年的&lt;/a&gt; 这个小伙子年少有为，你值得一看&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&amp;amp;mid=404321327&amp;amp;idx=1&amp;amp;sn=2d851ab953b7bce7d8734b0fdd94ef57&amp;amp;scene=1&amp;amp;srcid=0314Ml3EVRrxM97kqOLugyZJ&amp;amp;key=710a5d99946419d93f5d9d6f2c3d98d18d055bcc73fb7928a3c0917d2f4a45276269576400899ff2151edcb1de3d41c4&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员实力撩妹指南&lt;/a&gt; 猴喽~~猿猿们雷们猴啊！教你们如何毫无PS痕迹地实力撩妹！！ 笑笑就好，千万别当真！&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA4NTQwNDcyMA==&amp;amp;mid=402771384&amp;amp;idx=1&amp;amp;sn=d5386de694c0cdb0250d258743744e2f&amp;amp;scene=1&amp;amp;srcid=0316uWxad7Bm5NtL4Sfz7ZAo&amp;amp;key=710a5d99946419d98acec59e4705d4eec8255ea10f4d2d3cf92b60150b0f33e7d6a8a32b00dfbe1bd248a31ccd71a88d&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;上海Android交流会安排与分享嘉宾&lt;/a&gt; 嘿嘿，等了这么久，我们终于确定了大会的具体安排与邀请嘉宾，本次分享嘉宾由我跟「大头鬼」一起邀请，场地由薄荷提供，在这里感谢「大头鬼」以及这些嘉宾百忙之中对这次活动的支持与配合。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzIzNzE4NjkxMw==&amp;amp;mid=403135639&amp;amp;idx=1&amp;amp;sn=0e5b8da2beb165d56b0d208773117eb2&amp;amp;scene=1&amp;amp;srcid=03172s3Vu9j3AMP7s9ygBt3I&amp;amp;key=710a5d99946419d989b5ca4fb7c598c00497dced00ff1a34bb7882ff4c9edaf6d26dc57ae6f4bdb2326275d44d9ae3be&amp;amp;ascene=0&amp;amp;uin=MjM2NDM0ODgyMA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里巴巴终于忍不住了，宣布成立VR（虚拟现实）实验室&lt;/a&gt; 凤凰科技讯 3月17日消息，阿里巴巴宣布成立VR（虚拟现实）实验室，并首次对外透露集团VR战略。据介绍，阿里将发挥平台优势，同步推动VR内容培育和硬件孵化。在内容方面，阿里已经全面启动Buy＋计划引领未来购物体验，并将协同旗下的影业、音乐、视频网站等，推动优质VR内容产出。在硬件方面，阿里将依托全球最大电商平台，搭建VR商业生态，加速VR设备普及，助力硬件厂商发展&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;程序员，一种生物，能把咖啡和汉堡转化成软件的生物！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
@@ -683,62 +683,6 @@
   </entry>
   
   <entry>
-    <title>iOS通用下载管理器-HJMURLDownloader</title>
-    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
-    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
-    <published>2016-03-12T16:00:00.000Z</published>
-    <updated>2016-03-13T14:13:18.000Z</updated>
-    
-    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
-&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
-&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
-&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
-&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iOS技术周刊第3期</title>
     <link href="http://yoursite.com/2016/03/13/ios-technology-magazine-3/"/>
     <id>http://yoursite.com/2016/03/13/ios-technology-magazine-3/</id>
@@ -791,6 +735,62 @@
     
     
       <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS通用下载管理器-HJMURLDownloader</title>
+    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
+    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
+    <published>2016-03-12T16:00:00.000Z</published>
+    <updated>2016-03-13T14:13:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
+&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
+&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
+&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
+&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
