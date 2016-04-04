@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-04T13:22:19.000Z</updated>
+  <updated>2016-03-30T14:28:28.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,48 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Android技术周刊第9期</title>
-    <link href="http://yoursite.com/2016/03/28/android-technology-magazine-9/"/>
-    <id>http://yoursite.com/2016/03/28/android-technology-magazine-9/</id>
-    <published>2016-03-27T16:00:00.000Z</published>
-    <updated>2016-04-04T13:22:19.000Z</updated>
-    
-    <content type="html">&lt;p&gt;本期重点推荐&lt;a href=&quot;http://sookocheff.com/post/java/why-java/#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why Java? Tales from a Python Convert&lt;/a&gt;.   他说：别一直说Java太烦，你认真地了解过今日的Java吗？&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&amp;amp;mid=403155342&amp;amp;idx=1&amp;amp;sn=ded3478819cbb3d0ae10b9560e48542e&amp;amp;scene=0&amp;amp;key=710a5d99946419d903380083b076cca90a55d8feb7db4721db6abba41e349d0d5899deb59d2e1221553a2cf5a942d316&amp;amp;ascene=0&amp;amp;uin=MTkyODkzMzg4MA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 6.0 对于权限和标识符的更改&lt;/a&gt; 在 Marshmallow 中，权限请求已从安装时改到运行时。 这是 SDK 23+ 的一项强制性改动，意味着它会影响所有以 Android 6.0 作为目标平台的开发者和应用。无论如何，您的应用都需要更新，因此，您的挑战在于审慎地进行更新。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.google.com/instance-id/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;What is Instance ID?&lt;/a&gt; Instance ID provides a unique ID per instance of your apps. You can implement Instance ID for Android and iOS apps.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Commit message 和 Change log 编写指南&lt;/a&gt; 阮一峰关于Git Commit message 和 Change log的一些看法&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.it165.net/pro/html/201503/37225.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何安装ACRA一个Android应用Crash跟踪系统&lt;/a&gt; 可以毫不犹豫地说，一个手机应用最严重的问题莫过于崩溃，那你是否曾经考虑过搭建&lt;code&gt;崩溃追踪系统&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://sookocheff.com/post/java/why-java/#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why Java? Tales from a Python Convert&lt;/a&gt; Java已经今非昔比&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/riul88/call-recorder-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;call-recorder-for-android&lt;/a&gt; his android application allows you to record all incoming and outgoing calls from your phone. All your recorded calls are saved in 3gp files and can be sent from the application.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Bilibili/ijkplayer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ijkplayer&lt;/a&gt; Android/iOS video player based on FFmpeg n2.8, with MediaCodec, VideoToolbox support.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/bytedeco/javacpp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;javacpp&lt;/a&gt; The missing bridge between Java and native C++&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/dropbox/djinni&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Djinni&lt;/a&gt; Djinni is a tool for generating cross-language type declarations and interface bindings. It’s designed to connect C++ with either Java or Objective-C. Python support is available in an experimental version on the python branch.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;HotNews&quot;&gt;&lt;a href=&quot;#HotNews&quot; class=&quot;headerlink&quot; title=&quot;HotNews&quot;&gt;&lt;/a&gt;HotNews&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/AutumnsWind&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这位会coding的妹纸叫秋风&lt;/a&gt; 听说这位妹纸的编程功底很强，特喜欢猫，你敢看吗？&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cctalk.com/course/160751202367/#tab_play&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;2016互联网设计趋势探讨&lt;/a&gt; 2016互联网设计趋势探讨在刚刚过去的2015年，互联网开始侵入更多的产业领域，越来越多创新的移动互联网产品和服务正在加速改变着人们的生活。在这些产品中，除了产品形态、商业模式与服务体验的创新之外，产品设计本身也越来越多的迸发出新的创意和趋势&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0MjA2NzY0OQ==&amp;amp;mid=402694953&amp;amp;idx=1&amp;amp;sn=acffd7e2bff55b999b4290b4951ab30c&amp;amp;scene=23&amp;amp;srcid=0322SvcHMWtejsv4b3VpfIvR#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序bug导致了天大的损失，要枪毙程序猿吗？&lt;/a&gt; 如果程序的bug导致了巨大的经济损失，应该由谁来承担？用户？运营商？还是系统开发商？&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期重点推荐&lt;a href=&quot;http://sookocheff.com/post/java/why-java/#&quot;&gt;Why Java? Tales from a Python Convert&lt;/a&gt;.   他说：别一直说Java太烦，你认真地了解过今日的Java吗？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
-    
-  </entry>
   
   <entry>
     <title>AppStore 审核经验总结</title>
@@ -208,6 +166,48 @@
     
     
       <category term="疑难杂症" scheme="http://yoursite.com/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android技术周刊第9期</title>
+    <link href="http://yoursite.com/2016/03/28/android-technology-magazine-9/"/>
+    <id>http://yoursite.com/2016/03/28/android-technology-magazine-9/</id>
+    <published>2016-03-27T16:00:00.000Z</published>
+    <updated>2016-04-04T13:22:19.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本期重点推荐&lt;a href=&quot;http://sookocheff.com/post/java/why-java/#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why Java? Tales from a Python Convert&lt;/a&gt;.   他说：别一直说Java太烦，你认真地了解过今日的Java吗？&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;BestArticle&quot;&gt;&lt;a href=&quot;#BestArticle&quot; class=&quot;headerlink&quot; title=&quot;BestArticle&quot;&gt;&lt;/a&gt;BestArticle&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&amp;amp;mid=403155342&amp;amp;idx=1&amp;amp;sn=ded3478819cbb3d0ae10b9560e48542e&amp;amp;scene=0&amp;amp;key=710a5d99946419d903380083b076cca90a55d8feb7db4721db6abba41e349d0d5899deb59d2e1221553a2cf5a942d316&amp;amp;ascene=0&amp;amp;uin=MTkyODkzMzg4MA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 6.0 对于权限和标识符的更改&lt;/a&gt; 在 Marshmallow 中，权限请求已从安装时改到运行时。 这是 SDK 23+ 的一项强制性改动，意味着它会影响所有以 Android 6.0 作为目标平台的开发者和应用。无论如何，您的应用都需要更新，因此，您的挑战在于审慎地进行更新。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/instance-id/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;What is Instance ID?&lt;/a&gt; Instance ID provides a unique ID per instance of your apps. You can implement Instance ID for Android and iOS apps.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Commit message 和 Change log 编写指南&lt;/a&gt; 阮一峰关于Git Commit message 和 Change log的一些看法&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.it165.net/pro/html/201503/37225.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何安装ACRA一个Android应用Crash跟踪系统&lt;/a&gt; 可以毫不犹豫地说，一个手机应用最严重的问题莫过于崩溃，那你是否曾经考虑过搭建&lt;code&gt;崩溃追踪系统&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sookocheff.com/post/java/why-java/#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why Java? Tales from a Python Convert&lt;/a&gt; Java已经今非昔比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;FantasticLibs&quot;&gt;&lt;a href=&quot;#FantasticLibs&quot; class=&quot;headerlink&quot; title=&quot;FantasticLibs&quot;&gt;&lt;/a&gt;FantasticLibs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/riul88/call-recorder-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;call-recorder-for-android&lt;/a&gt; his android application allows you to record all incoming and outgoing calls from your phone. All your recorded calls are saved in 3gp files and can be sent from the application.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Bilibili/ijkplayer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ijkplayer&lt;/a&gt; Android/iOS video player based on FFmpeg n2.8, with MediaCodec, VideoToolbox support.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bytedeco/javacpp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;javacpp&lt;/a&gt; The missing bridge between Java and native C++&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dropbox/djinni&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Djinni&lt;/a&gt; Djinni is a tool for generating cross-language type declarations and interface bindings. It’s designed to connect C++ with either Java or Objective-C. Python support is available in an experimental version on the python branch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;HotNews&quot;&gt;&lt;a href=&quot;#HotNews&quot; class=&quot;headerlink&quot; title=&quot;HotNews&quot;&gt;&lt;/a&gt;HotNews&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/AutumnsWind&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这位会coding的妹纸叫秋风&lt;/a&gt; 听说这位妹纸的编程功底很强，特喜欢猫，你敢看吗？&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cctalk.com/course/160751202367/#tab_play&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;2016互联网设计趋势探讨&lt;/a&gt; 2016互联网设计趋势探讨在刚刚过去的2015年，互联网开始侵入更多的产业领域，越来越多创新的移动互联网产品和服务正在加速改变着人们的生活。在这些产品中，除了产品形态、商业模式与服务体验的创新之外，产品设计本身也越来越多的迸发出新的创意和趋势&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0MjA2NzY0OQ==&amp;amp;mid=402694953&amp;amp;idx=1&amp;amp;sn=acffd7e2bff55b999b4290b4951ab30c&amp;amp;scene=23&amp;amp;srcid=0322SvcHMWtejsv4b3VpfIvR#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序bug导致了天大的损失，要枪毙程序猿吗？&lt;/a&gt; 如果程序的bug导致了巨大的经济损失，应该由谁来承担？用户？运营商？还是系统开发商？&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本期重点推荐&lt;a href=&quot;http://sookocheff.com/post/java/why-java/#&quot;&gt;Why Java? Tales from a Python Convert&lt;/a&gt;.   他说：别一直说Java太烦，你认真地了解过今日的Java吗？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android技术周刊" scheme="http://yoursite.com/tags/Android%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
     
   </entry>
   
@@ -683,62 +683,6 @@
   </entry>
   
   <entry>
-    <title>iOS通用下载管理器-HJMURLDownloader</title>
-    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
-    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
-    <published>2016-03-12T16:00:00.000Z</published>
-    <updated>2016-03-13T14:13:18.000Z</updated>
-    
-    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
-&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
-&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
-&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
-&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iOS技术周刊第3期</title>
     <link href="http://yoursite.com/2016/03/13/ios-technology-magazine-3/"/>
     <id>http://yoursite.com/2016/03/13/ios-technology-magazine-3/</id>
@@ -791,6 +735,62 @@
     
     
       <category term="iOS技术周刊" scheme="http://yoursite.com/tags/iOS%E6%8A%80%E6%9C%AF%E5%91%A8%E5%88%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS通用下载管理器-HJMURLDownloader</title>
+    <link href="http://yoursite.com/2016/03/13/meeting-common-urldownloader/"/>
+    <id>http://yoursite.com/2016/03/13/meeting-common-urldownloader/</id>
+    <published>2016-03-12T16:00:00.000Z</published>
+    <updated>2016-03-13T14:13:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;为什么造轮子&quot;&gt;&lt;a href=&quot;#为什么造轮子&quot; class=&quot;headerlink&quot; title=&quot;为什么造轮子&quot;&gt;&lt;/a&gt;为什么造轮子&lt;/h2&gt;&lt;p&gt;在我们内部有不少项目需要下载功能，之前因为种种原因，并没有单独设计一套下载模块，而且原有项目中的方案还是基于 NSURLConnection，缺失了不少 NSURLSession 提供的新特性，失去了抽取并独立为模块的意义，为此我们在一次新的项目开发中重新开始设计。在前期 我们在 github 上也参考了不少下载模块开源项目，但综合看了一遍，并没有太完美的方案，主要参考和借鉴了 &lt;a href=&quot;https://github.com/Heikowi/HWIFileDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HWIFileDownload&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/thibaultCha/TCBlobDownload&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCBlobDownload&lt;/a&gt; 这两个不错的项目，基于我们的需求重新搞了一套，&lt;/p&gt;
+&lt;p&gt;总结了下，提供了如下特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 NSURLSession，支持多任务、后台下载、断点续传&lt;/li&gt;
+&lt;li&gt;采用 CoreData 存储下载数据，并提供了一套下载管理界面，显示下载中和已下载的任务&lt;/li&gt;
+&lt;li&gt;使用 Protocol 扩展下载信息，提供了 Delegate 和 Block 两种回调方式，便于替换到现有项目&lt;/li&gt;
+&lt;li&gt;处理了较多的异常情况，例如用户手动把后台的 app 杀掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说几点开发下载模块时遇到的问题和注意点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;BackgroudSession 创建的 identifier 需要一一对应，和默认提供的单例方法有冲突，需要提供单例和创建实例两种方式，这在一开始设计的时候并没有觉得是多大的问题，直到下载模块被越来越多的其他模块依赖就需要提供多个后台下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;断点续传有时候会在 app 第二次启动恢复下载时失效，需要重新开始下载。解决方法是需要检查 &lt;code&gt;NSURLSessionDownloadTask&lt;/code&gt; 生成的 resumeData 的合法性，resumeData 存的内容为 plist 文件，一般为 4kb 大小，里面的 tmp 文件路径在 iOS 9 和 iOS 9 之前的存储是有差异的，需要区分对待，并且第二次启动后需要矫正 tmp 文件路径，有时也可能出现 tmp 文件不存在的情况也需要考虑到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;后台下载在 app 退到后台或者遇到 crash 时也会正常继续下载，除非用户主动把 app 在后台杀死，此时更好的设计是提供一套后台蒙版，显示后台正在进行下载中…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用户后台主动杀死app会按照取消逻辑处理，第二次启动后，逻辑需要修正，此时可以通过 &lt;code&gt;- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error&lt;/code&gt; 返回的 error 区分是否为上次后台杀死的任务，检查 error.userInfo 的 key NSURLErrorBackgroundTaskCancelledReasonKey &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;正确理解 NSURLSession &lt;code&gt;- (void)getTasksWithCompletionHandler:(void (^)(NSArray&amp;lt;NSURLSessionDataTask *&amp;gt; *dataTasks, NSArray&amp;lt;NSURLSessionUploadTask *&amp;gt; *uploadTasks, NSArray&amp;lt;NSURLSessionDownloadTask *&amp;gt; *downloadTasks))completionHandler;&lt;/code&gt; 的用法，此回调主要是用来处理上次 app 未结束的任务，处理的任务有下载完成，下载取消，下载进行中几种可能，下载中的任务需要重新 和 UI 绑定，下载完成的任务需要正确处理好解压或者路径移动的问题，下载取消的任务状态要调整为暂停并且确保 UI 正确显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;处理 &lt;code&gt;- (void)application:(UIApplication *)anApplication handleEventsForBackgroundURLSession:(NSString *)aBackgroundURLSessionIdentifier completionHandler:(void (^)())aCompletionHandler&lt;/code&gt; 方法，此时的 aCompletionHandler的回调需要正确保存和执行，可以让退到后台的应用刷新后台截图，或者触发新的下载任务，适合一个接一个下载。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当 WIFI 状态切换时，需要重新创建 NSURLSession，NSURLSession的销毁回调是异步的，期间调用下载可能导致闪退问题，暂时没有更好的处理方法，需要处理好逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;NSURLSession 后下载无法控制下载的数目，系统会自动优化，所以需要控制队列，通过 NSOperationQueue 方式可能更好，目前的方式是数组维护，逻辑处理不完善时会存在触发多个下载的问题，在这个地方没有抽象好是一个遗憾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;判断系统剩余空间暂时没有提供更好的方法，这个点其实目前还没有处理好，因为 URLSession 接口并没有类似 URLConnection 的方法 &lt;code&gt;- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response&lt;/code&gt;, 可以在下载开始后取到文件的大小从而判断是否符合当前空间大小，目前只是在下载之前提供回调接口判断，调用方需要在下载之前就可以取得下载文件的大小。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;采用 CoreData 的存储方案是一个很有意思的点，之所以用这个有点偏重的方案是因为因为 CoreData 的一个特性 &lt;code&gt;NSFetchedResultsController&lt;/code&gt;，可以自动检测数据变化从而方便的属性 UI，所以在做下载管理界面的时候就特别合适处理多个任务的UI刷新，不需要设计一套复杂的逻辑，所以的刷新东西触发都由 CoreData 主动发起。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下载模块的设计很多时候是为了更好的给业务线使用，如果够用了就可以了，所以很多地方的设计并不是很通用，很多情况也没有太好的处理妥当，后续有机会我们会结合实际项目聊聊下载模块里面的一些设计思想和始终为处理好的疑难杂症，并根据项目使用继续维护好下载模块~&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HJMURLDownloader 是我们内部使用的 iOS 下载模块，基于 NSURLSession开发，已经在两个项目中使用，还算是比较稳定，在大家的努力下终于已经在 Github 上开源了，见&lt;a href=&quot;https://github.com/HujiangTechnology/HJMURLDownloader&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
