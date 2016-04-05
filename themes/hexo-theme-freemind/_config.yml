@@ -1,0 +1,60 @@
+slogan: "文章列表"
+
+theme: flatly
+inverse: inverse
+
+menu:
+  - title: 周刊
+    url: "tags/iOS技术周刊/"
+    intro: "iOS技术周刊"
+    icon: "fa fa-apple"
+  - title: 周刊
+    url: "tags/Android技术周刊/"
+    intro: "Android技术周刊"
+    icon: "fa fa-android"
+  - title: 归档
+    url: /archives/
+    intro: "All the articles."
+    icon: "fa fa-archive"
+
+  - title: 关于
+    url: about
+    intro: "About me."
+    icon: "fa fa-user"
+    
+  - title: RSS
+    url: atom.xml
+    intro: "Feed"
+    icon: "fa fa-rss"
+
+links:
+  - title: "GitHub"
+    url: https://github.com/mobilev5
+    intro: "GitHub"
+
+widgets:
+- category
+- tagcloud
+- recent_posts  
+- links
+
+rss: 
+fancybox: true
+favicon: https://avatars3.githubusercontent.com/u/13547892?v=3&s=200
+duoshuo_shortname: hujiangios
+
+# Analytics
+google_analytics:
+  enable: false
+  siteid:
+baidu_tongji:
+  enable: false
+  siteid:
+
+# search
+# swiftype_key: ZP2ZSuHgipSZfRyU8uTR
+
+# share widgets
+bdshare: false
+jiathis: true
+
