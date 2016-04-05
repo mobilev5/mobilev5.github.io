@@ -12,7 +12,7 @@
    if (page.archive){
    	  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
    	  else {
-	      title = __('归档');
+	      title = __('archive_a');
 		  posts = site.posts;
 	  }
    }
@@ -47,7 +47,8 @@
 			</ul>
 			<% } %>
 			<% is_first_year = 0 %>
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#<%= year %>"><%= year %><b class="caret"></b></h4>
+			
+            <h4 class="archive-ul" data-toggle="collapse" data-target="#<%= year %>"><%= year %><b class="caret"></b></h4>
 			<ul id="<%= year %>" class="collapse in">
 			<% last_year = year; %>
 		<% } %>

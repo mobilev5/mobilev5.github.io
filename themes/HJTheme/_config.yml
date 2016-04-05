@@ -13,7 +13,7 @@ menu:
     intro: "Android技术周刊"
     icon: "fa fa-android"
   - title: 归档
-    url: /archives/
+    url: archives/
     intro: "All the articles."
     icon: "fa fa-archive"
 
@@ -33,6 +33,7 @@ links:
     intro: "GitHub"
 
 widgets:
+- search
 - category
 - tagcloud
 - recent_posts  
@@ -52,7 +53,7 @@ baidu_tongji:
   siteid:
 
 # search
-# swiftype_key: ZP2ZSuHgipSZfRyU8uTR
+# swiftype_key: AADMgboE8hqENQHsWmsu
 
 # share widgets
 bdshare: false
