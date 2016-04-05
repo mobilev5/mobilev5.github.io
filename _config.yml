@@ -76,8 +76,7 @@ tag_generator:
 category_generator:
   per_page: 20
   pagination_dir: page
-
-
+  
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -93,5 +92,9 @@ feed:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
+<<<<<<< HEAD
   repository: https://github.com/mobilev5/mobilev5.github.io.git
+=======
+  repository: git@mobilev5:mobilev5/mobilev5.github.io.git
+>>>>>>> b6757d56b2dbf91ab82413ade46989dce16c8285
   branch: master
