@@ -1,7 +1,3 @@
-title: iOS技术周刊第7期
-date: 2016-4-10
-tags: iOS技术周刊
-categories: iOS开发
 author: 沸沸腾
 ---
 
@@ -35,7 +31,7 @@ author: 沸沸腾
 
 ### Web前端
 
-[ECMAScript 6入门](http://es6.ruanyifeng.com/) Web前端现在是越来越火了，新技术也越来越多，包括``React``,``React Native``，``AngularJS``这些东西简直火的一塌糊涂，而且他们都是基于``JavaScript``语言，其中使用React Native可以开发``Android`` 和``iOS``程序，以后也很有可能会取代iOS和Android开发人员，所以你必须要会JavaScript语言，推荐这本阮一峰大神的开源书讲解了最新的ES6的知识，骚年抓紧时间看学习吧！
+[ECMAScript 6入门](http://es6.ruanyifeng.com/) Web前端现在是越来越火了，新技术也越来越多，包括``React``,``React Native``，``AngularJS``这些东西简直火的一塌糊涂，而且他们都是基于``JavaScript``语言，其中使用React Native可以开发``Android`` 和``iOS``程序，将来Web开发人员也很有可能会取代iOS和Android开发人员，居安思危，所以你必须要懂得JavaScript语言，推荐这本阮一峰大神的开源书讲解了最新的ES6的知识，骚年抓紧时间学习吧！
 
 ### 编程语言
 
