@@ -15,7 +15,7 @@ author: 宏伟
 
 ### 设计模式
 
-[蘑菇街App的组件化之路](https://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&mid=402696366&idx=1&sn=ba8cbd75849b9657175c4b25bb0ac5b5&scene=2&srcid=0311YoPncvJPZrIVeGFIGtbN&from=timeline&isappinstalled=0&uin=MTcwODQ2NjAwMQ%3D%3D&key=710a5d99946419d9f3292e1b7809aa8ba9c2ff77c4026fd40cdcbb05c14087955671075ca2b03a38b906c3a437a2b7a7&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F1605)&version=11020201&lang=zh_CN&pass_ticket=bsuXUqOzYRQxfF1HqhcKnsnl1sCfaWp5f2nszKfKRwhXcUSSUVWFkfXzcmbJXr8J) 在组件化之前，蘑菇街 App 的代码都是在一个工程里开发的，在人比较少，业务发展不是很快的时候，这样是比较合适的，能一定程度地保证开发效率。慢慢地代码量多了起来，开发人员也多了起来，业务发展也快了起来，这时单一工程开发模式就会显露出一些弊端。
+[蘑菇街App的组件化之路](https://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&mid=402696366&idx=1&sn=ba8cbd75849b9657175c4b25bb0ac5b5&scene=2&srcid=0311YoPncvJPZrIVeGFIGtbN&from=timeline&isappinstalled=0&uin=MTcwODQ2NjAwMQ%3D%3D&key=710a5d99946419d9f3292e1b7809aa8ba9c2ff77c4026fd40cdcbb05c14087955671075ca2b03a38b906c3a437a2b7a7) 在组件化之前，蘑菇街 App 的代码都是在一个工程里开发的，在人比较少，业务发展不是很快的时候，这样是比较合适的，能一定程度地保证开发效率。慢慢地代码量多了起来，开发人员也多了起来，业务发展也快了起来，这时单一工程开发模式就会显露出一些弊端。
 
 ### SQLite数据库
 
