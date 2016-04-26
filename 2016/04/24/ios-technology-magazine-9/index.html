@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS技术周刊第8期 | MobileV5</title>
+  <title>iOS技术周刊第9期 | MobileV5</title>
   <meta name="author" content="MobileV5">
   
-  <meta name="description" content="本周主要重点关注MVVM，SQLite数据库。">
+  <meta name="description" content="本周主要重点关注性能优化，设计模式。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="iOS技术周刊第8期"/>
+  <meta property="og:title" content="iOS技术周刊第9期"/>
   <meta property="og:site_name" content="MobileV5"/>
 
   
@@ -107,7 +107,7 @@ _st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> iOS技术周刊第8期</h1>
+			<h1 class="title title-inverse "> iOS技术周刊第9期</h1>
 		</div>		
 	
 
@@ -127,16 +127,21 @@ _st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
 	<div class="mypage">		
 	  		
 
-	  <p>本周主要重点关注MVVM，SQLite数据库。</p>
+	  <p>本周主要重点关注性能优化，设计模式。</p>
 <a id="more"></a>
-<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p><a href="http://tech.glowing.com/cn/service-oriented-ios-architecture/" target="_blank" rel="external">Service Oriented 的 iOS 应用架构</a> 值得一看的iOS应用架构。</p>
-<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=402696366&amp;idx=1&amp;sn=ba8cbd75849b9657175c4b25bb0ac5b5&amp;scene=2&amp;srcid=0311YoPncvJPZrIVeGFIGtbN&amp;from=timeline&amp;isappinstalled=0&amp;uin=MTcwODQ2NjAwMQ%3D%3D&amp;key=710a5d99946419d9f3292e1b7809aa8ba9c2ff77c4026fd40cdcbb05c14087955671075ca2b03a38b906c3a437a2b7a7" target="_blank" rel="external">蘑菇街App的组件化之路</a> 在组件化之前，蘑菇街 App 的代码都是在一个工程里开发的，在人比较少，业务发展不是很快的时候，这样是比较合适的，能一定程度地保证开发效率。慢慢地代码量多了起来，开发人员也多了起来，业务发展也快了起来，这时单一工程开发模式就会显露出一些弊端。</p>
-<h3 id="SQLite数据库"><a href="#SQLite数据库" class="headerlink" title="SQLite数据库"></a>SQLite数据库</h3><p><a href="http://liuduo.me/2016/04/02/sqlitelockandwal/" target="_blank" rel="external">浅析SQLite的锁机制和WAL技术</a> SQLite基于锁来实现并发控制。SQLite的锁是粗粒度的，并不拥有PostgreSQL那样细粒度的行锁，这也使得SQLite较为轻量级。当一个连接要写数据库时，所有其它的连接都被锁住，直到写连接结束它的事务。</p>
-<h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><p><a href="http://www.jianshu.com/p/d5d897ffe118" target="_blank" rel="external">AutoLayout下多行UILabel无法显示多行文本的问题</a> 在项目中的一个自定义UITableViewCell中有个多行UILabel，用来显示多行文本的。项目中用了第三方库Masonry来给视图添加约束。</p>
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p><a href="https://swiftlang.ng.bluemix.net" target="_blank" rel="external">IBM 出的 Swift 在线 Playground</a> 在线调试带有Playground功能的Swift代码，逼格不是一般的高~😄</p>
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><p><a href="http://bihongbo.com/2016/01/03/memoryGhostdrawRect/" target="_blank" rel="external">内存恶鬼drawRect</a> 标题有点吓人，但是对于drawRect的评价倒是一点都不过分。在平日的开发中，随意覆盖drawRect方法，稍有不慎就会让你的程序内存暴增。</p>
+<p><a href="http://www.jianshu.com/p/f970872fdc22" target="_blank" rel="external">iOS 高效添加圆角效果实战讲解</a> 圆角（RounderCorner）是一种很常见的视图效果，相比于直角，它更加柔和优美，易于接受。但很多人并不清楚如何设置圆角的正确方式和原理。</p>
+<p><a href="https://yalantis.com/blog/mastering-uikit-performance/" target="_blank" rel="external">UIKit性能调优</a> 虽然很多文章和WWDC会议致力于UIKit的表现，但是这个话题对于很多iOS开发者仍然是模糊的。由于这个问题，我们把软件的快速与凉爽的用户界面的问题放在一起讨论。</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p><a href="http://blog.makeex.com/2016/04/23/the-design-pattern-of-composite/" target="_blank" rel="external">组合化繁为简的力量</a> 本篇文章，主要是介绍了 GoF 23 种设计模式中的组合模式，这算是结构型设计模式中的平民级模式，因为它简单、易用，但效果，往往能助你化繁为简。</p>
+<h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><p><a href="http://mp.weixin.qq.com/s?__biz=MzIwMzI0MTI5MA==&amp;mid=2247483670&amp;idx=1&amp;sn=b1a76605965632fd078d7e3adaca19ee&amp;scene=2&amp;srcid=0423Hg7weJjEwBbLoHmsByTu&amp;from=timeline&amp;isappinstalled=0#wechat_redirect" target="_blank" rel="external">iOS皮肤框架</a> JJSkin皮肤框架适用于所有iOS APP，如果你是一名iOS开发工程师，希望你读完本文，并且使用JJSkin在你的项目中。</p>
+<p><a href="https://www.raywenderlich.com/50319/beginning-auto-layout-tutorial-in-ios-7-part-2" target="_blank" rel="external">Beginning Auto Layout Tutorial</a> 这片文章是关于auto layout的介绍及使用，讲述的非常详细。</p>
+<h3 id="动画／绘图"><a href="#动画／绘图" class="headerlink" title="动画／绘图"></a>动画／绘图</h3><p><a href="https://github.com/BradLarson/GPUImage2" target="_blank" rel="external">GPUImage2</a> GPUImage 2 is the second generation of the GPUImage framework, an open source project for performing GPU-accelerated image and video processing on Mac, iOS, and now Linux.</p>
+<p><a href="http://www.cnblogs.com/densefog/p/5424155.html" target="_blank" rel="external">iOS粒子系统CAEmitterLayer</a> 关于CAEmitterLayer的介绍及各个参数的比较详细的介绍的原创文章，对于想使用粒子系统的可以进去查看下。</p>
 <h3 id="后花园"><a href="#后花园" class="headerlink" title="后花园"></a>后花园</h3><ul>
-<li><strong><a href="http://news.163.com/16/0414/14/BKKBS69800014AEE.html" target="_blank" rel="external">iOS再现安全漏洞</a></strong></li>
-<li><a href="https://github.com/ahangchen/How-to-Be-A-Programmer-CN/blob/master/README.md" target="_blank" rel="external">如何作为一个好的程序员</a> 困难而高尚。将一个软件工程集体愿景变为现实，最困难的地方在于与你的同事和顾客相处。编程很重要，这需要强大的智力和技能。 但在好的程序员看来，相比构建一个让客户和各种各样的同事都满意的软件系统，（纯粹的）编程真的只是小孩子的玩意。在这篇文章里，我尝试尽可能简洁地总结那些当我21岁时，希望别人告诉我的事。</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&amp;mid=2650400054&amp;idx=1&amp;sn=a39f00d0313f91b888d7feba57439a60&amp;scene=0#wechat_redirect" target="_blank" rel="external">阿里宣布开源Weex</a>对于移动开发者来说，Weex主要解决了频繁发版和多端研发两大痛点，同时解决了前端语言性能差和显示效果受限的问题。</p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651112090&amp;idx=1&amp;sn=7e00d0da704f99ef93ffd815731f1fd9&amp;scene=0#wechat_redirect" target="_blank" rel="external">iOS遗留系统重构实践</a> 本文分享了一个工程浩大的重构实践。</p>
+</li>
 </ul>
 	  
 	</div>
@@ -172,7 +177,7 @@ _st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
   <h2 class="title">评论</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016/04/17/ios-technology-magazine-8/" data-title="iOS技术周刊第8期" data-url="http://yoursite.com/2016/04/17/ios-technology-magazine-8/"></div>  
+  	 <div class="ds-thread" data-thread-key="2016/04/24/ios-technology-magazine-9/" data-title="iOS技术周刊第9期" data-url="http://yoursite.com/2016/04/24/ios-technology-magazine-9/"></div>  
   
 </section>
 
@@ -186,7 +191,7 @@ _st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-04-17 
+	2016-04-24 
 	</div>
 	
 
@@ -194,7 +199,7 @@ _st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
 	
 	<div class="meta-widget">
 	<i class="fa fa-user"></i>
-	宏伟 
+	吕品 
 	</div>
 	
 
