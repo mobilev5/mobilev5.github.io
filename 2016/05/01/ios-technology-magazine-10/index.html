@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS技术周刊第10期 | MobileV5</title>
+  <meta name="author" content="MobileV5">
+  
+  <meta name="description" content="本周主要重点关注设计模式、性能优化以及 Swift 的编译速度问题。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="iOS技术周刊第10期"/>
+  <meta property="og:site_name" content="MobileV5"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<!--搜索-->
+<script type="text/javascript">
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
+</script>
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">MobileV5</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives/" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> iOS技术周刊第10期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本周主要重点关注设计模式、性能优化以及 Swift 的编译速度问题。</p>
+<a id="more"></a>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p><a href="http://blog.makeex.com/2016/04/30/best-romantic-abstract-promise-and-future/" target="_blank" rel="external">最浪漫的抽象 Promise &amp; Future</a> 本篇文章，以浪漫、感性为基调，较为详细的介绍了 Promise&amp;Future，并在最后用 Objective-C 做了一个简单实现。</p>
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><p><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTIyNTUyMQ==&amp;mid=2709544818&amp;idx=1&amp;sn=62d0d2e9a363d250beb2d6887dca54b3&amp;luicode=10000359#rd" target="_blank" rel="external">离屏渲染优化</a> 作者 seedante 是一个低调人士，只愿意透露他的 GitHub：<a href="https://github.com/seedante。本篇文章非常详细的介绍了离屏渲染相关概念，并对如何优化以实例为切入点做了详细对比，最后给出了终极解决方案。" target="_blank" rel="external">https://github.com/seedante。本篇文章非常详细的介绍了离屏渲染相关概念，并对如何优化以实例为切入点做了详细对比，最后给出了终极解决方案。</a></p>
+<p><a href="http://www.jianshu.com/p/536184bfd163" target="_blank" rel="external">IOS—实例化讲解RunLoop</a> 非常详细、深入的 RunLoop 讲解，了解了 RunLoop 的本质，对与性能优化来说是一柄不可多得的利器。</p>
+<h3 id="算法与数据结构"><a href="#算法与数据结构" class="headerlink" title="算法与数据结构"></a>算法与数据结构</h3><p><a href="http://mp.weixin.qq.com/s?__biz=MzIwMTYzMzcwOQ==&amp;mid=403288000&amp;idx=1&amp;sn=46651e578d8986c77af2ea6671d87bd1&amp;scene=23&amp;srcid=03165bv4bTvESsRbe7MNVkPc#rd" target="_blank" rel="external">一周一算法</a> 算法是很多程序员的痛点，基本上是面试稍微大点的公司必考的知识。一周一算法为<strong>糖炒小虾</strong>的系列微信文章，非常值得关注。</p>
+<h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><p><a href="https://medium.com/swift-programming/speeding-up-slow-swift-build-times-922feeba5780#.6vi9ogk9h" target="_blank" rel="external">Speeding Up Slow Swift Build Times</a> Swift 的编译速度一直让人诟病，这篇文章提供了提升编译速度的技巧，使用 Swift 开发的同学可以观摩下。</p>
+<h3 id="动画-绘图"><a href="#动画-绘图" class="headerlink" title="动画 / 绘图"></a>动画 / 绘图</h3><p><a href="http://blog.treney.com/index.php/archives/CoreAnimation.html" target="_blank" rel="external">iOS开发之 动画CoreAnimation</a> 非常详细的介绍了 Core Animation 相关内容，值得一看。</p>
+<h3 id="越狱破解逆向"><a href="#越狱破解逆向" class="headerlink" title="越狱破解逆向"></a>越狱破解逆向</h3><p><a href="http://drops.wooyun.org/mobile/15406?luicode=10000359" target="_blank" rel="external">微信双开还是微信定时炸弹</a> 本文使用逆向相关技术，对 iOS 上微信双开的“倍推微信分身”作了详细的分析，由此可见此类应用存在的风险不亚于 XcodeGhost。</p>
+<p><a href="http://www.infoq.com/cn/articles/ios-thinning-delete-unnecessary-mach-o" target="_blank" rel="external">iOS瘦身之删除FrameWork中无用mach-O文件</a> 本文从<code>mach-o</code>文件格式切入，谈论了一种鲜为人知的 ipa 瘦身方法。</p>
+<h3 id="网络交互"><a href="#网络交互" class="headerlink" title="网络交互"></a>网络交互</h3><p><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-gpb/" target="_blank" rel="external">Google Protocol Buffer 的使用和原理</a> 虽然 Protocol Buffer 已经有很多文章介绍了，但这篇文章还是值得收藏的。</p>
+<h3 id="后花园"><a href="#后花园" class="headerlink" title="后花园"></a>后花园</h3><p><a href="http://www.ifanr.com/649749" target="_blank" rel="external">企业微信火了一把，但想要“干掉”阿里钉钉还为时尚早</a> 张小龙统领下的微信总能够在第一时间占领头条，但在企业级应用上，我们恐怕还真不能小看微信的对手——阿里钉钉。这个启动于 2014 年的企业级 IM 应用如今已经发展到了怎样的体量？</p>
+<p><a href="http://tech.qq.com/a/20160430/006698.htm" target="_blank" rel="external">从iPhone 7开始 苹果终于要学习三星了</a> 对于要取消 Home 键的传闻，同学们，你们怎么看？</p>
+<p><a href="http://tech.163.com/16/0430/08/BLSUGNCA000915BD.html" target="_blank" rel="external">过去一周苹果市值缩水650亿美元</a> 这会影响到我们这群开发者的薪资么？</p>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/05/01/ios-technology-magazine-10/" data-title="iOS技术周刊第10期" data-url="http://yoursite.com/2016/05/01/ios-technology-magazine-10/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-05-01 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	Makee 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 MobileV5
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
