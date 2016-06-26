@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS技术周刊第17期 | MobileV5</title>
+  <meta name="author" content="MobileV5">
+  
+  <meta name="description" content="本周重点关注持续集成、App 动态化相关内容。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="iOS技术周刊第17期"/>
+  <meta property="og:site_name" content="MobileV5"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<!--搜索-->
+<script type="text/javascript">
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
+</script>
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">MobileV5</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives/" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> iOS技术周刊第17期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本周重点关注持续集成、App 动态化相关内容。</p>
+<a id="more"></a>
+<h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><p><a href="https://github.com/linkedin/swift-style-guide" target="_blank" rel="external">Swift Style Guide</a> 非常详细的 Swift 代码规范，想要统一团队成员代码风格的，可以参考下。</p>
+<p><a href="https://realm.io/news/slug-nick-oneill-native-swift-patterns/" target="_blank" rel="external">Discovering Native Swift Patterns</a> 实现特定的逻辑，代码有千万种写法，但真正契合语言理念的方式却不多，本文试图找到真正切合 Swift 语言的代码模式。</p>
+<h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><p><a href="http://holko.pl/2016/06/23/core-data/" target="_blank" rel="external">Concurrent Core Data, Now Easier Than Ever</a> 本文简单介绍了 iOS 10 中的 <code>NSPersistentContainer</code> 如何使得多线程操作在 Core Data 中变得简单。</p>
+<h3 id="界面布局"><a href="#界面布局" class="headerlink" title="界面布局"></a>界面布局</h3><p><a href="http://draveness.me/keyboard/" target="_blank" rel="external">『零行代码』解决键盘遮挡问题</a> 本文详细的分析了<code>IQKeyboardManager</code>的实现，揭开零行代码背后的密码。</p>
+<h3 id="App-动态化"><a href="#App-动态化" class="headerlink" title="App 动态化"></a>App 动态化</h3><p><a href="http://www.jianshu.com/p/41ed877aa0cd" target="_blank" rel="external">iOS 热更新 － JSPatch 实现原理 + Patch 现场恢复</a> 在 iOS 开发领域，由于 Apple 严格的审核标准和低效率，iOS 应用的发版速度极慢，稍微大型的 app 发版基本上都在一个月以上，所以代码热更新（<em>HotfixPatch</em>）对于 iOS 应用来说就显得尤其重要。</p>
+<h3 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h3><p><a href="https://github.com/recruit-mtl/Graphs" target="_blank" rel="external">轻量级的图表库 Graphs</a> 使用 Swift 编写的开源图表库，使用起来非常简单。</p>
+<p><a href="https://github.com/bustoutsolutions/siesta" target="_blank" rel="external">简洁优雅的网络库 Siesta </a> 又一款基于 Swift 开发的开源网络库，相比于 Alamofire，Siesta 提供了更多的功能，详细参看项目 README 中的对比表格。</p>
+<p><a href="https://github.com/nomad/shenzhen" target="_blank" rel="external">iOS 打包发布工具 ShenZhen</a> 没错，这个库的名字就是代表“深圳”（<em>爱国青年啊</em>）。作为持续集成中打包发布工具而言，还是非常强大的，目前已经支持了很多第三方托管平台了。</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p><a href="http://mp.weixin.qq.com/s?__biz=MzA5OTAyNzQ2OA==&amp;mid=2649690418&amp;idx=1&amp;sn=a1112a9ce591329f3ed0c5d9dc451c3a&amp;scene=23&amp;srcid=0619NejoL0lLxZf5Fs8fXvEC#rd" target="_blank" rel="external">Jenkins 2.0 新时代：从 CI 到 CD</a> Jenkins 终于迎来了 2.0 时代，2.0 最大的三个卖点分别是 Pipeline as Code、全新的开箱体验和 1.x 兼容性。小伙伴们，赶快着手升级起来吧！</p>
+<p><a href="http://liwei.life/category/shell/" target="_blank" rel="external">SHELL 编程之常用技巧</a> 作为 iOS 开发，对 shell 这种能提高工作效率的技术还是需要掌握的，这一系列文章简单易懂，可以作为入门基础。</p>
+<p><a href="http://xialeizhou.com/2016/06/23/%E9%AB%98%E6%95%88macbook%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" target="_blank" rel="external">高效 MacBook 工作环境配置</a> 工欲善其事，必先利其器，工具永远都是用来解决问题的，没必要为了工具而工具，一切工具都是为了能快速准确的完成工作和学习任务而服务。本文记录 MacBook 整个配置过程，供新入手 MacBook 和觉得 MacBook 比较难用的同学参考。</p>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/06/25/ios-technology-magazine-17/" data-title="iOS技术周刊第17期" data-url="http://yoursite.com/2016/06/25/ios-technology-magazine-17/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-06-25 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	makee 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 MobileV5
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
