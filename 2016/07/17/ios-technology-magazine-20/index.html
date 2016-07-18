@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS技术周刊第20期 | MobileV5</title>
+  <meta name="author" content="MobileV5">
+  
+  <meta name="description" content="本周挖掘了一些不错的开源项目，分享给大家~">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="iOS技术周刊第20期"/>
+  <meta property="og:site_name" content="MobileV5"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<!--搜索-->
+<script type="text/javascript">
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
+</script>
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">MobileV5</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives/" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> iOS技术周刊第20期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本周挖掘了一些不错的开源项目，分享给大家~</p>
+<a id="more"></a>
+<h2 id="Mobile-C-开源项目"><a href="#Mobile-C-开源项目" class="headerlink" title="Mobile C++ 开源项目"></a>Mobile C++ 开源项目</h2><p>介绍两个采用 Djinni 的 Mobile C++ 开源项目<br>采用的很多技术方案让人眼前一亮    </p>
+<ul>
+<li><p><a href="https://github.com/boloutaredoubeni/Twenty48" target="_blank" rel="external">Twenty48
+</a> An example project using React Native for the UI and C++ for the business logic via Djinni</p>
+</li>
+<li><p><a href="https://github.com/kittinunf/Cookpit" target="_blank" rel="external">Cookpit</a> 底层 C++ 用了 libcurl 和 lmdb，上层 demo iOS 用了 RxSwift，Android 是 kotlin，第三方依赖用的是 git subtree，同时用了 clang-format, C++ 库还搞了个 flowcpp，是源自 Redux。</p>
+</li>
+</ul>
+<h2 id="WWDC"><a href="#WWDC" class="headerlink" title="WWDC"></a>WWDC</h2><ul>
+<li>WWDC 2016 的视频看了几个了？还是来看看这个短平快的总结吧~<br><a href="https://gist.github.com/mackuba/e8fb4219c7ef611f47cdb66b93986d85" target="_blank" rel="external">New stuff from WWDC 2016</a></li>
+</ul>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><p>ReactiveCocoa 和 RxSwift 已经不够酷了，现在的思潮是基于 Flux 的 <a href="https://github.com/ReSwift/" target="_blank" rel="external">ReSwift</a> ! 一起看下同一位作者的两篇文章学习下吧~  </p>
+<ul>
+<li><a href="http://blog.benjamin-encz.de/post/real-world-flux-ios/" target="_blank" rel="external">Real World Flux Architecture on iOS</a>  </li>
+<li><a href="https://realm.io/news/benji-encz-unidirectional-data-flow-swift/" target="_blank" rel="external">Unidirectional Data Flow in Swift: An Alternative to Massive View Controllers</a></li>
+</ul>
+<h2 id="后花园"><a href="#后花园" class="headerlink" title="后花园"></a>后花园</h2><ul>
+<li><a href="https://github.com/kahopoon/Pokemon-Go-Controller" target="_blank" rel="external">Pokemon-Go-Controller</a> Pokemon 最近火热火热啊~ 来看看这个有趣的开源项目，通过 Xcode 模拟 GPS 位置，实现不出家抓遍天下的梦想。当然成本也是很高的，两个 iOS 设备和一个 Mac，亲眼见识了旁边同学折腾的我表示玩起来很蛋疼… 但是在一天之后就出现了集成方向键的懒人版 Pokemon, George 同学已经玩的废寝忘食鸟….</li>
+<li><a href="https://github.com/Urinx/iOSAppHook" target="_blank" rel="external">iOSAppHook</a> 专注于非越狱环境下 iOS 应用逆向研究，从 dylib 注入，应用重签名到 App Hook。看了这些逆向知识，做一个懒人版 Pokemon 应该就不成问题啦~</li>
+<li><a href="https://code.facebook.com/posts/300815046928882/" target="_blank" rel="external">大厂都是这么测试滴…</a> 嗯，还不至于犯密集恐惧症吧….</li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/07/17/ios-technology-magazine-20/" data-title="iOS技术周刊第20期" data-url="http://yoursite.com/2016/07/17/ios-technology-magazine-20/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-07-17 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	东子 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 MobileV5
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
