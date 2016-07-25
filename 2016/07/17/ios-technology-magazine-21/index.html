@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS技术周刊第20期 | MobileV5</title>
+  <meta name="author" content="MobileV5">
+  
+  <meta name="description" content="本周重点是 RxSwift。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="iOS技术周刊第20期"/>
+  <meta property="og:site_name" content="MobileV5"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<!--搜索-->
+<script type="text/javascript">
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
+</script>
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">MobileV5</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives/" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> iOS技术周刊第20期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>本周重点是 RxSwift。</p>
+<a id="more"></a>
+<h2 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h2><ul>
+<li><a href="http://liuduo.me/2016/07/24/rxswiftmoyanetwork/" target="_blank" rel="external">用 RxSwift + Moya 写出优雅的网络请求代码</a> Swift 写起代码来比 Objective-C 要优雅很多，如何让代码更加优雅呢，上 RxSwift 吧。</li>
+<li><a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1469328520&amp;ver=1&amp;signature=zA338yv2NDf-6q-yXYeiRUO-8cj08C9R3O-RJpTIc9*7vaHaPOTs0mDniMxPcj-go15vVq*3BX1-W9Cg0vPW0qF5SwLspAupG-4bXjbd6HFGSTnYASiiMFy-KYvMXZ5RzivNUfbRitaGvnI5iTIOXH3trvYNUhEun8OoUgc11zQ=" target="_blank" rel="external">在实践中应用 RxSwift</a> 本文介绍了 RxSwift 在实践中的一些用法，和一些比较好的写法。</li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjAzODk0OQ==&amp;mid=2652684505&amp;idx=1&amp;sn=38864068e68f89c2fd20f5b3d4073d40&amp;scene=23&amp;srcid=0723P6d1NAPMgvHp9alvrY4V#rd" target="_blank" rel="external">Swift: 把 Struct 作为数据模型的注意事项</a> 众所周知 Swift 中更提倡用 struct 来构建数据模型，那么用 struct 有哪些注意事项，有哪些麻烦呢，本文有介绍。</li>
+</ul>
+<h2 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h2><ul>
+<li><a href="http://hamcrest.org/" target="_blank" rel="external">Hamcrest</a> Hamcrest 是一个比较好的单元测试框架，有多种语言的版本，其中也包含 Swift 和 Objective-C。</li>
+<li><a href="https://github.com/kif-framework/KIF" target="_blank" rel="external">KIF</a> 一个不错的函数式单元测试框架。</li>
+</ul>
+<h2 id="Xcode"><a href="#Xcode" class="headerlink" title="Xcode"></a>Xcode</h2><ul>
+<li><a href="http://blog.lanvige.com/2015/01/04/library-vs-framework-in-ios/" target="_blank" rel="external">Library vs Framework in iOS</a> Library 和 Framework 的区别是什么，静态库和动态库的区别是什么，本文进行了详细的讲解。</li>
+</ul>
+<h2 id="逆向"><a href="#逆向" class="headerlink" title="逆向"></a>逆向</h2><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIwMTYzMzcwOQ==&amp;mid=2650948457&amp;idx=1&amp;sn=9b1f3e0c405b7621a6b3b7c8419a2695&amp;scene=1&amp;srcid=0724IIVS39VqVG4NfViPhU7s&amp;key=77421cf58af4a653d340bb0deaee291e763e1249dcd3486b70f792ddc3190758d2e6bf3bc85be93b98e673fe7c2730ea&amp;ascene=0&amp;uin=MzM5MTU4Mzk1" target="_blank" rel="external">如何获取手机上的已安装的所有应用</a> 可以学习一下这种分析问题解决问题的方式。</li>
+</ul>
+<h2 id="后花园"><a href="#后花园" class="headerlink" title="后花园"></a>后花园</h2><ul>
+<li><a href="http://blog.makeex.com/2016/07/18/old-driver-take-you-fly-on-xiaomi-router/" target="_blank" rel="external">老司机带你玩转小米路由</a> 如何把 149 元的小米路由玩出 2700 元的 NAS 的感觉，看看这篇文章吧，向老司机学习。</li>
+<li><a href="http://blog.lanvige.com/2014/03/04/memory-in-taiwan/?from=groupmessage&amp;isappinstalled=0" target="_blank" rel="external">记忆宝岛</a> 不能总是在写代码，也得干点其它事情，比如去台湾旅个游。</li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/07/17/ios-technology-magazine-21/" data-title="iOS技术周刊第20期" data-url="http://yoursite.com/2016/07/17/ios-technology-magazine-21/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-07-17 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	东子 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 MobileV5
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
