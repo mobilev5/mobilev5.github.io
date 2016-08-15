@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android技术周刊第28期 | MobileV5</title>
+  <meta name="author" content="MobileV5">
+  
+  <meta name="description" content="有的时候，周刊只要一篇就够了！那么，你想知道这一篇质量能顶的上过去一周的文章是来自哪位大神之笔吗，当然就是我们的 George 老师：何晓杰">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Android技术周刊第28期"/>
+  <meta property="og:site_name" content="MobileV5"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/https://avatars3.githubusercontent.com/u/13547892?v=3&s=200" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/flatly.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+<!--搜索-->
+<script type="text/javascript">
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','A37Cmt44Q_bDoYC-ErPz','2.0.0');
+</script>
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">MobileV5</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/tags/iOS技术周刊/" title="iOS技术周刊">
+			  <i class="fa fa-apple"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags/Android技术周刊/" title="Android技术周刊">
+			  <i class="fa fa-android"></i>周刊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/archives/" title="All the articles.">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Feed">
+			  <i class="fa fa-rss"></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Android技术周刊第28期</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>有的时候，周刊只要一篇就够了！<br>那么，你想知道这一篇质量能顶的上过去一周的文章是来自哪位大神之笔吗，当然就是我们的 George 老师：何晓杰  </p>
+<a id="more"></a>
+<h1 id="获取JNI库里的版本号"><a href="#获取JNI库里的版本号" class="headerlink" title="获取JNI库里的版本号"></a>获取JNI库里的版本号</h1><h2 id="为毛会有这么个奇葩的话题"><a href="#为毛会有这么个奇葩的话题" class="headerlink" title="为毛会有这么个奇葩的话题"></a>为毛会有这么个奇葩的话题</h2><p>其实起因很简单，因为我们有一个项目是在 JNI 库里面写了版本号的，而且该版本号将会影响编译过程。</p>
+<p>具体说来，就是 JNI 库太大，为了在编译项目时节省时间，只有当版本号发生变化时才进行 JNI 的编译，否则就只编译 APK 了。</p>
+<p>听起来挺靠谱的，但是到了真正写编译脚本的时候，就懵逼了，这个版本号写进去容易，但是怎么读出来呢… 最终的目的是要比对版本号嘛…</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>再次重新审视现状，版本号是作为全局静态变量被写在<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">而我们的判断是要判断```.cpp```内的版本号，和```.so```内的版本号，若是不一致才进行编译，这个问题就变为了如何从一个 JNI 库内读取一个指定的静态变量的值。</span><br><span class="line"></span><br><span class="line">到了这里其实答案已经出来了，我们必须借助```objdump```，用它来对```.so```进行逆向，获取内部的数据。由此写下一个命令：</span><br></pre></td></tr></table></figure></p>
+<p>$ objdump -DS libsample.so<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">恩，直接悲剧了，程序报错，提示格式不对。你要问为毛，原因是这个 JNI 库是 ARM 指令集的，所以就必须找到跨平台工具，即作用于 ARM 的 ```objdump```命令。</span><br><span class="line"></span><br><span class="line">幸运的是，我们并不需要走太远，NDK 内已经提供了这一工具，就拿 Mac 版的 NDK 来说，这一工具位于：</span><br></pre></td></tr></table></figure></p>
+<p>${NDK_HOME}/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">只需要使用这一工具即可，于是有了以下脚本代码：</span><br></pre></td></tr></table></figure></p>
+<p>$ export BINUTIL_HOME=${NDK_HOME}/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin<br>$ ${BINUTIL_HOME}/arm-linux-androideabi-objdump -DS libsample.so<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">命令的执行需要比较长的时间，取决于这个 JNI 库有多复杂。完成后会打印出一大堆东西，当然大部分内容我们不需要关心。</span><br><span class="line"></span><br><span class="line">直接找到```Disassembly of section .data```这个部分，你会发现几乎所有的全局变量都在此处列出（说『几乎』是因为还有部分全局变量会放在```section .rodata```，决定这个的是变量的类型）。</span><br><span class="line"></span><br><span class="line">好了，往下稍微翻一下，就能找到我们定义的版本号了，此处是：</span><br></pre></td></tr></table></figure></p>
+<p>00015004 <jniversioncode>:<br>   15004:  000000f1  andeq  r0, r0, r0, ror #1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此处的```000000f1 ```转换成 10 进制就是我们要的版本号了，至此分析完毕。</span><br><span class="line"></span><br><span class="line">## 解决问题</span><br><span class="line"></span><br><span class="line">既然已经通过分析得到了想要的结果，那么解决问题就变得无比简单了，请出 CodeTyphon 写一段小程序搞定之，废话不多直接上代码：</span><br></pre></td></tr></table></figure></jniversioncode></p>
+<p>program sover;<br>{$mode objfpc}{$H+}<br>uses {$IFNDEF WINDOWS}cthreads,{$ENDIF} Classes, sysutils, process;</p>
+<p>procedure writeRequireBinutilHome; begin<br>  WriteLn(‘Environment BINUTIL_HOME must be set!’);<br>end;</p>
+<p>procedure writeHelp; begin<br>  WriteLn(‘usage: sover <so path="">‘);<br>end;</so></p>
+<p>function dumpVersionCode(bin: string; soPath: string): Integer;<br>const<br>  DATA_NAME = ‘<jniversioncode>‘;<br>var<br>  execRet: Boolean;<br>  outStr, valStr: string;<br>  i, p: Integer;<br>begin<br>  Result := 0;<br>  execRet:= RunCommand(bin, [‘-DS’, soPath], outStr, [poWaitOnExit, poUsePipes]);<br>  if execRet then begin<br>    with TStringList.Create do begin<br>      Text:= outStr;<br>      for i:= 0 to Count - 1 do begin<br>        if Strings[i].Contains(DATA_NAME) then begin<br>          valStr:= Strings[i + 1];<br>          Break;<br>        end;<br>      end;<br>      Free;<br>    end;<br>    p := Pos(‘:’, valStr);<br>    valStr:= Trim(Copy(valStr, p + 1, Length(valStr) - p));<br>    valStr:= LeftStr(valStr, 8);<br>    Result := StrToInt(‘$’ + valStr);<br>  end;<br>end;</jniversioncode></p>
+<p>var<br>  binutilHome: string;<br>  binDump: string;<br>  verCode: Integer;<br>begin<br>  binutilHome:= GetEnvironmentVariable(‘BINUTIL_HOME’);<br>  if binutilHome = ‘’ then begin<br>    writeRequireBinutilHome;<br>    Exit;<br>  end;<br>  if (ParamCount &lt;&gt; 1) or (not FileExists(ParamStr(1))) then begin<br>    writeHelp;<br>    Exit;<br>  end;<br>  if not binutilHome.EndsWith(‘/‘) then begin<br>    binutilHome += ‘/‘;<br>  end;<br>  binDump:= binutilHome + ‘arm-linux-androideabi-objdump’;<br>  if not FileExists(binDump) then begin<br>    binDump:= binutilHome + ‘arm-linux-gnueabihf-objdump’;<br>  end;<br>  verCode:= dumpVersionCode(binDump, ParamStr(1));<br>  WriteLn(verCode);<br>end.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">随便编译一下就成了，接着就可以欢乐的玩耍啦，命令很简单：</span><br></pre></td></tr></table></figure></p>
+<p>$ export BINUTIL_HOME=${NDK_HOME}/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin<br>$ ./sover libsample.so<br>```</p>
+<p>执行命令后打印出 241，这就是 JNI 库的版本号。</p>
+<p>设置 <code>BINUTIL_HOME</code> 这个环境变量是为了跨平台，每个平台下可能配置的命令路径都不一样，<strong>不能写死</strong>！</p>
+<ul>
+<li><p>如果觉得每次都 export 很麻烦，可以直接将 <code>BINUTIL_HOME</code> 写进 .bash_profile 内，以后就无需再输入了。</p>
+</li>
+<li><p>如果你使用 Ubuntu 或是它的衍生版本，可以直接 apt 安装 <code>binutils-arm-linux-gnueabihf</code>，这样无需安装 NDK，也可以执行这个命令了。</p>
+</li>
+</ul>
+	  
+	</div>
+
+
+    <!-- share -->
+    
+        
+
+        
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_24x24">
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_linkedin"></a>
+        <a class="jiathis_button_copy"></a>
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <br>
+
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">评论</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/08/14/android-technology-magazine-28/" data-title="Android技术周刊第28期" data-url="http://yoursite.com/2016/08/14/android-technology-magazine-28/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-08-14 
+	</div>
+	
+
+	<!-- author -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-user"></i>
+	YYDroid 
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hujiangios' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+      
+<p>
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次 
+</p>
+<br>
+
+  &copy; 2016 MobileV5
+     
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
